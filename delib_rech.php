@@ -11,26 +11,6 @@
 	if (!isset($_SESSION['acces']))
 		$_SESSION['acces']=0;
 
-	function RecupURL()
-	{
-		if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
-			$url = "https";
-		else
-			$url = "http";
-
-		// Ajoutez // à l'URL.
-		$url .= "://";
-
-		// Ajoutez l'hôte (nom de domaine, ip) à l'URL.
-		$url .= $_SERVER['HTTP_HOST'];
-
-		// Ajouter l'emplacement de la ressource demandée à l'URL
-
-		$url .= rawurldecode($_SERVER['REQUEST_URI']);
-		// Afficher l'URL
-		return $url;
-	}
-
 ?>
 
 <!DOCTYPE html>
@@ -57,13 +37,27 @@
 
 
 	// Filtre des communes
-	if (!isset($_GET['insee']))
-		$_GET['insee']=$insee_par_defaut; // Pour moi c'est l'EPCI
+	if (!isset($_GET['insee'])){			// pour moi c'est l'ECPI
+		if (isset($_GET['Villes']) && $_GET['Villes'] != "Toutes") {
+				$_GET['insee']=$insee_all[$_GET['Villes']];
+		}else {
+				$_GET['insee']="Toutes";
+		}
+	}else {
+		if (isset($_GET['Villes']) && $_GET['Villes'] != "Toutes") {
+				$_GET['insee']=$insee_all[$_GET['Villes']];
+		}else {
+				$_GET['insee']="Toutes";
+		}
+	}
 
 	$insee=$_GET['insee'];
 
+	//début page
+
 	echo "<h2>Registre des actes</h2>";
 
+	// classification
 	echo "\n".'Classification <select id="classif" class="form-control"><option>Toutes</option>';
 	$sql="SELECT * FROM class";
 	$res=mysqli_query($link, $sql);
@@ -76,27 +70,48 @@
 	$w="AND nature LIKE '%rations'";
 
 	if ($_SESSION['acces']==1) { // => Acces total pour les besoins internes à notre EPCI
-		echo "\n".' &nbsp; Nature <select id="nature" class="form-control"<option>Choisir</option>';
-		echo "<option>Choisir</option>";
-		$sql="SELECT DISTINCT nature FROM ".$pref_tab."index_delib ORDER BY nature";
-		$res=mysqli_query($link, $sql);
-		//echo $sql;
-		while ($row=mysqli_fetch_object($res)) {
-			echo "<option>".utf8_encode($row->nature)."</option>";
+
+		if ($insee == "Toutes" || $_GET['Villes'] == "Toutes" || (!isset($_GET['Villes']))) {
+
+			echo "\n".' &nbsp; Nature <select id="nature" class="form-control"<option>Choisir</option>';
+			echo "<option>Choisir</option>";
+
+			foreach($pref_tab_all as $ville => $pref){
+				$sql="SELECT DISTINCT nature FROM ".$pref."index_delib ORDER BY nature";
+				$res=mysqli_query($link, $sql);
+				//echo $sql;
+				while ($row=mysqli_fetch_object($res)) {
+					echo "<option>".utf8_encode($row->nature)."</option>";
+				}
+			}
+			echo "<option value=All>Toutes</option>";
+			echo "<option value=Toutes>Public</option>";
+			echo "</select>";
+
+		}elseif ($_GET['Villes'] == "Givors" || $_GET['Villes'] == "Sitiv") {
+
+			echo "\n".' &nbsp; Nature <select id="nature" class="form-control"<option>Choisir</option>';
+			echo "<option>Choisir</option>";
+			$sql="SELECT DISTINCT nature FROM ".$pref_tab_all[$_GET['Villes']]."index_delib ORDER BY nature";
+			$res=mysqli_query($link, $sql);
+			//echo $sql;
+			while ($row=mysqli_fetch_object($res)) {
+				echo "<option>".utf8_encode($row->nature)."</option>";
+			}
+			echo "<option value=All>Toutes</option>";
+			echo "<option value=Toutes>Public</option>";
+			echo "</select>";
+
 		}
-		echo "<option value=All>Toutes</option>";
-		echo "<option value=Toutes>Public</option>";
-		echo "</select>";
 
-		if (isset($_GET['nature'])) {
-			if ($_GET['nature']!='Toutes')
-				$w="AND nature='".$_GET['nature']."'";
+			if (isset($_GET['nature'])) {
+				if ($_GET['nature']!='Toutes')
+					$w="AND nature='".$_GET['nature']."'";
 
-		} else
-				$w="";
+			} else
+					$w="";
+		}
 
-
-	}
 	// Recherche par villes
 
 	echo "\n".'Villes <select id="villes" class="form-control"><option>Choisir</option>';
@@ -111,7 +126,7 @@
 	echo "<option value=Vaulx_en_Velin>Vaulx en Velin</option>";
 	echo "<option value=Sitiv>Sitiv</option>";
 
-echo "</select>";
+	echo "</select>";
 
 ?>
 
@@ -120,28 +135,70 @@ echo "</select>";
 <button class="btn" id="B_date_acte">🔍</button>
 
 <?php
-	$sql="SELECT * FROM ".$pref_tab."index_delib WHERE insee='$insee' $w ORDER BY del_date DESC";
-	$res=mysqli_query($link, $sql);
-	//echo $sql;
-	echo '<table id="delib" class="display compact" cellspacing="0" width="100%">';
-	echo "<thead><tr><th>Date</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Pièces jointes</th></tr></thead>";
-	echo "<tfoot><tr><th>Date</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Pièces jointes</th></tr></tfoot>";
-	echo "<tbody>";
-	while ($row=mysqli_fetch_object($res)) {
-		echo "<tr>";
-		//echo "<td>".Aff_date($row->del_date)."</td>";
-		echo "<td>$row->del_date</td>";
-		echo "<td>$row->num</td>";
-		echo "<td>$row->code</td>";
-		echo "<td>".utf8_encode($row->obj)."</td>";
-		echo "<td>";
-		$tmp=explode("|",$row->pj);
-		foreach($tmp as $pj)
-			echo "<a href='actes/$row->insee/$pj' target='_blank'><img src='ico/pdf.png' /></a>";
-		echo "</td>";
-		echo "</tr>";
+
+	if ($insee == "Toutes" || $_GET['Villes'] == "Toutes" || (!isset($_GET['Villes']))) {
+
+		echo '<table id="delib" class="display compact" cellspacing="0" width="100%">';
+		echo "<thead><tr><th>Date</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Pièces jointes</th></tr></thead>"; //debut
+		echo "<tfoot><tr><th>Date</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Pièces jointes</th></tr></tfoot>"; //fin
+		echo "<tbody>";
+
+		foreach($pref_tab_all as $ville => $pref){
+
+			$insee=$insee_all[$ville];
+
+			$sql="SELECT * FROM ".$pref."index_delib WHERE insee='$insee' $w ORDER BY del_date DESC";
+			$res=mysqli_query($link, $sql);
+			//echo $sql;
+
+			while ($row=mysqli_fetch_object($res)) {
+				echo "<tr>";
+				//echo "<td>".Aff_date($row->del_date)."</td>";
+				echo "<td>$row->del_date</td>"; //date ajout
+				echo "<td>$row->num</td>"; // numéro
+				echo "<td>$row->code</td>"; //class (code)
+				echo "<td>".utf8_encode($row->obj)."</td>"; //objet
+				echo "<td>";
+				//piece jointe
+				$tmp=explode("|",$row->pj);
+				foreach($tmp as $pj)
+					echo "<a href='actes/$row->insee/$pj' target='_blank'><img src='ico/pdf.png' /></a>";
+				echo "</td>";
+				echo "</tr>";
+			}
+
+		}
+		echo "</body></table>";
+		echo "<br>";
+	}elseif ($_GET['Villes'] == "Givors" || $_GET['Villes'] == "Sitiv") {
+
+		echo "<br>";
+
+		$sql="SELECT * FROM ".$pref_tab_all[$_GET['Villes']]."index_delib WHERE insee='$insee' $w ORDER BY del_date DESC";
+		$res=mysqli_query($link, $sql);
+		//echo $sql;
+		echo '<table id="delib" class="display compact" cellspacing="0" width="100%">';
+		echo "<thead><tr><th>Date</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Pièces jointes</th></tr></thead>"; //debut
+		echo "<tfoot><tr><th>Date</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Pièces jointes</th></tr></tfoot>"; //fin
+		echo "<tbody>";
+		while ($row=mysqli_fetch_object($res)) {
+			echo "<tr>";
+			//echo "<td>".Aff_date($row->del_date)."</td>";
+			echo "<td>$row->del_date</td>"; //date ajout
+			echo "<td>$row->num</td>"; // numéro
+			echo "<td>$row->code</td>"; //class (code)
+			echo "<td>".utf8_encode($row->obj)."</td>"; //objet
+			echo "<td>";
+			//piece jointe
+			$tmp=explode("|",$row->pj);
+			foreach($tmp as $pj)
+				echo "<a href='actes/$row->insee/$pj' target='_blank'><img src='ico/pdf.png' /></a>";
+			echo "</td>";
+			echo "</tr>";
+		}
+		echo "</body></table>";
+		echo "<br>";
 	}
-	echo "</body></table>";
 
 ?>
 
@@ -180,7 +237,7 @@ $("#nature").change(function() {
 	}else if ($(this).val()== "All") {
 		if (searchParams.has('Villes')) {
 			let ville= searchParams.get('Villes');
-			document.location="delib_rech.php?Villes"+ville;
+			document.location="delib_rech.php?Villes="+ville;
 		}else {
 			document.location="delib_rech.php";
 		}
@@ -195,7 +252,7 @@ $("#nature").change(function() {
 })
 
 $("#villes").change(function() {
-
+	/*
 	let searchParams = new URLSearchParams(window.location.search);
 
 	if ((!searchParams.has('insee')) || (!searchParams.has('nature'))) {
@@ -205,7 +262,8 @@ $("#villes").change(function() {
 		let nature= searchParams.get('nature');
 
 		document.location="delib_rech.php?insee="+insee+"&nature="+nature+"&Villes="+$(this).val();
-	}
+	}*/
+	document.location="delib_rech.php?Villes="+$(this).val();
 })
 
 </script>
