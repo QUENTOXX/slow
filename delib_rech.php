@@ -21,9 +21,10 @@
 <meta name="referrer" content="origin-when-crossorigin">
 <title>Registres des Actes</title>
 <script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/jquery.dataTables.js"></script>
 <link rel="stylesheet" type="text/css" href="style/jquery.dataTables.css">
 <link rel="stylesheet" type="text/css" href="style/style.css">
+<link rel="stylesheet" type="text/css" href="style/configuration.css">
 <style>
 
 </style>
@@ -88,15 +89,23 @@
 			echo "<option value=Toutes>Public</option>";
 			echo "</select>";
 
-		}elseif ($_GET['Villes'] == "Givors" || $_GET['Villes'] == "Sitiv") {
+		}elseif ($_GET['Villes'] == "Givors" || $_GET['Villes'] == "Sitiv" || $_GET['Villes'] == "Saint-Chamont" || $_GET['Villes'] == "Venissieux" || $_GET['Villes'] == "Corbas" || $_GET['Villes'] == "Grigny" || $_GET['Villes'] == "Pierre_Benite" || $_GET['Villes'] == "Rive_de_Gier" || $_GET['Villes'] == "Vaulx_en_Velin") {
+
+			$tab_nature = array();
 
 			echo "\n".' &nbsp; Nature <select id="nature" class="form-control"<option>Choisir</option>';
 			echo "<option>Choisir</option>";
 			$sql="SELECT DISTINCT nature FROM ".$pref_tab_all[$_GET['Villes']]."index_delib ORDER BY nature";
 			$res=mysqli_query($link, $sql);
 			//echo $sql;
-			while ($row=mysqli_fetch_object($res)) {
-				echo "<option>".utf8_encode($row->nature)."</option>";
+			while ($row=mysqli_fetch_object($res)) {	//recupération des natures
+				if (!in_array("utf8_encode($row->nature)", $tab_nature)) {
+					array_push($tab_nature, utf8_encode($row->nature));
+				}
+				//echo "<option>".utf8_encode($row->nature)."</option>";
+			}
+			foreach ($tab_nature as $value) {
+				echo "<option>".$value."</option>";
 			}
 			echo "<option value=All>Toutes</option>";
 			echo "<option value=Toutes>Public</option>";
@@ -170,7 +179,7 @@
 		}
 		echo "</body></table>";
 		echo "<br>";
-	}elseif ($_GET['Villes'] == "Givors" || $_GET['Villes'] == "Sitiv") {
+	}elseif ($_GET['Villes'] == "Givors" || $_GET['Villes'] == "Sitiv" || $_GET['Villes'] == "Saint-Chamont" || $_GET['Villes'] == "Venissieux" || $_GET['Villes'] == "Corbas" || $_GET['Villes'] == "Grigny" || $_GET['Villes'] == "Pierre_Benite" || $_GET['Villes'] == "Rive_de_Gier" || $_GET['Villes'] == "Vaulx_en_Velin") {
 
 		echo "<br>";
 
@@ -207,7 +216,7 @@ $(document).ready(function() {
 	var table = $('#delib').dataTable( {
 		"language": { "url": "french.json" },
 		"order": [[ 0, "desc" ],[ 1, "desc" ]],
-		"lengthMenu": [[25, 50, 100, -1, 10], [25, 50, 100, "Tous", 10]]
+		"lengthMenu": [[50, 100, -1, 10, 25], [50, 100, "Tous", 10, 25]]
 		}
 	);
 
