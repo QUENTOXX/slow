@@ -2,6 +2,7 @@
 	session_start();
 
 	require_once "params.php";
+	require_once 'perso.php';
 
 	// Spécification de l'accès total (si certains actes ne sont pas à destination du public)
 	if (isset($_GET['ctrl'])) {
@@ -54,9 +55,32 @@
 
 	$insee=$_GET['insee'];
 
-	//début page
+	//haut de page (logo)
 
-	echo "<h2>Registre des actes</h2>";
+	if (isset($_GET['Villes']) && $_GET['Villes']!= "Toutes") {
+
+		$tab_perso= Recup_Fich_Tab($pref_tab_all[$_GET['Villes']]);
+
+			$lien= "Personalisation/logo/".$tab_perso[1]["Logo"];
+			$lien= rtrim($lien);
+
+			image($lien);
+	}
+
+	//début page
+	if (isset($_GET['Villes']) && $_GET['Villes']!= "Toutes") {
+
+		$tab_perso= Recup_Fich_Tab($pref_tab_all[$_GET['Villes']]);
+
+		if ($tab_perso == 0) {
+			echo "<h2>Registre des actes</h2>";
+		}else {
+			$titre= $tab_perso[1]["Titre"];
+			echo "<h2>$titre</h2>";
+		}
+	}else {
+		echo "<h2>Registre des actes</h2>";
+	}
 
 	// classification
 	echo "\n".'Classification <select id="classif" class="form-control"><option>Toutes</option>';
