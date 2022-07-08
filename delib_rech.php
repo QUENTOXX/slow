@@ -61,21 +61,27 @@
 
 		$tab_perso= Recup_Fich_Tab($pref_tab_all[$_GET['Villes']]);
 
-			$lien= "Personalisation/logo/".$tab_perso[1]["Logo"];
+			$lien= $tab_perso[1]["Logo"];
+			$lien= ltrim($lien);
 			$lien= rtrim($lien);
 
-			image($lien);
+			if ($lien != "") {
+				$lien= "Personalisation/logo/".$lien;
+				image($lien);
+			}
 	}
 
 	//début page
 	if (isset($_GET['Villes']) && $_GET['Villes']!= "Toutes") {
 
 		$tab_perso= Recup_Fich_Tab($pref_tab_all[$_GET['Villes']]);
+		$titre= $tab_perso[1]["Titre"];
+		$titre= ltrim($titre);
+		$titre= rtrim($titre);
 
-		if ($tab_perso == 0) {
+		if ($titre == "") {
 			echo "<h2>Registre des actes</h2>";
 		}else {
-			$titre= $tab_perso[1]["Titre"];
 			echo "<h2>$titre</h2>";
 		}
 	}else {
