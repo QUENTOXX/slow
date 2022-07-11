@@ -25,7 +25,6 @@
 <script src="js/jquery.dataTables.js"></script>
 <link rel="stylesheet" type="text/css" href="style/jquery.dataTables.css">
 <link rel="stylesheet" type="text/css" href="style/style.css">
-<link rel="stylesheet" type="text/css" href="style/configuration.css">
 <style>
 
 </style>
@@ -166,14 +165,27 @@
 	echo "<option value=Sitiv>Sitiv</option>";
 
 	echo "</select>";
-
+//formulaire date
 ?>
 
-
- &nbsp; Date <input class="form-control" type="date" id="date_acte" placeholder="Date de l'acte" >
-<button class="btn" id="B_date_acte">🔍</button>
+<form name="Filter" method="POST">
+    Date de :
+    <input type="date" name="date_acte_deb" value="<?php echo date('Y-m-d'); ?>" />
+    à:
+    <input type="date" name="date_acte_fin" value="<?php echo date('Y-m-d'); ?>" />
+    <input type="submit" name="submit" value="Rechercher"/>
+</form>
 
 <?php
+//vérification post non vide
+if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
+	$date_deb = date('Y-m-d', strtotime($_POST['date_acte_deb']));
+	$date_fin = date('Y-m-d', strtotime($_POST['date_acte_fin']));
+
+	$d= "AND del_date BETWEEN ' ".$date_deb." ' AND ' ".$date_fin." ' ";
+}else {
+	$d= "";
+}
 
 	if ($insee == "Toutes" || $_GET['Villes'] == "Toutes" || (!isset($_GET['Villes']))) {
 
@@ -186,7 +198,7 @@
 
 			$insee=$insee_all[$ville];
 
-			$sql="SELECT * FROM ".$pref."index_delib WHERE insee='$insee' $w ORDER BY del_date DESC";
+			$sql="SELECT * FROM ".$pref."index_delib WHERE insee='$insee' $w $d ORDER BY del_date DESC";
 			$res=mysqli_query($link, $sql);
 			//echo $sql;
 
@@ -213,7 +225,7 @@
 
 		echo "<br>";
 
-		$sql="SELECT * FROM ".$pref_tab_all[$_GET['Villes']]."index_delib WHERE insee='$insee' $w ORDER BY del_date DESC";
+		$sql="SELECT * FROM ".$pref_tab_all[$_GET['Villes']]."index_delib WHERE insee='$insee' $w $d ORDER BY del_date DESC";
 		$res=mysqli_query($link, $sql);
 		//echo $sql;
 		echo '<table id="delib" class="display compact" cellspacing="0" width="100%">';
@@ -257,11 +269,11 @@ $("#classif").change(function() {
 	if ($(this).val()!="Toutes")
 		$("input[type=search]").focus().val($(this).val()).blur().trigger('keyup');
 })
-
-$("#B_date_acte").click(function() {
-	$("input[type=search]").focus().val($("#date_acte").val()).blur().trigger('keyup');
+/*
+$("#B_date_acte_fin").click(function() {
+	$("input[type=search]").focus().val($("#date_acte_deb").val()).blur().trigger('keyup');
 })
-
+*/
 $("#nature").change(function() {
 	let searchParams = new URLSearchParams(window.location.search);
 	//alert($(this).val());
