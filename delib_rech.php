@@ -39,13 +39,13 @@
 
 	// Filtre des communes
 	if (!isset($_GET['insee'])){			// pour moi c'est l'ECPI
-		if (isset($_GET['Villes']) && $_GET['Villes'] != "Toutes") {
+		if (isset($_GET['Villes']) && $_GET['Villes'] != "Toutes" && array_key_exists($_GET['Villes'], $insee_all)) {
 				$_GET['insee']=$insee_all[$_GET['Villes']];
 		}else {
 				$_GET['insee']="Toutes";
 		}
 	}else {
-		if (isset($_GET['Villes']) && $_GET['Villes'] != "Toutes") {
+		if (isset($_GET['Villes']) && $_GET['Villes'] != "Toutes" && array_key_exists($_GET['Villes'], $insee_all)) {
 				$_GET['insee']=$insee_all[$_GET['Villes']];
 		}else {
 				$_GET['insee']="Toutes";
@@ -56,7 +56,7 @@
 
 	//haut de page (logo)
 
-	if (isset($_GET['Villes']) && $_GET['Villes']!= "Toutes") {
+	if (isset($_GET['Villes']) && $_GET['Villes']!= "Toutes" && array_key_exists($_GET['Villes'], $pref_tab_all)) {
 
 		$tab_perso= Recup_Fich_Tab($pref_tab_all[$_GET['Villes']]);
 
@@ -71,7 +71,7 @@
 	}
 
 	//début page
-	if (isset($_GET['Villes']) && $_GET['Villes']!= "Toutes") {
+	if (isset($_GET['Villes']) && $_GET['Villes']!= "Toutes" && array_key_exists($_GET['Villes'], $pref_tab_all)) {
 
 		$tab_perso= Recup_Fich_Tab($pref_tab_all[$_GET['Villes']]);
 		$titre= $tab_perso[1]["Titre"];
@@ -118,7 +118,7 @@
 			echo "<option value=Toutes>Public</option>";
 			echo "</select>";
 
-		}elseif ($_GET['Villes'] == "Givors" || $_GET['Villes'] == "Sitiv" || $_GET['Villes'] == "Saint-Chamont" || $_GET['Villes'] == "Venissieux" || $_GET['Villes'] == "Corbas" || $_GET['Villes'] == "Grigny" || $_GET['Villes'] == "Pierre_Benite" || $_GET['Villes'] == "Rive_de_Gier" || $_GET['Villes'] == "Vaulx_en_Velin") {
+		}elseif (array_key_exists($_GET['Villes'], $pref_tab_all)) {
 
 			$tab_nature = array();
 
@@ -156,7 +156,7 @@
 	echo "<option value=Toutes>Toutes</option>";
 	echo "<option value=Givors>Givors</option>";
 	echo "<option value=Grigny>Grigny</option>";
-	echo "<option value=Saint-Chamont>Saint Chamont</option>";
+	echo "<option value=Saint-Chamond>Saint Chamond</option>";
 	echo "<option value=Venissieux>Venissieux</option>";
 	echo "<option value=Corbas>Corbas</option>";
 	echo "<option value=Pierre_Benite>Pierre Benite</option>";
@@ -169,9 +169,9 @@
 ?>
 
 <form name="Filter" method="POST">
-    Date de :
+    Date du :
     <input type="date" name="date_acte_deb" value="<?php echo date('Y-m-d'); ?>" />
-    à:
+    au:
     <input type="date" name="date_acte_fin" value="<?php echo date('Y-m-d'); ?>" />
     <input type="submit" name="submit" value="Rechercher"/>
 </form>
@@ -221,7 +221,7 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 		}
 		echo "</body></table>";
 		echo "<br>";
-	}elseif ($_GET['Villes'] == "Givors" || $_GET['Villes'] == "Sitiv" || $_GET['Villes'] == "Saint-Chamont" || $_GET['Villes'] == "Venissieux" || $_GET['Villes'] == "Corbas" || $_GET['Villes'] == "Grigny" || $_GET['Villes'] == "Pierre_Benite" || $_GET['Villes'] == "Rive_de_Gier" || $_GET['Villes'] == "Vaulx_en_Velin") {
+	}elseif (array_key_exists($_GET['Villes'], $pref_tab_all)) {
 
 		echo "<br>";
 
@@ -314,7 +314,11 @@ $("#villes").change(function() {
 
 		document.location="delib_rech.php?insee="+insee+"&nature="+nature+"&Villes="+$(this).val();
 	}*/
-	document.location="delib_rech.php?Villes="+$(this).val();
+	if ($(this).val() == "Choisir") {
+		document.location="delib_rech.php?Villes=Toutes";
+	}else {
+		document.location="delib_rech.php?Villes="+$(this).val();
+	}
 })
 
 </script>
