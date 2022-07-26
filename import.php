@@ -7,7 +7,7 @@
 <title>Récupération des actes sur s2low</title>
 <link rel="stylesheet" type="text/css" href="style/style.css">
 <body>
-<?php 
+<?php
 
 /*
 // A faire //
@@ -26,7 +26,7 @@ include 'ctrl_cert.inc.php';
 if ($error>0) {
 	echo '<div class="info info-rouge"><br>⚠️ Merci de corriger les erreurs avant de lancer les récupérations<br><br></div>';
 	exit;
-}		
+}
 
 #if (!isset($_SERVER['HTTPS'])) {
 #	echo '<div class="info info-rouge"><br>⛔ Il semblerait que la page ne soit pas HTTPS<br><br></div>';
@@ -46,14 +46,14 @@ if (!isset($_GET['insee']))
 else
 	$insee=$_GET['insee'];
 
-  
+  // !! regarder a faire !!!
 // Prise en compte du serveur Windows (merci Antoine)
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 	define('PEM',     realpath('key').'\\'.$cert.'client.pem');
 	define('SSLKEY',  realpath('key').'\\'.$cert.'key.pem');
 	define('CA_PATH', realpath('key').'\\'.$cert.'ca.pem');
 } else {
-	// la partie x509 du certificat : openssl pkcs12 -in certificat.p12 -out client.pem -clcerts -nokeys 
+	// la partie x509 du certificat : openssl pkcs12 -in certificat.p12 -out client.pem -clcerts -nokeys
 	define('PEM',     './key/'.$cert.'client.pem');
 	//  la clé privée du certificat : openssl pkcs12 -in certificat.p12 -out key.pem -nocerts
 	define('SSLKEY',  './key/'.$cert.'key.pem');
@@ -88,28 +88,64 @@ if (!isset($_GET['nb_load']))
 	$_GET['nb_load']=20;
 
 // Filtre par commune
-if ($insee=="all") 
+if ($insee=="all")
 	$w="";
 else
 	$w="AND insee='$insee'";
 
 // Liste des utilisateurs (communes) à récupérer
-$sql="SELECT * FROM ".$pref_tab."user WHERE actif=1 $w";
-$res=mysqli_query($link,$sql);
-//echo $sql;
-if (mysqli_num_rows($res)==0) {
-// S'il n'y a aucun utilisateur,
-// on considère que le certification est pour un usage individuel.
-// Il est conseiller de créer au moins 1 utilisateur
-// et de spécifier un mot de passe dans S2low.
-	echo '<div class="info info-rouge">Vous n\'avez pas défini d\'utilisateur dans la table'.$pref_tab.'user</div>';
-	//load(''); // Lance la récupération des actes pour l'utilisateur unique => déconseiller
-} else {
-	while ($row=mysqli_fetch_object($res)) {
-		echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
-		$insee=$row->insee;
-		$user_delib=$row;
-		load($insee); // Lance la récupération des actes
+
+if ($insee == "all") { // a modif pour toute villes
+
+	foreach ($pref_tab_all as $ville => $pref) {
+
+		$sql="SELECT * FROM ".$pref."user WHERE actif=1 $w";
+		$res=mysqli_query($link,$sql);
+		//echo $sql;
+		if (mysqli_num_rows($res)==0) {
+		// S'il n'y a aucun utilisateur,
+		// on considère que le certification est pour un usage individuel.
+		// Il est conseiller de créer au moins 1 utilisateur
+		// et de spécifier un mot de passe dans S2low.
+			echo '<div class="info info-rouge">Vous n\'avez pas défini d\'utilisateur dans la table'.$pref.'user</div>';
+			//load(''); // Lance la récupération des actes pour l'utilisateur unique => déconseiller
+		} else {
+			while ($row=mysqli_fetch_object($res)) {
+				echo "<br> $insee";
+				echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
+				$insee=$row->insee;
+				$user_delib=$row;
+				load($insee, $pref); // Lance la récupération des actes
+			}
+		}
+	}
+
+}else {
+
+	while ($cherinsee = current($insee_all)) {
+		if ($cherinsee == $insee) {
+
+			$sql="SELECT * FROM ".$pref_tab_all[key($insee_all)]."user WHERE actif=1 $w";
+			$res=mysqli_query($link,$sql);
+			//echo $sql;
+			if (mysqli_num_rows($res)==0) {
+			// S'il n'y a aucun utilisateur,
+			// on considère que le certification est pour un usage individuel.
+			// Il est conseiller de créer au moins 1 utilisateur
+			// et de spécifier un mot de passe dans S2low.
+				echo '<div class="info info-rouge">Vous n\'avez pas défini d\'utilisateur dans la table'.$pref_tab_all[key($insee_all)].'user</div>';
+				//load(''); // Lance la récupération des actes pour l'utilisateur unique => déconseiller
+			} else {
+				while ($row=mysqli_fetch_object($res)) {
+					echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
+					$insee=$row->insee;
+					$user_delib=$row;
+					load($insee,$pref_tab_all[key($insee_all)]); // Lance la récupération des actes
+				}
+			}
+			break;
+		}
+		next($insee_all);
 	}
 }
 
@@ -118,18 +154,16 @@ if (mysqli_num_rows($res)==0) {
 /**************************/
 /* Récupération des actes */
 /**************************/
-function load($insee) {
-		
-	global $pref_tab;
-	
+function load($insee, $pref_tab) {
+
 	$nb_load=0;
 
 	// Création du répertoire de la commune
 	@mkdir("actes/".$insee."/");
-	
+
 	// Récupération des actes déjà récupérés
 	$nvu="actes/".$insee."/vu.txt";
-	if (!file_exists($nvu)) file_put_contents($nvu,'');	
+	if (!file_exists($nvu)) file_put_contents($nvu,'');
 	$vu=explode("\n",file_get_contents($nvu));
 
 
@@ -142,7 +176,7 @@ function load($insee) {
 	$mel_mess="Bonjour,\n\nDe nouveaux actes ont été passés au contrôle de légalité :\n ";
 	$mel_delib_ind='';
 	$mel_delib='';
-	
+
 	echo '<hr>';
 	// Liste des actes de la commune
 	$json=go_curl($insee, URL."modules/actes/api/list_actes.php?status_id=4&nature=2&offset=".$_GET['offset']."&limit=".$limit); // OK
@@ -173,10 +207,10 @@ function load($insee) {
 						}
 						$nat=str_replace($GLOBALS['old_nature'], $GLOBALS['new_nature'], $t->nature_descr);
 						echo " => $nat";
-						
-						// Notification de la récupération de l'acte						
+
+						// Notification de la récupération de l'acte
 						file_put_contents("actes/".$insee."/vu.txt",$t->id."\n",FILE_APPEND | LOCK_EX);
-						
+
 						// Ajout de l'acte dans la table mysql
 						exe ("INSERT INTO ".$pref_tab."index_delib VALUES('$insee',$t->id,'$t->date','".utf8_decode($nat)."','$t->number','$t->classification',\"".utf8_decode(str_replace("\n",' ',str_replace('"','\"',($t->subject))))."\",\"".substr($list_fich,0,-1)."\");");
 
@@ -195,17 +229,17 @@ function load($insee) {
 				}
 				exe("DELETE FROM ".$pref_tab."index_delib WHERE insee='$insee' AND num='$t->number';");
 			}
-			
+
 		}
 	}
-	
+
 	if ($mel_delib!="")
 		Envoi_mail_unique($GLOBALS['user_delib']->mels_notif, $mel_obj, $mel_mess.$mel_delib, 'Notification Actes',0,'\u2712\uFE0F');
 	//else
 	//	Envoi_mail_unique('mel@domaine.fr', 'Rien de neuf', utf8_decode('Rien à voir pour l\'instant'), 'Notification Actes',0,'\u2712\uFE0F');
-		
 
-	
+
+
 	//if ($_GET['nb_load']>0)
 	if (count($json->transactions)>0) {
 		$lien_suite="import.php?insee=".$insee."&offset=".($_GET['offset']+$limit)."&nb_load=$nb_load";
@@ -233,19 +267,19 @@ function go_curl($user, $api, $nfich='') {
 	//curl_setopt($ch, CURLOPT_PROXY, 'x.x.x.x:8080');
 	//curl_setopt($ch, CURLOPT_POST, TRUE);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-	
+
 	// Dans mon cas l'user et le mot de passe sont identiques.
 	// Il s'agit du login et mot de passe saisie dans l'administration de S2low
 	if ($user!='')
 		curl_setopt($ch, CURLOPT_USERPWD, $user.":".'79BES=p'); // L'identifiant et le mot de passe sont identiques
-	
-	
+
+
 //	curl_setopt($ch, CURLOPT_HEADER, true);
 //	curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 //	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (compatible; Circle)");
 //	curl_setopt($ch, CURLOPT_TIMEOUT,60);
 //	curl_setopt($ch, CURLOPT_FOLLOWLOCATION,TRUE);
-		
+
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 	curl_setopt($ch, CURLOPT_CAPATH, CA_PATH);
 	curl_setopt($ch, CURLOPT_SSLCERT, PEM);
@@ -262,7 +296,7 @@ function go_curl($user, $api, $nfich='') {
 		echo '<div class="info info-rouge">⚠️ Erreur dans le module curl';
 		echo '<br>curl_errno = ' . curl_errno($ch) . ' ( ' . curl_error($ch) . ' )</div>';
 		$curl_return='';
-	} else {	
+	} else {
 		if ($nfich!='') {
 			// Fichiers déposés dans le dossier actes/
 			file_put_contents('actes/'.$user.'/'.$nfich,$curl_return);
@@ -270,7 +304,7 @@ function go_curl($user, $api, $nfich='') {
 		}
 	}
 	curl_close($ch);
-	
+
 	return($curl_return);
 }
 
@@ -288,7 +322,7 @@ function Envoi_mail_unique($pers,$obj,$mess,$info,$urgent=0,$ico='') {
 	}
 
 	if ($info=="") $info="Information Actes";
-	
+
 	foreach(explode(",",$pers) as $m) {
 		if (strlen($m)>5) {
 			echo '<br>Envoi du mel à '.$m;
