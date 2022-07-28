@@ -69,7 +69,7 @@
 				image($lien);
 			}
 	}
-
+	
 	//début page
 	if (isset($_GET['Villes']) && $_GET['Villes']!= "Toutes" && array_key_exists($_GET['Villes'], $pref_tab_all)) {
 
@@ -97,9 +97,11 @@
 	echo "</select>";
 
 	// Filtres pour le public : affichera les actes de natures Délibérations, mais exclus Actes individuels, Actes réglementaires, Autres, ...
-	$w="AND nature LIKE '%rations'";
+	//$w="AND nature LIKE '%rations'";
 
-	if ($_SESSION['acces']==1) { // => Acces total pour les besoins internes à notre EPCI
+	$w="";
+
+/*	if ($_SESSION['acces']==1) { // => Acces total pour les besoins internes à notre EPCI
 
 		if ($insee == "Toutes" || $_GET['Villes'] == "Toutes" || (!isset($_GET['Villes']))) {
 
@@ -148,11 +150,46 @@
 
 			} else
 					$w="";
-		}
+		}else {*/
+
+			echo "\n".'Natures <select id="nature" class="form-control"><option>Choisir</option>';
+			echo "<option value=delib>Délibérations</option>";
+			echo "<option value=decis>Décisions</option>";
+			echo "<option value=arret>Arrêtés</option>";
+			echo "<option value=docbf>Documents budgétaires et financiers</option>";
+			echo "<option value=Toutes>Toutes</option>";
+
+			echo "</select>";
+
+			if (isset($_GET['nature'])) {
+				if ($_GET['nature']!='Toutes' && $_GET['nature']!='Choisir')
+					switch ($_GET['nature']) {
+						case "delib":
+							$w="AND nature= 'Délibérations'";
+							break;
+						case "decis":
+							$w="AND nature= 'Autres'";
+							break;
+						case "arret":
+							$w="AND nature= 'Actes reglementaires'";
+							break;
+						case "docbf":
+							$w="AND nature= 'Documents budgétaires et financiers'";
+							break;
+
+						default:
+							$w="";
+							break;
+					}
+
+			} else
+					$w="";
+
+		//}
 
 	// Recherche par villes
 
-	echo "\n".'Villes <select id="villes" class="form-control"><option>Choisir</option>';
+	echo "\n".'Etablissements <select id="villes" class="form-control"><option>Choisir</option>';
 	echo "<option value=Toutes>Toutes</option>";
 	echo "<option value=Givors>Givors</option>";
 	echo "<option value=Grigny>Grigny</option>";
@@ -190,8 +227,8 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 	if ($insee == "Toutes" || $_GET['Villes'] == "Toutes" || (!isset($_GET['Villes']))) {
 
 		echo '<table id="delib" class="display compact" cellspacing="0" width="100%">';
-		echo "<thead><tr><th>Date</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Pièces jointes</th></tr></thead>"; //debut
-		echo "<tfoot><tr><th>Date</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Pièces jointes</th></tr></tfoot>"; //fin
+		echo "<thead><tr><th>Date de décision</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Etablissement</th><th>Pièces jointes</th></tr></thead>"; //debut
+		echo "<tfoot><tr><th>Date de décision</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Etablissement</th><th>Pièces jointes</th></tr></tfoot>"; //fin
 		echo "<tbody>";
 
 		foreach($pref_tab_all as $ville => $pref){
@@ -209,6 +246,7 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 				echo "<td>$row->num</td>"; // numéro
 				echo "<td>$row->code</td>"; //class (code)
 				echo "<td>".utf8_encode($row->obj)."</td>"; //objet
+				echo "<td>$ville </td>";
 				echo "<td>";
 				//piece jointe
 				$tmp=explode("|",$row->pj);
@@ -224,13 +262,16 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 	}elseif (array_key_exists($_GET['Villes'], $pref_tab_all)) {
 
 		echo "<br>";
-
-		$sql="SELECT * FROM ".$pref_tab_all[$_GET['Villes']]."index_delib WHERE insee='$insee' $w $d ORDER BY del_date DESC";
+		//$sql="SELECT * FROM gi_index_delib WHERE insee='WDGIVORS' AND nature= 'Délibérations'";
+		$sql="SELECT * FROM ".$pref_tab_all[$_GET['Villes']]."index_delib WHERE insee='$insee' $w $d"."ORDER BY del_date DESC";
 		$res=mysqli_query($link, $sql);
-		//echo $sql;
+		echo $sql;
+		var_dump("$sql");
+		var_dump("SELECT * FROM gi_index_delib WHERE insee='WDGIVORS' AND nature= 'Délibérations' ORDER BY del_date DESC");
+
 		echo '<table id="delib" class="display compact" cellspacing="0" width="100%">';
-		echo "<thead><tr><th>Date</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Pièces jointes</th></tr></thead>"; //debut
-		echo "<tfoot><tr><th>Date</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Pièces jointes</th></tr></tfoot>"; //fin
+		echo "<thead><tr><th>Date de décision</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Etablissement</th><th>Pièces jointes</th></tr></thead>"; //debut
+		echo "<tfoot><tr><th>Date de décision</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Etablissement</th><th>Pièces jointes</th></tr></tfoot>"; //fin
 		echo "<tbody>";
 		while ($row=mysqli_fetch_object($res)) {
 			echo "<tr>";
@@ -239,6 +280,7 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 			echo "<td>$row->num</td>"; // numéro
 			echo "<td>$row->code</td>"; //class (code)
 			echo "<td>".utf8_encode($row->obj)."</td>"; //objet
+			echo "<td>".$_GET['Villes']."</td>";
 			echo "<td>";
 			//piece jointe
 			$tmp=explode("|",$row->pj);
