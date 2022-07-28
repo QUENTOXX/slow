@@ -26,13 +26,16 @@
 				del_date date NOT NULL,
 				nature varchar(50) COLLATE utf8_bin NOT NULL,
 				num varchar(20) COLLATE utf8_bin NOT NULL,
+				import_date date,
 				code char(20) COLLATE utf8_bin NOT NULL,
 				obj text COLLATE utf8_bin NOT NULL,
 				pj mediumtext COLLATE utf8_bin NOT NULL,
 				UNIQUE KEY insee_num (insee,num)
 			) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;");
+
 			echo '<br>Création de la table '.$pref.'index_delib';
 		} else {
+			//exe("ALTER TABLE ".$pref."index_delib ADD import_date date");
 			echo '<div class="info info-vert">✔️ La table <b>'.$pref.'index_delib</b> existe déjà</div>';
 		}
 	}
