@@ -67,8 +67,8 @@ define('PASSWORD', $pass);
 
 // Permet de changer les classifications qui ont évoluées depuis 2011.
 $old_nature=array("Contrats et conventions","Deliberations","Arretes individuels","Arretes reglementaires","Documents budgetaires et financiers");
-$new_nature=array("Contrats, conventions et avenants","Délibérations","Actes individuels","Actes réglementaires","Documents budgétaires et financiers");
-
+$new_nature=array("Contrats, conventions et avenants","Deliberations","Actes individuels","Actes reglementaires","Documents budgetaires et financiers");
+// !!!!!!   enlever les accens pour sql    !!!!!!!!!!!
 /*
 // Liste des utilisateurs dans S2low
 $json=go_curl('',URL."admin/users/admin_users.php?api=1&count=1000"); // OK
@@ -210,9 +210,14 @@ function load($insee, $pref_tab) {
 
 						// Notification de la récupération de l'acte
 						file_put_contents("actes/".$insee."/vu.txt",$t->id."\n",FILE_APPEND | LOCK_EX);
-
+						//date du jour
+						$today= date("Y-m-d");
 						// Ajout de l'acte dans la table mysql
-						exe ("INSERT INTO ".$pref_tab."index_delib VALUES('$insee',$t->id,'$t->date','".utf8_decode($nat)."','$t->number','$t->classification',\"".utf8_decode(str_replace("\n",' ',str_replace('"','\"',($t->subject))))."\",\"".substr($list_fich,0,-1)."\");");
+						exe ("INSERT INTO ".$pref_tab."index_delib VALUES('$insee',$t->id,'$t->date','".utf8_decode($nat)."','$t->number','$t->classification',\"".utf8_decode(str_replace("\n",' ',str_replace('"','\"',($t->subject))))."\",\"".substr($list_fich,0,-1)."\",'$today');");
+
+						// insertion date du jour
+						//exe("INSERT INTO ".$pref_tab."index_delib (import_date) VALUES ('$today');");
+						//exe("UPDATE ".$pref_tab."index_delib SET `import_date` = '$today' WHERE ".$pref_tab."index_delib.`insee` = $insee;");
 
 						if ($nat=="Actes individuels")
 							$mel_delib_ind.="- $t->number ($nat) $t->subject\n";//<br>";
