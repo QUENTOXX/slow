@@ -1,0 +1,150 @@
+
+2022-07-28 08:01:33 Erreur de syntaxe près de '(
+				ADD import_date date
+				)' à la ligne 1 [/sitiv/install.php]
+ALTER TABLE gi_index_delib(
+				ADD import_date date
+				)
+
+2022-07-28 08:01:33 Erreur de syntaxe près de '(
+				ADD import_date date
+				)' à la ligne 1 [/sitiv/install.php]
+ALTER TABLE rs_index_delib(
+				ADD import_date date
+				)
+
+2022-07-28 08:01:33 Erreur de syntaxe près de '(
+				ADD import_date date
+				)' à la ligne 1 [/sitiv/install.php]
+ALTER TABLE sc_index_delib(
+				ADD import_date date
+				)
+
+2022-07-28 08:01:33 Erreur de syntaxe près de '(
+				ADD import_date date
+				)' à la ligne 1 [/sitiv/install.php]
+ALTER TABLE ve_index_delib(
+				ADD import_date date
+				)
+
+2022-07-28 08:01:33 Erreur de syntaxe près de '(
+				ADD import_date date
+				)' à la ligne 1 [/sitiv/install.php]
+ALTER TABLE co_index_delib(
+				ADD import_date date
+				)
+
+2022-07-28 08:01:33 Erreur de syntaxe près de '(
+				ADD import_date date
+				)' à la ligne 1 [/sitiv/install.php]
+ALTER TABLE gr_index_delib(
+				ADD import_date date
+				)
+
+2022-07-28 08:01:33 Erreur de syntaxe près de '(
+				ADD import_date date
+				)' à la ligne 1 [/sitiv/install.php]
+ALTER TABLE pi_index_delib(
+				ADD import_date date
+				)
+
+2022-07-28 08:01:33 Erreur de syntaxe près de '(
+				ADD import_date date
+				)' à la ligne 1 [/sitiv/install.php]
+ALTER TABLE ri_index_delib(
+				ADD import_date date
+				)
+
+2022-07-28 08:01:33 Erreur de syntaxe près de '(
+				ADD import_date date
+				)' à la ligne 1 [/sitiv/install.php]
+ALTER TABLE va_index_delib(
+				ADD import_date date
+				)
+
+2022-07-28 14:15:31 Erreur de syntaxe près de ''2022-07-28','PV','','0',"","",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','','0',"","",'2022-07-28');
+
+2022-07-28 14:17:26 Erreur de syntaxe près de ''2022-07-28','PV','','0',"","",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','','0',"","",'2022-07-28');
+
+2022-07-28 14:25:23 Erreur de syntaxe près de ''2022-07-28','PV','','0',"j","",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','','0',"j","",'2022-07-28');
+
+2022-07-28 14:25:37 Erreur de syntaxe près de ''2022-07-28','PV','','0',"j","",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','','0',"j","",'2022-07-28');
+
+2022-07-28 14:26:06 Erreur de syntaxe près de ''2022-07-28','PV','','0',"j","",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','','0',"j","",'2022-07-28');
+
+2022-07-28 14:26:15 Erreur de syntaxe près de ''2022-07-28','PV','','0',"j","",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','','0',"j","",'2022-07-28');
+
+2022-07-28 14:27:22 Erreur de syntaxe près de ''2022-07-28','PV','','0',"j","",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','','0',"j","",'2022-07-28');
+
+2022-07-28 14:34:26 Erreur de syntaxe près de ''2022-07-28','PV','','0','j',"",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','','0','j',"",'2022-07-28');
+
+2022-07-28 14:36:17 Erreur de syntaxe près de ''2022-07-28','PV','','0','g',"",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','','0','g',"",'2022-07-28');
+
+2022-07-28 14:43:08 Erreur de syntaxe près de ''2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:43:42 Erreur de syntaxe près de ''2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:45:02 Erreur de syntaxe près de ''2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:45:25 Erreur de syntaxe près de ''2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28')' à la ligne 1 [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:50:14 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',1,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:50:18 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',1,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:50:37 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',1,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:51:13 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',1,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:51:40 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',2,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:51:46 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',2,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:52:15 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',2,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:53:06 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',1,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:53:25 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',1,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:54:04 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',1,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:54:12 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',12,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:55:01 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',123,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:55:07 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',1234,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:55:48 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',1,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:55:55 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',159,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-07-28 14:56:02 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',159,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
