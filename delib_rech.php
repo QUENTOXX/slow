@@ -92,7 +92,7 @@
 	$sql="SELECT * FROM class";
 	$res=mysqli_query($link, $sql);
 	while ($row=mysqli_fetch_object($res)) {
-		echo "<option value='$row->class'>$row->class ".((strstr($row->class,".0")) ? "" : "&nbsp;&nbsp;&nbsp;").utf8_encode($row->nclass)."</option>";
+		echo "<option value='$row->class'>$row->class ".((strstr($row->class,".0")) ? "" : "&nbsp;&nbsp;&nbsp;").$row->nclass."</option>";
 	}
 	echo "</select>";
 
@@ -234,7 +234,6 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 		foreach($pref_tab_all as $ville => $pref){
 
 			$insee=$insee_all[$ville];
-
 			$sql="SELECT * FROM ".$pref."index_delib WHERE insee='$insee' $w $d ORDER BY import_date DESC";
 			$res=mysqli_query($link, $sql);
 			//echo $sql;
@@ -245,7 +244,8 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 				echo "<td>$row->del_date</td>"; //date ajout
 				echo "<td>$row->num</td>"; // numéro
 				echo "<td>$row->code</td>"; //class (code)
-				echo "<td>".utf8_encode($row->obj)."</td>"; //objet
+				echo "<td>$row->obj</td>"; //objet
+//				echo "<td>".utf8_encode($row->obj)."</td>"; //objet
 				echo "<td>$ville </td>";
 				echo "<td>";
 				//piece jointe
@@ -269,7 +269,7 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 		echo $sql;
 		var_dump("$sql");
 		var_dump("SELECT * FROM gi_index_delib WHERE insee='WDGIVORS' AND nature= 'Délibérations' ORDER BY del_date DESC");
-
+		var_dump($res);
 		echo '<table id="delib" class="display compact" cellspacing="0" width="100%">';
 		echo "<thead><tr><th>Date de décision</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Etablissement</th><th>Pièces jointes</th><th>Date d'affichage</th></tr></thead>"; //debut
 		echo "<tfoot><tr><th>Date de décision</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Etablissement</th><th>Pièces jointes</th><th>Date d'affichage</th></tr></tfoot>"; //fin

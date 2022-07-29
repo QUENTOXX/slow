@@ -35,7 +35,7 @@
 
 			echo '<br>Création de la table '.$pref.'index_delib';
 		} else {
-			//exe("ALTER TABLE ".$pref."index_delib ADD import_date date");
+			exe("ALTER TABLE ".$pref."index_delib ADD import_date date");
 			echo '<div class="info info-vert">✔️ La table <b>'.$pref.'index_delib</b> existe déjà</div>';
 		}
 	}
