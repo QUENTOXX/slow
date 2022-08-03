@@ -260,6 +260,8 @@ function load($insee, $pref_tab) {
 /*******************************/
 function go_curl($user, $api, $nfich='') {
 
+	require_once "params.php";
+
 	echo "<br><i class='cl-bleu'>API : $api</i>";
 
 	$data = array('api' => '1'); // Laisser à 1
@@ -295,7 +297,6 @@ function go_curl($user, $api, $nfich='') {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_HTTPGET, 1);
 
-  $proxyadd="http://192.168.76.3:3128";
 	if (isset($proxyadd)) {
 		curl_setopt($ch, CURLOPT_PROXY, $proxyadd);
 		echo "proxy set ".$proxyadd;
