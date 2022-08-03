@@ -115,7 +115,7 @@ if ($insee == "all") { // a modif pour toute villes
 				echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
 				$insee=$row->insee;
 				$user_delib=$row;
-				load($insee, $pref); // Lance la récupération des actes
+				load($insee, $pref, $proxyadd); // Lance la récupération des actes
 			}
 		}
 	}
@@ -140,7 +140,7 @@ if ($insee == "all") { // a modif pour toute villes
 					echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
 					$insee=$row->insee;
 					$user_delib=$row;
-					load($insee,$pref_tab_all[key($insee_all)]); // Lance la récupération des actes
+					load($insee,$pref_tab_all[key($insee_all)], $proxyadd); // Lance la récupération des actes
 				}
 			}
 			break;
@@ -154,7 +154,7 @@ if ($insee == "all") { // a modif pour toute villes
 /**************************/
 /* Récupération des actes */
 /**************************/
-function load($insee, $pref_tab) {
+function load($insee, $pref_tab, $proxyadd) {
 
 	$nb_load=0;
 
