@@ -260,6 +260,8 @@ function load($insee, $pref_tab) {
 /*******************************/
 function go_curl($user, $api, $nfich='') {
 
+	echo "test ".$proxy;
+
 	echo "<br><i class='cl-bleu'>API : $api</i>";
 
 	$data = array('api' => '1'); // Laisser à 1
