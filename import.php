@@ -295,6 +295,7 @@ function go_curl($user, $api, $nfich='') {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_HTTPGET, 1);
 
+  $proxyadd="http://192.168.76.3:3128";
 	if (isset($proxyadd)) {
 		curl_setopt($ch, CURLOPT_PROXY, $proxy);
 		echo "proxy set ".$proxyadd;
