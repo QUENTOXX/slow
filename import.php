@@ -179,7 +179,7 @@ function load($insee, $pref_tab) {
 
 	echo '<hr>';
 	// Liste des actes de la commune
-	$json=go_curl($insee, URL."modules/actes/api/list_actes.php?status_id=4&nature=2&offset=".$_GET['offset']."&limit=".$limit); // OK
+	$json=go_curl($insee, URL."modules/actes/api/list_actes.php?status_id=4&nature=2&offset=".$_GET['offset']."&limit=".$limit, $proxyadd); // OK
 	if ($json!='') {
 		echo "json: $json";
 		$json=json_decode($json);
@@ -191,7 +191,7 @@ function load($insee, $pref_tab) {
 				if (!in_array($t->id,$vu)) { // Vérifie si l'acte est déjà récupéré à partir du fichier vu.txt
 					$nb_load++;
 					// Récupération des PJ
-					$list_doc=go_curl($insee, URL."modules/actes/actes_transac_get_files_list.php?transaction=".$t->id);
+					$list_doc=go_curl($insee, URL."modules/actes/actes_transac_get_files_list.php?transaction=".$t->id, $proxyadd);
 					if ($list_doc!='') {
 						$list_fich="";
 						$list=json_decode($list_doc);
@@ -202,7 +202,7 @@ function load($insee, $pref_tab) {
 								$nomf=substr($d->name,0,-4)."__".uniqid().".pdf";
 								$list_fich.=$nomf."|";
 								// Récupération du fichier
-								go_curl($insee, URL."modules/actes/actes_download_file.php?tampon=true&file=".$d->id, $nomf);
+								go_curl($insee, URL."modules/actes/actes_download_file.php?tampon=true&file=".$d->id, $nomf, $proxyadd);
 							}
 						}
 						$nat=str_replace($GLOBALS['old_nature'], $GLOBALS['new_nature'], $t->nature_descr);
@@ -258,9 +258,7 @@ function load($insee, $pref_tab) {
 /*******************************/
 /* Lance une requête sur S2low */
 /*******************************/
-function go_curl($user, $api, $nfich='') {
-
-	require_once "params.php";
+function go_curl($user, $api, $nfich='', $proxyadd) {
 
 	echo "<br><i class='cl-bleu'>API : $api</i>";
 
