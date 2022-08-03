@@ -297,6 +297,7 @@ function go_curl($user, $api, $nfich='') {
 
 	if (isset($proxy)) {
 		curl_setopt($ch, CURLOPT_PROXY, $proxy);
+		echo "proxy set ".$proxy;
 		if (isset($proxyauth)) {
 			curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 		}
