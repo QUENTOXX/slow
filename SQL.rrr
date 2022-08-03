@@ -148,3 +148,270 @@ INSERT INTO gi_index_delib VALUES('WDGIVORS',159,'2022-07-28','PV','quentin8','0
 
 2022-07-28 14:56:02 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/sitiv/depot.php]
 INSERT INTO gi_index_delib VALUES('WDGIVORS',159,'2022-07-28','PV','quentin8','0','jarivepo',"",'2022-07-28');
+
+2022-08-01 09:07:44 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-01','PV','quentin8','0','jarivepo',"",'2022-08-01');
+
+2022-08-01 09:08:22 Duplicata du champ 'WDGIVORS-quentin8' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-01','PV','quentin8','0','jarivepo',"",'2022-08-01');
+
+2022-08-01 09:33:11 Duplicata du champ 'WDGIVORS-' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-01','Déliberations','','0','test délib',"",'2022-08-01');
+
+2022-08-01 14:33:48 Duplicata du champ 'WDGIVORS-7' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-01','PV','7','0','test fichier',"Stage - Guide méthodologique.pd",'2022-08-01');
+
+2022-08-01 14:35:32 Duplicata du champ 'WDGIVORS-7' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-01','PV','7','0','test fichier',"Stage - Guide méthodologique.pd",'2022-08-01');
+
+2022-08-02 07:54:22 Duplicata du champ 'WDGIVORS-7' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-02','PV','7','0','test fichier',"Stage - Guide méthodologique.pd",'2022-08-02');
+
+2022-08-02 08:33:26 La table 'publis2low.index_delib' n'existe pas [/depot.php]
+INSERT INTO index_delib VALUES('test',0,'2022-08-02','Actes réglementaires','quentin8','0','j',"slow.drawio.pdf",'2022-08-02');
+
+2022-08-02 09:02:39 Duplicata du champ 'WDGIVORS-5' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-02','Documents budgétaires et financiers','5','0','test fichier',"",'2022-08-02');
+
+2022-08-02 09:03:19 Duplicata du champ 'WDGIVORS-5' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-02','Documents budgétaires et financiers','5','0','test fichier',"",'2022-08-02');
+
+2022-08-02 09:03:47 Duplicata du champ 'WDGIVORS-5' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-02','Documents budgétaires et financiers','5','0','test fichier',"",'2022-08-02');
+
+2022-08-02 11:56:48 Duplicata du champ 'WDGIVORS-5' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-02','Documents budgétaires et financiers','5','0','test fichier',"",'2022-08-02');
+
+2022-08-02 11:57:31 Duplicata du champ 'WDGIVORS-5' pour la clef 'insee_num' [/depot.php]
+INSERT INTO gi_index_delib VALUES('WDGIVORS',0,'2022-08-02','Documents budgétaires et financiers','5','0','test fichier',"",'2022-08-02');
+
+2022-08-02 13:17:33 La table 'publis2low.index_delib' n'existe pas [/depot.php]
+INSERT INTO index_delib VALUES('',0,'2022-08-02','PV','2','0','test con',"",'2022-08-02');
+
+2022-08-02 13:18:46 La table 'publis2low.index_delib' n'existe pas [/depot.php]
+INSERT INTO index_delib VALUES('',0,'2022-08-02','PV','2','0','test con',"",'2022-08-02');
+
+2022-08-02 13:19:12 La table 'publis2low.index_delib' n'existe pas [/depot.php]
+INSERT INTO index_delib VALUES('',0,'2022-08-02','PV','2','0','test con',"",'2022-08-02');
+
+2022-08-02 13:22:14 La table 'publis2low.index_delib' n'existe pas [/depot.php]
+INSERT INTO index_delib VALUES('',0,'2022-08-02','PV','2','0','test con',"",'2022-08-02');
+
+2022-08-02 13:22:44 La table 'publis2low.index_delib' n'existe pas [/depot.php]
+INSERT INTO index_delib VALUES('',0,'2022-08-02','PV','2','0','test con',"",'2022-08-02');
+
+2022-08-02 13:24:59 La table 'publis2low.index_delib' n'existe pas [/depot.php]
+INSERT INTO index_delib VALUES('',0,'2022-08-02','PV','2','0','test con',"",'2022-08-02');
+
+2022-08-02 13:28:05 La table 'publis2low.index_delib' n'existe pas [/depot.php]
+INSERT INTO index_delib VALUES('',0,'2022-08-02','PV','2','0','test con',"",'2022-08-02');
+
+2022-08-02 14:25:43 Field 'mels_notif_conf' doesn't have a default value [/login.php]
+INSERT INTO gi_user (insee, actif, mels_notif, mdp, siren) VALUES ('WDGIVORS', '1', 'moi@test.com', 'bo7DIPGbLyOlU', '216900910')
+
+2022-08-02 14:26:00 Field 'mels_notif_conf' doesn't have a default value [/login.php]
+INSERT INTO gi_user (insee, actif, mels_notif, mdp, siren) VALUES ('WDGIVORS', '1', 'moi@test.com', 'bo7DIPGbLyOlU', '216900910')
+
+2022-08-02 14:27:25 Field 'mels_notif_conf' doesn't have a default value [/login.php]
+INSERT INTO gi_user (insee, actif, mels_notif, mdp, siren) VALUES ('WDGIVORS', '1', 'moi@test.com', 'bo7DIPGbLyOlU', '216900910')
+
+2022-08-02 14:29:45 Field 'mels_notif_conf' doesn't have a default value [/login.php]
+INSERT INTO gi_user (insee, actif, mels_notif, mdp, siren) VALUES ('WDGIVORS', '1', 'moi@test.com', 'bo7DIPGbLyOlU', '216900910')
+
+2022-08-02 14:29:48 Field 'mels_notif_conf' doesn't have a default value [/login.php]
+INSERT INTO gi_user (insee, actif, mels_notif, mdp, siren) VALUES ('WDGIVORS', '1', 'moi@test.com', 'bo7DIPGbLyOlU', '216900910')
+
+2022-08-02 14:31:04 Field 'mels_notif_conf' doesn't have a default value [/login.php]
+INSERT INTO gi_user (insee, actif, mels_notif, mdp, siren) VALUES ('WDGIVORS', '1', 'moi@test.com', 'bo7DIPGbLyOlU', '216900910')
+
+2022-08-02 14:31:58 Field 'mels_notif_conf' doesn't have a default value [/login.php]
+INSERT INTO gi_user (insee, actif, mels_notif, mdp, siren) VALUES ('WDGIVORS', 1, 'moi@test.com', 'bo7DIPGbLyOlU', '216900910')
+
+2022-08-02 14:33:13 Field 'mels_notif_conf' doesn't have a default value [/login.php]
+INSERT INTO gi_user (insee, actif, mels_notif, mdp, siren) VALUES ('WDGIVORS', 1, 'moi@test.com', 'bo7DIPGbLyOlU', '216900910');
+
+2022-08-02 14:33:20 Field 'mels_notif_conf' doesn't have a default value [/login.php]
+INSERT INTO gi_user (insee, actif, mels_notif, mdp, siren) VALUES ('WDGIVORS', 1, 'moi@test.com', 'bo7DIPGbLyOlU', '216900910')
+
+2022-08-02 14:34:58 Field 'mels_notif_conf' doesn't have a default value [/login.php]
+INSERT INTO gi_user (insee, actif, mels_notif, mdp, siren) VALUES ('WDGIVORS', 1, 'moi@test.com', 'bo7DIPGbLyOlU', '216900910');
+
+2022-08-02 14:44:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE KEY insee_num (insee,mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-02 14:44:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE KEY insee_num (insee,mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-02 14:44:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE KEY insee_num (insee,mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-02 14:44:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE KEY insee_num (insee,mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-02 14:44:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE KEY insee_num (insee,mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-02 14:44:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE KEY insee_num (insee,mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-02 14:44:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE KEY insee_num (insee,mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-02 14:44:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE KEY insee_num (insee,mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-02 14:44:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE KEY insee_num (insee,mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-02 14:44:47 Table 'publis2low.gi_user' inconnue [/install.php]
+DROP TABLE gi_user
+
+2022-08-02 14:44:47 Table 'publis2low.rs_user' inconnue [/install.php]
+DROP TABLE rs_user
+
+2022-08-02 14:44:47 Table 'publis2low.sc_user' inconnue [/install.php]
+DROP TABLE sc_user
+
+2022-08-02 14:44:47 Table 'publis2low.ve_user' inconnue [/install.php]
+DROP TABLE ve_user
+
+2022-08-02 14:44:47 Table 'publis2low.co_user' inconnue [/install.php]
+DROP TABLE co_user
+
+2022-08-02 14:44:47 Table 'publis2low.gr_user' inconnue [/install.php]
+DROP TABLE gr_user
+
+2022-08-02 14:44:47 Table 'publis2low.pi_user' inconnue [/install.php]
+DROP TABLE pi_user
+
+2022-08-02 14:44:47 Table 'publis2low.ri_user' inconnue [/install.php]
+DROP TABLE ri_user
+
+2022-08-02 14:44:47 Table 'publis2low.va_user' inconnue [/install.php]
+DROP TABLE va_user
+
+2022-08-03 07:33:25 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi@test.com', '', 'a3bf200ff02e9c41fd27da11d0f09d0a', '216900910');
+
+2022-08-03 07:33:31 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi@test.com', '', 'a3bf200ff02e9c41fd27da11d0f09d0a', '216900910');
+
+2022-08-03 08:51:11 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi2@test.com', '', '8bd926edfcd5ad25a386953d131f6766', '216900910');
+
+2022-08-03 08:56:32 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi2@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:01:21 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi2@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:01:49 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi2@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:03:41 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi2@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:07:02 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi2@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:08:46 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi2@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:09:42 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi2@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:11:06 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moideux@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:19:13 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moideux@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:21:30 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 2, 'moideux@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:24:05 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moideux@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:25:44 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moideux@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910')
+
+2022-08-03 09:25:53 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moideux@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:31:25 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moideux@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-03 09:31:44 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moideux@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');

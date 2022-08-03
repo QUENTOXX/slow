@@ -157,6 +157,7 @@
 			echo "<option value=decis>Décisions</option>";
 			echo "<option value=arret>Arrêtés</option>";
 			echo "<option value=docbf>Documents budgétaires et financiers</option>";
+			echo "<option value=pv>PV</option>";
 			echo "<option value=Toutes>Toutes</option>";
 
 			echo "</select>";
@@ -171,10 +172,13 @@
 							$w="AND nature= 'Autres'";
 							break;
 						case "arret":
-							$w="AND nature= 'Actes reglementaires'";
+							$w="AND nature= 'Actes réglementaires'";
 							break;
 						case "docbf":
 							$w="AND nature= 'Documents budgétaires et financiers'";
+							break;
+						case "pv":
+							$w="AND nature= 'PV'";
 							break;
 
 						default:
@@ -266,10 +270,10 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 		//$sql="SELECT * FROM gi_index_delib WHERE insee='WDGIVORS' AND nature= 'Délibérations'";
 		$sql="SELECT * FROM ".$pref_tab_all[$_GET['Villes']]."index_delib WHERE insee='$insee' $w $d"."ORDER BY import_date DESC";
 		$res=mysqli_query($link, $sql);
-		echo $sql;
-		var_dump("$sql");
-		var_dump("SELECT * FROM gi_index_delib WHERE insee='WDGIVORS' AND nature= 'Délibérations' ORDER BY del_date DESC");
-		var_dump($res);
+		//echo $sql;
+		//var_dump("$sql");
+		//var_dump("SELECT * FROM gi_index_delib WHERE insee='WDGIVORS' AND nature= 'Délibérations' ORDER BY del_date DESC");
+		//var_dump($res);
 		echo '<table id="delib" class="display compact" cellspacing="0" width="100%">';
 		echo "<thead><tr><th>Date de décision</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Etablissement</th><th>Pièces jointes</th><th>Date d'affichage</th></tr></thead>"; //debut
 		echo "<tfoot><tr><th>Date de décision</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Etablissement</th><th>Pièces jointes</th><th>Date d'affichage</th></tr></tfoot>"; //fin
@@ -280,7 +284,7 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 			echo "<td>$row->del_date</td>"; //date ajout
 			echo "<td>$row->num</td>"; // numéro
 			echo "<td>$row->code</td>"; //class (code)
-			echo "<td>".utf8_encode($row->obj)."</td>"; //objet
+			echo "<td>$row->obj</td>"; //objet
 			echo "<td>".$_GET['Villes']."</td>";
 			echo "<td>";
 			//piece jointe

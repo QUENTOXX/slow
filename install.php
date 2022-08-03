@@ -21,21 +21,22 @@
 		if (!tab_exist($pref.'index_delib')) {
 			// Création de la table contenant la liste des actes
 			exe("CREATE TABLE ".$pref."index_delib (
-				insee varchar(100) COLLATE utf8_bin NOT NULL,
+				insee varchar(100) COLLATE utf8_unicode_ci NOT NULL,
 				id int(11) NOT NULL,
 				del_date date NOT NULL,
-				nature varchar(50) COLLATE utf8_bin NOT NULL,
-				num varchar(20) COLLATE utf8_bin NOT NULL,
-				code char(20) COLLATE utf8_bin NOT NULL,
-				obj text COLLATE utf8_bin NOT NULL,
-				pj mediumtext COLLATE utf8_bin NOT NULL,
+				nature varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+				num varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+				code char(20) COLLATE utf8_unicode_ci NOT NULL,
+				obj text COLLATE utf8_unicode_ci NOT NULL,
+				pj mediumtext COLLATE utf8_unicode_ci NOT NULL,
 				import_date date,
 				UNIQUE KEY insee_num (insee,num)
-			) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;");
+			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=;");
 
 			echo '<br>Création de la table '.$pref.'index_delib';
 		} else {
-			exe("ALTER TABLE ".$pref."index_delib ADD import_date date");
+			//exe("ALTER TABLE ".$pref."index_delib ADD import_date date");
+
 			echo '<div class="info info-vert">✔️ La table <b>'.$pref.'index_delib</b> existe déjà</div>';
 		}
 	}
@@ -47,7 +48,7 @@
 			class char(6) NOT NULL,
 			nclass varchar(100) NOT NULL,
 			UNIQUE KEY class (class)
-		) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;");
+		) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
 		echo '<br>Création de la table class';
 
 		// Classification
@@ -123,21 +124,24 @@
 	}
 
 	foreach ($pref_tab_all as $ville => $pref) {
-
+			//exe("DROP TABLE ".$pref."user");
 			if (!tab_exist($pref.'user')) {
 				// Création de la table utilisateur
 				exe("CREATE TABLE ".$pref."user (
 					insee varchar(100) NOT NULL,
 					actif int(1) NOT NULL,
-					mels_notif text COLLATE utf8_bin NOT NULL,
-					mels_notif_conf text COLLATE utf8_bin NOT NULL
-				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;");
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE KEY insee_siren (insee,siren)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
 				echo '<br>Création de la table '.$pref.'user';
 
 					// Exemple de données utilisateurs
-					exe("INSERT INTO ".$pref."user (insee, actif, mels_notif, mels_notif_conf) VALUES
+					/*exe("INSERT INTO ".$pref."user (insee, actif, mels_notif, mels_notif_conf) VALUES
 					(57999,	1,	'mel1@domaine.fr,mel2@domaine.fr,mel3@domaine.fr',	''),
-					(57777,	1,	'mel1@domaine.fr',	'');");
+					(57777,	1,	'mel1@domaine.fr',	'');");*/
 				}	else {
 					echo '<div class="info info-vert">✔️ La table <b>'.$pref.'user</b> existe déjà</div>';
 				}
@@ -158,7 +162,7 @@
 	// A faire
 	echo '<br><hr><br>A faire sur votre hébergement :';
 	echo '<li> Ajouter la tâche cron du script <i class="cl-bleu">'.dirname(__FILE__).'/import.php</i> dans votre hébergement</li>';
-	echo '<li> Editer la table <b class="cl-bleu">'.$pref_tab.'user</b> pour ajouter des utilisateurs (=communes)</li>';
+//	echo '<li> Editer la table <b class="cl-bleu">'.$pref_tab.'user</b> pour ajouter des utilisateurs (=communes)</li>';
 
 
 

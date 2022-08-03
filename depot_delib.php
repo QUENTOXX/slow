@@ -16,25 +16,102 @@
 
   echo "<h2>Dépot des actes</h2>";
 
+	//$user = array('nicolas@gmail.com' => 12345, 'idiotduvillage' => "4567",'ptdrtki' => "7894");
+
+	if (isset($_POST['check'])) {
+
+			$login = isset($_POST['login']) ? $_POST['login'] : "";
+			$mdp = isset($_POST['mdp']) ? $_POST['mdp'] : "";
+
+			$erreurs ="";
+
+			if (empty($login)) {
+					$erreurs .= "le mail doit etre renseigner !! <br>";
+			}
+			if (empty($mdp)) {
+					$erreurs .= "le mot de passe doit etre renseigner !! <br>";
+			}else{
+					foreach ($pref_tab_all as $ville => $pref) {
+						$sql = "SELECT * FROM ".$pref."user";
+						$req=mysqli_query($link, $sql);
+						//var_dump($req);
+
+						//$res = $req->fetchALL();
+						//var_dump($res);
+						foreach ($req as $user) {
+							if ($login != $user['mels_notif'] || !hash_equals($user['mdp'], md5(crypt($mdp, $salt)))) {
+
+									$erreurs ="";
+									$erreurs .= "pseudo ou mot de passe incorect !! <br>";
+							}else {
+									$siren= $user['siren'];
+									$erreurs= "";
+									break;
+							}
+						}
+			}
+
+			}
+	}else {
+		header("Location: login.php");
+	}
+
 ?>
-// apres connection rajouter id en value de name insee
+<?php
 
-  <form name="depot" action="depot.php" method="post">
+	if (empty($erreurs)) {
 
-    <p>Rentrer un ID : <input type="number" name="id" placeholder="EX : 789456"/> </p>
-    <p>Rentrer la date de décision : <input type="date" name="date_deci" value="<?php echo date('Y-m-d'); ?>" /> </p>
-    <label>Séléctionner sa Nature : </label>
-    <select id="nature" name="nature" onchange="check_value()">
-      <option selected value="PV">PV</option>
-      <option value="Deliberations">Délibération</option>
-    </select>
-    <p>Rentrer un numéro : <input type="text" name="num" placeholder="EX : PV202274Q"/> </p>
-    <p>Rentrer un objet : <input type="text" name="obj" placeholder=" objet : obligatoire"/> </p>
-    <label>Joindre un ou plusieurs PDF : </label>
-    <input type="file" id="pj" name="pj" accept="application/pdf" multiple >
-    <br><br>
-    <input type="submit" name="submit" value="Déposer"/>
-  </form>
+	?>
+	<div id="okay">
+			<?php
+					echo("Bienvenue $login");
+			?>
+	</div>
+
+	<form name="depot" action="depot.php" method="post" enctype="multipart/form-data">
+
+		<?php
+    	echo '<input type="hidden" name="siren" value="' . htmlspecialchars($siren) . '" />'."\n";
+		?>
+		<p>Rentrer la date de décision : <input type="date" name="date_deci" value="<?php echo date('Y-m-d'); ?>" /> </p>
+		<label>Séléctionner sa Nature : </label>
+		<select id="nature" name="nature">
+			<option selected value="PV">PV</option>
+			<option value="Déliberations">Délibération</option>
+			<option value="Autres">Décisions</option>
+			<option value="Actes réglementaires">Arrétés</option>
+			<option value="Documents budgétaires et financiers">Documents budgétaires et financiers</option>
+		</select>
+		<p>Rentrer un numéro : <input type="text" name="num" placeholder="EX : PV202274Q"/> Le numéro est obligatoire et doit être non existant </p>
+		<p>Rentrer une description : <input type="text" name="obj" placeholder=" Objet : obligatoire"/> </p>
+		<label>Joindre un ou plusieurs PDF : </label>
+		<input type="file" id="pj" name="pj[]" accept="application/pdf" multiple >
+		<br><br>
+		<input type="submit" name="submit" value="Déposer"/>
+	</form>
+
+	<?php
+	}
+
+	?>
+
+	<?php
+
+	if (!empty($erreurs)) {
+
+	?>
+	<div id="erreurs">
+			<?= $erreurs; ?>
+	</div>
+	<p> Retour à la connection </p>
+	<form method="post" action="depot_delib.php">
+	<input type="submit" name="retour" value="OK" />
+	</form>
+
+	<?php
+	}
+
+?>
 
 
 <?php
