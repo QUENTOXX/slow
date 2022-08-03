@@ -295,6 +295,13 @@ function go_curl($user, $api, $nfich='') {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_HTTPGET, 1);
 
+	if (isset($proxy)) {
+		curl_setopt($ch, CURLOPT_PROXY, $proxy);
+		if (isset($proxyauth)) {
+			curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+		}
+	}
+
 	$curl_return = curl_exec($ch);
 
 	if ($curl_return === false) {
