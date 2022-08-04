@@ -415,3 +415,618 @@ INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moideux@test.com', '', 'fc13c9dd0a3d
 
 2022-08-03 09:31:44 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
 INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moideux@test.com', '', 'fc13c9dd0a3d91acb3c527038021cdd5', '216900910');
+
+2022-08-04 13:54:31 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7869073,'2022-07-28','Autres','DM2022_028','1.7.7',"Protocole transactionnel entre la commune et monsieur Mebarki","99_AU-069-216900910-20220728-DM2022_028-AU-1-1_1__62ebcf92d1a4e.pdf|99_AU-069-216900910-20220728-DM2022_028-AU-1-1_2__62ebcf947a034.pdf|99_AU-069-216900910-20220728-DM2022_028-AU-1-1_3__62ebcf958ea9c.pdf");
+
+2022-08-04 13:54:34 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7869072,'2022-08-03','Actes réglementaires','AR2022_503','1.2.12',"AUTORISATION DE TRAVAUX D'UN ÉTABLISSEMENT RECEVANT DU PUBLIC - FADY'S FOOD","99_AR-069-216900910-20220803-AR2022_503-AR-1-1_1__62ebcf97df101.pdf|99_AR-069-216900910-20220803-AR2022_503-AR-1-1_2__62ebcf9957a11.pdf");
+
+2022-08-04 13:54:36 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7864528,'2022-07-29','Actes réglementaires','AR2022_502','6.1.1',"AUTORISATION DE TRAVAUX D'UN ÉTABLISSEMENT RECEVANT DU PUBLIC - MC DONALD CENTRE COMMERCIAL 2 VALLÉES ","99_AR-069-216900910-20220729-AR2022_502-AR-1-1_1__62ebcf9b4458b.pdf");
+
+2022-08-04 13:54:39 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7864527,'2022-07-29','Actes réglementaires','AR2022_501','6.1.1',"AUTORISATION DE TRAVAUX D'UN ÉTABLISSEMENT RECEVANT DU PUBLIC - LYCÉE DANIELLE CASANOVA ","99_AR-069-216900910-20220729-AR2022_501-AR-1-1_1__62ebcf9d6873d.pdf|99_AR-069-216900910-20220729-AR2022_501-AR-1-1_2__62ebcf9ea86cb.pdf");
+
+2022-08-04 13:54:41 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7864526,'2022-07-29','Actes réglementaires','AR2022_500','6.1.1',"AUTORISATION DE TRAVAUX D'UN ÉTABLISSEMENT RECEVANT DU PUBLIC - AA GIVORS OPTIQUE - ALAIN AFFLELOU","99_AR-069-216900910-20220729-AR2022_500-AR-1-1_1__62ebcfa092889.pdf");
+
+2022-08-04 13:54:45 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7864524,'2022-07-29','Actes réglementaires','AR2022_499','6.1.1',"AUTORISATION DE TRAVAUX D'UN ÉTABLISSEMENT RECEVANT DU PUBLIC - BLEU LIBELLULE HUB GIVORS","99_AR-069-216900910-20220729-AR2022_499-AR-1-1_1__62ebcfa277619.pdf|99_AR-069-216900910-20220729-AR2022_499-AR-1-1_2__62ebcfa3c98dc.pdf");
+
+2022-08-04 13:54:48 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7864220,'2022-07-29','Autres','DM2022_029','1.7.7',"ACCEPTATION D?UNE INDEMNITE DE SINISTRE ? INCENDIE SALLE DE MUSCULATION LCR JEAN MOULIN","99_AU-069-216900910-20220729-DM2022_029-AU-1-1_1__62ebcfa5e8baf.pdf|99_AU-069-216900910-20220729-DM2022_029-AU-1-1_2__62ebcfa74556d.pdf");
+
+2022-08-04 13:54:52 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7863982,'2022-07-27','Autres','DM2022_026','3.3',"CONVENTION DE RÉSILIATION AMIABLE DU BAIL AVEC LA POSTE","99_AU-069-216900910-20220727-DM2022_026-AU-1-1_1__62ebcfa994e31.pdf|99_AU-069-216900910-20220727-DM2022_026-AU-1-1_2__62ebcfab22c4c.pdf");
+
+2022-08-04 13:54:56 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7848447,'2022-07-27','Autres','DM2022_027','1.7.7',"Protocole transactionnel entre la commune et madame Khadija Mouchfi","99_AU-069-216900910-20220727-DM2022_027-AU-1-1_1__62ebcfad85b99.pdf|99_SE-069-216900910-20220727-DM2022_027-AU-1-1_2__62ebcfaf53a66.pdf");
+
+2022-08-04 13:54:58 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7840823,'2022-07-22','Autres','DM2022_025','5.8',"DECISION D'ESTER EN JUSTICE DEVANT LE TRIBUNAL ADMINISTRATIF DE LYON - RECOURS DE MONSIEUR TOUAMI- AFFAIRE 2205180","99_AU-069-216900910-20220722-DM2022_025-AU-1-1_1__62ebcfb1b5660.pdf");
+
+2022-08-04 13:55:01 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7816638,'2022-07-18','Actes réglementaires','AR2022_486','6.4',"Permis de détention d'un chien de 2ème catégorie","99_AR-069-216900910-20220718-AR2022_486-AR-1-1_1__62ebcfb3aa015.pdf");
+
+2022-08-04 13:55:04 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7816620,'2022-07-11','Autres','DM2022_023','7.10',"ACCEPTATION D?UNE INDEMNITE DE SINISTRE ? BRIS DE GLACE VEHICULE EZ006LR AVRIL 2022","99_AU-069-216900910-20220711-DM2022_023-AU-1-1_1__62ebcfb6414a3.pdf");
+
+2022-08-04 13:55:07 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7816618,'2022-07-11','Autres','DM2022_024','5.8',"Décision d'ester en justice devant le tribunal administratif de Lyon - Recours de madame TOUATI - Affaire 2205181","99_AU-069-216900910-20220711-DM2022_024-AU-1-1_1__62ebcfb930788.pdf");
+
+2022-08-04 13:55:10 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7785730,'2022-07-07','Actes réglementaires','AR2022_468','6.4.2',"Interdiction de la vente d'alcool à emporter, de la consommation d'alcool sur la voie publique, de la vente de toute boisson dans des récipients en verre, de détenir toute boisson dans des récipients en verre sur la voie publique, de la présence de chiens classés en 1er et 2ème catégories sur des secteurs déterminés, de la vente de pétard, fusées et feux d'artifices, de l'usage de pétard, fusées et feux d'artifices sur la voie publique, de la vente de carburant en récipient.","99_AR-069-216900910-20220707-AR2022_468-AR-1-1_1__62ebcfbc320a7.pdf");
+
+2022-08-04 13:55:12 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7785729,'2022-07-07','Actes réglementaires','AR2022_471','6.4',"Arrêté temporaire - portant sur autorisation de vente au déballage","99_AR-069-216900910-20220707-AR2022_471-AR-1-1_1__62ebcfbf375ae.pdf");
+
+2022-08-04 13:55:17 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7772713,'2022-07-05','Autres','DM2022_022','1.5',"Protocole transactionnel entre la commune et monsieur Jean-François Puggioni","99_AU-069-216900910-20220705-DM2022_022-AU-1-1_1__62ebcfc18bb73.pdf|99_AU-069-216900910-20220705-DM2022_022-AU-1-1_2__62ebcfc2d623c.pdf|99_AU-069-216900910-20220705-DM2022_022-AU-1-1_3__62ebcfc41615e.pdf");
+
+2022-08-04 13:55:20 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7772658,'2022-07-06','Actes réglementaires','AR2022_465','3.3',"Arrêté individuel mettant fin à l'occupation d'un logement de fonction avec astreinte","99_AR-069-216900910-20220706-AR2022_465-AR-1-1_1__62ebcfc6607c8.pdf");
+
+2022-08-04 13:55:22 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7772657,'2022-07-06','Actes réglementaires','AR2022_464','5.4',"Arrêté portant désignation de la personne responsable de l'accès aux documents administratifs et des questions relatives à la réutilisation des informations publiques (PRADA)","99_AR-069-216900910-20220706-AR2022_464-AR-1-1_1__62ebcfc906842.pdf");
+
+2022-08-04 13:55:24 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7772655,'2022-07-06','Actes réglementaires','AR2022_463','1.2.12',"Arrêté accordant la protection fonctionnelle à un fonctionnaire - Monsieur Brebion","99_AR-069-216900910-20220706-AR2022_463-AR-1-1_1__62ebcfcb2bc81.pdf");
+
+2022-08-04 13:55:26 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7767774,'2022-06-30','Actes réglementaires','AR2022_457','2.1',"Arrêté autorisation d'enseigne, CREPRY","99_AR-069-216900910-20220630-AR2022_457-AR-1-1_1__62ebcfcd8ffc9.pdf");
+
+2022-08-04 13:55:32 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7758537,'2022-06-09','Autres','DM2022_017','3.5',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A L'ASSOCIATION AMINE A TITRE GRACIEUX","99_AU-069-216900910-20220609-DM2022_017-AU-1-1_1__62ebcfcfba54a.pdf|99_AU-069-216900910-20220609-DM2022_017-AU-1-1_2__62ebcfd1d559f.pdf|99_SE-069-216900910-20220609-DM2022_017-AU-1-1_3__62ebcfd2a074f.pdf");
+
+2022-08-04 13:55:38 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7758536,'2022-06-09','Autres','DM2022_016','3.5',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A L'ASSOCIATION SPORTIVE NOTRE-DAME COLLEGE SAINT-THOMAS D'AQUIN A TITRE GRACIEUX","99_AU-069-216900910-20220609-DM2022_016-AU-1-1_1__62ebcfd61bfd9.pdf|99_AU-069-216900910-20220609-DM2022_016-AU-1-1_2__62ebcfd8c543e.pdf|99_AU-069-216900910-20220609-DM2022_016-AU-1-1_3__62ebcfd9c034e.pdf");
+
+2022-08-04 13:55:41 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7754774,'2022-07-05','Autres','DM2022_021','1.7.7',"ACCEPTATION D?UNE INDEMNITE DE SINISTRE ? DEGAT DES EAUX LOGEMENT 15B ROUTE D'ECHALAS","99_AU-069-216900910-20220705-DM2022_021-AU-1-1_1__62ebcfdb9d0e2.pdf");
+
+2022-08-04 13:55:43 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7741386,'2022-07-01','Autres','DM2022_020','7.1.4',"Tarification du centre nautique","99_AU-069-216900910-20220701-DM2022_020-AU-1-1_1__62ebcfddf22e4.pdf");
+
+2022-08-04 13:55:46 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7732172,'2022-06-30','Actes réglementaires','AR2022_456','6.4',"Arrêté relatif au placement en dépôt d'un chien dangereux","99_AR-069-216900910-20220630-AR2022_456-AR-1-1_1__62ebcfe0ae3a2.pdf");
+
+2022-08-04 13:55:48 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718732,'2022-06-23','Délibérations','DEL20220623_27','7.10.2',"Intégration de biens à l'actif de la ville suite au retrait du Syder transfert de biens au Sigerly suite au transfert de compétences","99_DE-069-216900910-20220623-DEL20220623_27-DE-1-1_1__62ebcfe30577f.pdf");
+
+2022-08-04 13:55:52 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718731,'2022-06-23','Délibérations','DEL20220623_25','1.5',"Conclusion d'un protocole transactionnel entre la commune et monsieur ABAD","99_DE-069-216900910-20220623-DEL20220623_25-DE-1-1_1__62ebcfe5cf3b2.pdf|99_DE-069-216900910-20220623-DEL20220623_25-DE-1-1_2__62ebcfe7903a4.pdf");
+
+2022-08-04 13:55:59 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718730,'2022-06-23','Délibérations','DEL20220623_18','8.2.8',"Règlement intérieur de l'accueil de loisirs jeunesse","99_DE-069-216900910-20220623-DEL20220623_18-DE-1-1_1__62ebcfea05cd3.pdf|99_DE-069-216900910-20220623-DEL20220623_18-DE-1-1_2__62ebcfedaf135.pdf");
+
+2022-08-04 13:56:01 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718729,'2022-06-23','Délibérations','DEL20220623_16','8.8',"Attribution d'une aide financière pour un composteur sur le budget 2022","99_DE-069-216900910-20220623-DEL20220623_16-DE-1-1_1__62ebcff011bfb.pdf");
+
+2022-08-04 13:56:04 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718728,'2022-06-23','Délibérations','DEL20220623_15','8.8',"Renouvellement du don d'arbres aux Givordins","99_DE-069-216900910-20220623-DEL20220623_15-DE-1-1_1__62ebcff234eba.pdf");
+
+2022-08-04 13:56:07 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718726,'2022-06-23','Délibérations','DEL20220623_31','4.2.2',"Véhicule de service avec autorisation de remisage à domicile","99_DE-069-216900910-20220623-DEL20220623_31-DE-1-1_1__62ebcff563210.pdf");
+
+2022-08-04 13:56:09 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718725,'2022-06-23','Délibérations','DEL20220623_33','4.1.1',"Tableau des emplois","99_DE-069-216900910-20220623-DEL20220623_33-DE-1-1_1__62ebcff834949.pdf");
+
+2022-08-04 13:56:12 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718724,'2022-06-23','Délibérations','DEL20220623_35','4.2.1',"Emplois non permanents","99_DE-069-216900910-20220623-DEL20220623_35-DE-1-1_1__62ebcffaaf857.pdf");
+
+2022-08-04 13:56:14 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718723,'2022-06-23','Délibérations','DEL20220623_34','8.6',"Création d'emplois d'apprentis","99_DE-069-216900910-20220623-DEL20220623_34-DE-1-1_1__62ebcffcd0771.pdf");
+
+2022-08-04 13:56:18 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718722,'2022-06-23','Délibérations','DEL20220623_32','4.1.2',"Débat sur la protection sociale complémentaire","99_DE-069-216900910-20220623-DEL20220623_32-DE-1-1_1__62ebcfff19f66.pdf|99_DE-069-216900910-20220623-DEL20220623_32-DE-1-1_2__62ebd0018359d.pdf");
+
+2022-08-04 13:56:23 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718721,'2022-06-23','Délibérations','DEL20220623_19','8.2.5',"Modification du règlement intérieur de l'ALSH La Rama","99_DE-069-216900910-20220623-DEL20220623_19-DE-1-1_1__62ebd0038be78.pdf|99_DE-069-216900910-20220623-DEL20220623_19-DE-1-1_2__62ebd00601313.pdf");
+
+2022-08-04 13:56:25 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718720,'2022-06-23','Délibérations','DEL20220623_11','8.1',"Ecole privée sous contrat d'association - Désignation de représentants par le conseil municipal","99_DE-069-216900910-20220623-DEL20220623_11-DE-1-1_1__62ebd00860ea3.pdf");
+
+2022-08-04 13:56:27 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718719,'2022-06-23','Délibérations','DEL20220623_10','8.1',"Subvention exceptionnelle au collège Paul Vallon","99_DE-069-216900910-20220623-DEL20220623_10-DE-1-1_1__62ebd00a7837a.pdf");
+
+2022-08-04 13:56:41 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718718,'2022-06-23','Délibérations','DEL20220623_5','7.10',"Participation financière au projet de pôle de santé porté par la SAGIM","99_DE-069-216900910-20220623-DEL20220623_5-DE-1-1_1__62ebd00c7b209.pdf|99_DE-069-216900910-20220623-DEL20220623_5-DE-1-1_2__62ebd0184ba50.pdf");
+
+2022-08-04 13:56:49 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718717,'2022-06-23','Délibérations','DEL20220623_6','8.5',"Autorisation de création d'une SAS par la SAGIM","99_DE-069-216900910-20220623-DEL20220623_6-DE-1-1_1__62ebd01a93910.pdf|99_DE-069-216900910-20220623-DEL20220623_6-DE-1-1_2__62ebd02035794.pdf");
+
+2022-08-04 13:56:54 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718716,'2022-06-23','Délibérations','DEL20220623_14','1.4.8',"Convention cadre de coopération pour la mise en ?uvre et le suivi d'une démarche d'achat socialement responsable avec la Maison Métropolitaine d'Insertion pour l'Emploi (MMIE)  ","99_DE-069-216900910-20220623-DEL20220623_14-DE-1-1_1__62ebd0224070e.pdf|99_DE-069-216900910-20220623-DEL20220623_14-DE-1-1_2__62ebd0250cb1f.pdf");
+
+2022-08-04 13:57:03 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718715,'2022-06-23','Délibérations','DEL20220623_20','3.3',"Actualisation du règlement intérieur des salles municipales","99_DE-069-216900910-20220623-DEL20220623_20-DE-1-1_1__62ebd02714a36.pdf|99_DE-069-216900910-20220623-DEL20220623_20-DE-1-1_2__62ebd02c2a908.pdf");
+
+2022-08-04 13:57:05 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718713,'2022-06-23','Délibérations','DEL20220623_26','7.1.1',"Décision Modificative n°1","99_DE-069-216900910-20220623-DEL20220623_26-DE-1-1_1__62ebd02fb76f3.pdf");
+
+2022-08-04 13:57:10 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718712,'2022-06-23','Délibérations','DEL20220623_9','2.3',"Acquisition par voie de préemption d'un immeuble sis 23 rue Roger Salengro","99_DE-069-216900910-20220623-DEL20220623_9-DE-1-1_1__62ebd031e86ce.pdf|99_DE-069-216900910-20220623-DEL20220623_9-DE-1-1_2__62ebd033f0298.pdf|99_DE-069-216900910-20220623-DEL20220623_9-DE-1-1_3__62ebd0356f06a.pdf");
+
+2022-08-04 13:57:16 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718711,'2022-06-23','Délibérations','DEL20220623_24','2.2',"Convention ADS Métropole","99_DE-069-216900910-20220623-DEL20220623_24-DE-1-1_1__62ebd0379cf13.pdf|99_DE-069-216900910-20220623-DEL20220623_24-DE-1-1_2__62ebd03b776c4.pdf");
+
+2022-08-04 13:57:26 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718710,'2022-06-23','Délibérations','DEL20220623_4','3.2',"Création d'un pôle santé par la SAGIM : cessions et servitudes","99_DE-069-216900910-20220623-DEL20220623_4-DE-1-1_1__62ebd03d36127.pdf");
+
+2022-08-04 13:57:29 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718709,'2022-06-23','Délibérations','DEL20220623_23','3.5',"Convention de servitude Enedis avenue Gagarine","99_DE-069-216900910-20220623-DEL20220623_23-DE-1-1_1__62ebd0474219b.pdf");
+
+2022-08-04 13:57:33 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718708,'2022-06-23','Délibérations','DEL20220623_22','3.2',"Régularisation de l'alignement sis 39 montée des Autrichiens","99_DE-069-216900910-20220623-DEL20220623_22-DE-1-1_1__62ebd04a269a8.pdf|99_DE-069-216900910-20220623-DEL20220623_22-DE-1-1_2__62ebd04c1898f.pdf");
+
+2022-08-04 13:57:35 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718707,'2022-06-23','Délibérations','DEL20220623_30','4.1',"Engagement de servir des policiers municipaux - modalités de remboursement du coût de la formation en cas de départ de l'agent","99_DE-069-216900910-20220623-DEL20220623_30-DE-1-1_1__62ebd04e3e2b8.pdf");
+
+2022-08-04 13:57:39 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718706,'2022-06-23','Délibérations','DEL20220623_13','8.5',"Convention de participation financière pour les actions de gestion sociale et urbaine de proximité (GSUP) 2022 avec la Métropole de Lyon","99_DE-069-216900910-20220623-DEL20220623_13-DE-1-1_1__62ebd05042df2.pdf|99_DE-069-216900910-20220623-DEL20220623_13-DE-1-1_2__62ebd0523d8c0.pdf");
+
+2022-08-04 13:57:43 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718705,'2022-06-23','Délibérations','DEL20220623_3','8.2.7',"Convention de collaboration partenariale relative au Conseil Local de Santé Mentale (CLSM)","99_DE-069-216900910-20220623-DEL20220623_3-DE-1-1_1__62ebd05471e1c.pdf|99_DE-069-216900910-20220623-DEL20220623_3-DE-1-1_2__62ebd0568e667.pdf");
+
+2022-08-04 13:57:46 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718704,'2022-06-23','Délibérations','DEL20220623_21','3.5',"Convention de servitude Enedis chemin de la Lône","99_DE-069-216900910-20220623-DEL20220623_21-DE-1-1_1__62ebd0588416e.pdf");
+
+2022-08-04 13:57:52 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718702,'2022-06-23','Délibérations','DEL20220623_7','8.2',"Signature d'une convention cadre entre la ville et le CCAS","99_DE-069-216900910-20220623-DEL20220623_7-DE-1-1_1__62ebd05b94aa8.pdf|99_DE-069-216900910-20220623-DEL20220623_7-DE-1-1_2__62ebd05e4533d.pdf");
+
+2022-08-04 13:57:54 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718701,'2022-06-23','Délibérations','DEL20220623_2','7.1.4',"Gratuité temporaire de la piscine","99_DE-069-216900910-20220623-DEL20220623_2-DE-1-1_1__62ebd06123c9c.pdf");
+
+2022-08-04 13:57:58 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718699,'2022-06-23','Délibérations','DEL20220623_12','8.9',"Autorisation de dépôt de dossier à la commission nationale du patrimoine et de l?architecture pour deux tableaux municipaux","99_DE-069-216900910-20220623-DEL20220623_12-DE-1-1_1__62ebd06344d7f.pdf");
+
+2022-08-04 13:58:00 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718698,'2022-06-23','Délibérations','DEL20220623_8','8.5',"Subventions aux associations - Les Incroyables Comestibles de Givors","99_DE-069-216900910-20220623-DEL20220623_8-DE-1-1_1__62ebd06711163.pdf");
+
+2022-08-04 13:58:05 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718697,'2022-06-23','Délibérations','DEL20220623_1','5.2.1',"Modification du règlement intérieur du conseil municipal","99_DE-069-216900910-20220623-DEL20220623_1-DE-1-1_1__62ebd0693c8e7.pdf|99_DE-069-216900910-20220623-DEL20220623_1-DE-1-1_2__62ebd06baa8f1.pdf|99_DE-069-216900910-20220623-DEL20220623_1-DE-1-1_3__62ebd06ce3b4a.pdf");
+
+2022-08-04 13:58:09 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718695,'2022-06-23','Délibérations','DEL20220623_28','7.10.2',"Mise à disposition de la Métropole de Lyon des biens appartenant à la ville de Givors dans le cadre du transfert des compétences \"concession de distribution d'électricité et de gaz\"","99_DE-069-216900910-20220623-DEL20220623_28-DE-1-1_1__62ebd06e9b1fb.pdf|99_DE-069-216900910-20220623-DEL20220623_28-DE-1-1_2__62ebd07046c2b.pdf");
+
+2022-08-04 13:58:11 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718694,'2022-06-23','Délibérations','DEL20220623_29','7.10',"Cession du véhicule communal Renault Maxity immatriculé FA-256-KM","99_DE-069-216900910-20220623-DEL20220623_29-DE-1-1_1__62ebd071eb0ee.pdf");
+
+2022-08-04 13:58:13 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7718692,'2022-06-23','Délibérations','DEL20220623_17','7.1.4',"Remboursement de locations de salles","99_DE-069-216900910-20220623-DEL20220623_17-DE-1-1_1__62ebd073ef28b.pdf");
+
+2022-08-04 13:58:15 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7715823,'2022-06-28','Actes réglementaires','AR2022_452','2.1',"Arrêté de numérotation, 15 rue Pierre et Marie Curie","99_AR-069-216900910-20220628-AR2022_452-AR-1-1_1__62ebd07611933.pdf");
+
+2022-08-04 13:58:17 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7715142,'2022-06-27','Actes réglementaires','AR2022_450','6.4',"Arrêté Permanent - Réglementation du stationnement des caravanes, auto-caravanes, camping cars portant sur le parking du Square Jules Mouton, le parking de la Halte Fluviale, les quartiers de Canal et du Centre Ville. ","99_AR-069-216900910-20220627-AR2022_450-AR-1-1_1__62ebd0782e8ee.pdf");
+
+2022-08-04 13:58:19 Column count doesn't match value count at row 1 [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,7715141,'2022-06-27','Actes réglementaires','AR2022_449','6.4',"Arrêté relatif au placement en dépôt en urgence d'un animal dangereux","99_AR-069-216900910-20220627-AR2022_449-AR-1-1_1__62ebd07a3dfbe.pdf");
+
+2022-08-04 14:00:30 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4263011,'2019-08-01','Actes réglementaires','DG2019_063','1.6.12',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A L’ASSOCIATION ASL BANS FC A TITRE GRACIEUX ","",'2022-08-04');
+
+2022-08-04 14:00:31 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4262942,'2019-08-01','Actes réglementaires','DG2019_067','1.6.12',"MISE A DISPOSITION D’UN LOCAL MUNICIPAL A L’ OFFICE DU SPORT GIVORDIN A TITRE GRACIEUX ","",'2022-08-04');
+
+2022-08-04 14:00:32 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4262930,'2019-08-01','Actes réglementaires','DG2019_066','1.6.12',"MISE A DISPOSITION D’UN LOCAL MUNICIPAL A L’ASSOCIATION SOG RUGBY GIVORS 2 VALLEES A TITRE GRACIEUX ","",'2022-08-04');
+
+2022-08-04 14:00:33 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4254922,'2019-08-01','Actes réglementaires','DM2019_065','1.6.12',"MISE A DISPOSITION D’UN LOCAL MUNICIPAL A L’ASSOCIATION LES SAUVETEURS DE GIVORS  A TITRE GRACIEUX ","",'2022-08-04');
+
+2022-08-04 14:00:34 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4254891,'2019-08-01','Actes réglementaires','DM2019_064','1.6.12',"MISE A DISPOSITION D’UN LOCAL MUNICIPAL A L’ASSOCIATION SHOGUN HAGA CLUB A TITRE GRACIEUX ","",'2022-08-04');
+
+2022-08-04 14:00:34 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4254816,'2019-08-01','Actes réglementaires','DM2019_062','1.6.12',"MISE A DISPOSITION D’UN LOCAL MUNICIPAL A L’ASSOCIATION TAEKWONDO GIVORS A TITRE GRACIEUX ","",'2022-08-04');
+
+2022-08-04 14:00:35 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4254807,'2019-08-01','Actes réglementaires','DM2019_061','1.6.12',"MISE A DISPOSITION D’UN LOCAL MUNICIPAL A L’ASSOCIATION TIR A L’ARC GIVORS GIER SUD A TITRE GRACIEUX ","",'2022-08-04');
+
+2022-08-04 14:00:36 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4254796,'2019-08-01','Actes réglementaires','DM2019_060','1.6.12',"MISE A DISPOSITION D’UN LOCAL MUNICIPAL A L’ASSOCIATION GIVORS TENNIS A TITRE GRACIEUX ","",'2022-08-04');
+
+2022-08-04 14:00:37 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4254682,'2019-08-01','Actes réglementaires','DM2019_059','1.6.12',"MISE A DISPOSITION D’UN LOCAL MUNICIPAL A L’ASSOCIATION GIVORS TIR SPORTIF A TITRE GRACIEUX ","",'2022-08-04');
+
+2022-08-04 14:00:37 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4246355,'2019-08-19','Actes réglementaires','DG2019_058','1.6.12',"FIXATION DES TARIFS DU THEATRE DE GIVORS POUR LA SAISON 2019/2020","",'2022-08-04');
+
+2022-08-04 14:00:38 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4246347,'2019-08-19','Actes réglementaires','DG2019_057','1.6.12',"CONTRAT DE PRÊT AVEC LE CNAP","",'2022-08-04');
+
+2022-08-04 14:00:39 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4246326,'2019-06-21','Actes réglementaires','DG2019_056','7.1.7',"CREATION D'UNE REGIE D'AVANCES POUR LES DEPENSES LIEES AU FONCTIONNEMENT DE LA DIRECTION GENERALE DES SERVICES","",'2022-08-04');
+
+2022-08-04 14:00:40 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4228522,'2019-07-31','Actes individuels','DG2019_006','1.6.11',"ARRETE PORTANT DELEGATION DE LA PRESIDENCE DE LA COMMISION D’APPEL D’OFFRES DU 30 AOUT 2019 ","",'2022-08-04');
+
+2022-08-04 14:00:41 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4191906,'2018-08-31','Actes réglementaires','DG2019_005B','1.6.11',"ARRETE PORTANT DELEGATION DE FONCTION ET DE SIGNATURE A UN ADJOINT POUR LA PERIODE DU 12 AU 30 AOUT 2019","",'2022-08-04');
+
+2022-08-04 14:00:41 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4132398,'2019-07-01','Délibérations','DEL201907_18B','3.2',"CESSION DU BIEN IMMOBILIER SITUE 10 PLACE DE LA LIBERTE","",'2022-08-04');
+
+2022-08-04 14:00:42 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4126680,'2019-07-04','Actes réglementaires','DM2019_055','1.6.12',"CONSTITUTION DE PARTIE CIVILE DEVANT LE TGI DE LYON CONTRE MONSIEUR LLOR DYLAN","",'2022-08-04');
+
+2022-08-04 14:00:43 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4126181,'2019-07-01','Délibérations','DEL201907_22','8.9',"SIGNATURE D’UNE CONVENTION AVEC LA BIENNALE D’ART CONTEMPORAIN-VEDUTA ET VERSEMENT D’UNE SUBVENTION","",'2022-08-04');
+
+2022-08-04 14:00:43 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4126136,'2019-07-01','Délibérations','DEL201907_26','1.7.7',"COMMUNICATIONS AU CONSEIL MUNICIPAL","",'2022-08-04');
+
+2022-08-04 14:00:44 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4126095,'2019-07-01','Délibérations','DEL201907_25','5.3',"DESIGNATION D’UN REPRESENTANT DU CONSEIL MUNICIPAL AU SEIN DU CONSEIL D’ADMINISTRATION DE LA SAGIM SUITE A LA DEMISSION DE MADAME JANNOT","",'2022-08-04');
+
+2022-08-04 14:00:45 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4126049,'2019-07-01','Délibérations','DEL201907_24','2.1.2',"ZAC VMC : QUITUS DE LA CONVENTION PUBLIQUE D’AMENAGEMENT","",'2022-08-04');
+
+2022-08-04 14:00:45 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4126019,'2019-07-01','Délibérations','DEL201907_23','7.1.4',"TARIFS DU THEATRE POUR LA SAISON 2019/2020","",'2022-08-04');
+
+2022-08-04 14:00:46 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125988,'2019-07-01','Délibérations','DEL201907_21','8.9',"CONVENTION TRIPARTITE DE PARTICIPATION FINANCIERE POUR LA RESTAURATION DU PATRIMOINE INSCRIT ET CLASSE MONUMENT HISTORIQUE DE L’EGLISE SAINT NICOLAS ENTRE LA VILLE DE GIVORS, L’ASSOCIATION CULTURELLE SAINT NICOLAS ET LA FONDATION DU PATRIMOINE","",'2022-08-04');
+
+2022-08-04 14:00:47 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125952,'2019-07-01','Délibérations','DEL201907_20','8.9',"CREATION D’UN ESPACE PUBLIC NUMERIQUE AU SEIN DE LA MEDIATHEQUE ET DEMANDE DE FINANCEMENT AUPRES DE LA DRAC AUVERGNE-RHONE-ALPES","",'2022-08-04');
+
+2022-08-04 14:00:48 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125933,'2019-07-01','Délibérations','DEL201907_19','8.8',"PROGRAMME METROPOLITAIN D’ACTIONS POUR LA PROTECTION DES ESPACES NATURELS ET AGRICOLES PERIURBAINS","",'2022-08-04');
+
+2022-08-04 14:00:48 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125628,'2019-07-01','Délibérations','DEL201907_17','3.2',"DECLASSEMENT DU BIEN IMMOBILIER SITUE 10 PLACE DE LA LIBERTE","",'2022-08-04');
+
+2022-08-04 14:00:49 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125568,'2019-07-01','Délibérations','DEL201907_16','3.2',"CESSION DE LA PARCELLE AT 320 QUAI ROBICHON","",'2022-08-04');
+
+2022-08-04 14:00:49 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125541,'2019-07-01','Délibérations','DEL201907_15','3.2',"DECLASSEMENT DE LA PARCELLE AT 320 QUAI ROBICHON","",'2022-08-04');
+
+2022-08-04 14:00:50 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125533,'2019-07-01','Délibérations','DEL201907_14','3.2',"CESSION DES PARCELLES BK 540, AD 127, AD 126 ET AD 128 A LA REGION AUVERGNE-RHONE-ALPES","",'2022-08-04');
+
+2022-08-04 14:00:50 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125515,'2019-07-01','Délibérations','DEL201907_13','4.2.1',"EMPLOIS SAISONNIERS ET TEMPORAIRES","",'2022-08-04');
+
+2022-08-04 14:00:51 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125502,'2019-07-01','Délibérations','DEL201907_12','4.2.1',"RECOURS AU CONTRAT D’APPRENTISSAGE – SERVICE INFORMATIQUE","",'2022-08-04');
+
+2022-08-04 14:00:52 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125488,'2019-07-01','Délibérations','DEL201907_11','4.2.2',"ORGANISATION DES ASTREINTES AU SEIN DES SERVICES MUNICIPAUX","",'2022-08-04');
+
+2022-08-04 14:00:53 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125461,'2019-07-01','Délibérations','DEL201907_10','4.1.2',"CONVENTION AVEC LE CENTRE DE GESTION DU RHONE RELATIVE A L’INTERVENTION SUR LES DOSSIERS DES COHORTES CNRACL","",'2022-08-04');
+
+2022-08-04 14:00:53 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125421,'2019-07-01','Délibérations','DEL201907_09','1.7.9',"GROUPEMENT DE COMMANDES POUR LA PASSATION DE L’ACCORD-CADRE DE RESTAURATION COLLECTIVE ENTRE LA VILLE DE GIVORS ET LE CENTRE COMMUNAL D’ACTION SOCIALE DE GIVORS","",'2022-08-04');
+
+2022-08-04 14:00:54 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125381,'2019-07-01','Délibérations','DEL201907_08','7.10',"ADHESION DE GIVORS A L’ASSOCIATION FINANCES-GESTION-EVALUATION DES COLLECTIVITES TERRITORIALES (AFIGESE-CT)","",'2022-08-04');
+
+2022-08-04 14:00:54 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125294,'2019-07-01','Délibérations','DEL201907_07','1.5',"CONCLUSION D’UNE TRANSACTION ENTRE LA COMMUNE ET LA SOCIETE NATIONALE DES CHEMINS DE FER FRANÇAIS","",'2022-08-04');
+
+2022-08-04 14:00:55 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125239,'2019-07-01','Délibérations','DEL201907_06','7.5',"RAPPORT SUR L’UTILISATION DE LA DOTATION DE SOLIDARITE URBAINE EN 2018","",'2022-08-04');
+
+2022-08-04 14:00:56 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125099,'2019-07-01','Délibérations','DEL201907_05','7.5',"DEMANDE DE SUBVENTIONS AU TITRE DE LA DOTATION POLITIQUE DE LA VILLE 2019","",'2022-08-04');
+
+2022-08-04 14:00:56 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125049,'2019-07-01','Délibérations','DEL201907_04','7.8',"CONVENTION RELATIVE AU VERSEMENT D’UN FONDS DE CONCOURS AU GRAND LYON DANS LE DOMAINE DE LA VOIRIE","",'2022-08-04');
+
+2022-08-04 14:00:57 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4125010,'2019-07-01','Délibérations','DEL201907_03','7.2.1',"TAXE D’HABITATION : ABATTEMENT SPECIAL A LA BASE EN FAVEUR DES PERSONNES HANDICAPEES OU INVALIDES","",'2022-08-04');
+
+2022-08-04 14:00:58 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4124990,'2019-07-01','Délibérations','DEL201907_02','7.1',"DECISION MODIFICATIVE N°2 AU BUDGET PRIMITIF 2019","",'2022-08-04');
+
+2022-08-04 14:00:58 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4124954,'2019-07-01','Délibérations','DEL201907_01','1.1.11',"CONVENTION VILLE-SNCF RESEAUX ECOLE JOSEPH LIAUTHAUD","",'2022-08-04');
+
+2022-08-04 14:00:59 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047819,'2019-06-03','Documents budgétaires et financiers','DEL201906_02G','7.1.1',"COMPTE ADMINISTRATIF 2018","",'2022-08-04');
+
+2022-08-04 14:01:00 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047803,'2019-06-03','Délibérations','DEL201906_19B','9.4',"VOEU : SOUTIEN A « L’APPEL POUR UN PACTE FINANCE-CLIMAT »","",'2022-08-04');
+
+2022-08-04 14:01:00 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047800,'2019-06-03','Délibérations','DEL201906_18B','1.6.12',"COMMUNICATIONS AU CONSEIL MUNICIPAL","",'2022-08-04');
+
+2022-08-04 14:01:01 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047796,'2019-06-03','Délibérations','DEL201906_17B','8.3',"DENOMINATION D’UNE VOIE : « PROMENADE MADJID BOUSSAID »","",'2022-08-04');
+
+2022-08-04 14:01:02 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047792,'2019-06-03','Délibérations','DEL201906_16B','4.2.2',"RECONDUCTION DU DISPOSITIF CONTRAT MUNICIPAL ÉTUDIANT 2019-2020","",'2022-08-04');
+
+2022-08-04 14:01:02 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047785,'2019-06-03','Délibérations','DEL201906_15B','9.1',"MODIFICATION DU PLAN D’ORGANISATION DE LA SURVEILLANCE ET DES SECOURS DE L’ESPACE NAUTIQUE POUR LA PÉRIODE DU 24 JUIN 2019 AU 31 AOÛT 2019","",'2022-08-04');
+
+2022-08-04 14:01:03 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047783,'2019-06-03','Délibérations','DEL201906_14B','4.1.1',"MODIFICATION DU TABLEAU DES EFFECTIFS","",'2022-08-04');
+
+2022-08-04 14:01:03 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047779,'2019-06-03','Délibérations','DEL201906_13B','4.5',"MODIFICATION DU RÉGIME INDEMNITAIRE DES TECHNICIENS ET INGÉNIEURS TERRITORIAUX","",'2022-08-04');
+
+2022-08-04 14:01:04 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047776,'2019-06-03','Délibérations','DEL201906_12B','4.2.1',"CREATION DE DEUX POSTES DANS LE CADRE DU DISPOSITIF PARCOURS EMPLOI COMPETENCES (PEC)","",'2022-08-04');
+
+2022-08-04 14:01:04 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047773,'2019-06-03','Délibérations','DEL201906_11B','7.8',"FONDS DE CONCOURS AU PROFIT DU SIGERLY POUR L’INSTALLATION D’HORLOGES DANS LES ARMOIRES D’ECLAIRAGE PUBLIC","",'2022-08-04');
+
+2022-08-04 14:01:05 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047766,'2019-06-03','Délibérations','DEL201906_10B','7.5.3',"SUBVENTION EXCEPTIONNELLE AUX JEUNES SAPEURS-POMPIERS GIVORS/GRIGNY","",'2022-08-04');
+
+2022-08-04 14:01:06 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047747,'2019-06-03','Délibérations','DEL201906_09B','3.2',"CESSION TONDEUSE KUBOTA","",'2022-08-04');
+
+2022-08-04 14:01:06 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047736,'2019-06-03','Délibérations','DEL201906_08B','7.2.2',"ACTUALISATION DES TARIFS DE LA TAXE LOCALE SUR LA PUBLICITE EXTERIEURE (TLPE)","",'2022-08-04');
+
+2022-08-04 14:01:07 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047727,'2019-06-03','Délibérations','DEL201906_07B','7.1.1',"AUTORISATION DE PROGRAMMES ET DE CREDITS DE PAIEMENT (AP/CP) – REVISION DE L’AP/CP POUR LA CONSTRUCTION DU GROUPE SCOLAIRE FREYDIERE GARE","",'2022-08-04');
+
+2022-08-04 14:01:08 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047723,'2019-06-03','Délibérations','DEL201906_06B','7.1.1',"AUTORISATION DE PROGRAMMES ET DE CREDITS DE PAIEMENT (AP/CP) – RESTRUCTURATION DU CENTRE COMMERCIAL ET DE SERVICES DES VERNES","",'2022-08-04');
+
+2022-08-04 14:01:08 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047712,'2019-06-03','Délibérations','DEL201906_05B','7.1.1',"DECISION MODIFICATIVE N°1 AU BUDGET PRIMITIF 2019","",'2022-08-04');
+
+2022-08-04 14:01:09 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047704,'2019-06-03','Délibérations','DEL201906_04B','5.7.1',"INTEGRATION DU SOLDE CREDITEUR SUITE A LA DISSOLUTION DU SYNDICAT INTERCOMMUNAL POUR LES VACANCES ET LES LOISIRS (SIVAL)","",'2022-08-04');
+
+2022-08-04 14:01:10 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047697,'2019-06-03','Délibérations','DEL201906_03B','7.1.1',"AFFECTATION DES RESULTATS DE 2018 SUR L’EXERCICE 2019","",'2022-08-04');
+
+2022-08-04 14:01:10 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4047690,'2019-06-03','Délibérations','DEL201906_01B','7.1.1',"COMPTE DE GESTION 2018 – BUDGET PRINCIPAL","",'2022-08-04');
+
+2022-08-04 14:06:15 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4044559,'2019-05-24','Actes réglementaires','DM2019_053','1.6.12',"REVALORISATION DES TARIFS DE LOCATION DES INSTALLATIONS SPORTIVES - METROPOLE DE LYON/COLLEGE PAUL VALLON","",'2022-08-04');
+
+2022-08-04 14:06:16 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4044551,'2019-05-24','Actes réglementaires','DM2019_052','1.6.12',"REVALORISATION DES TARIFS DE LOCATION DES INSTALLATIONS SPORTIVES - METROPOLE DE LYON/COLLEGE LUCIE AUBRAC","",'2022-08-04');
+
+2022-08-04 14:06:17 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4044547,'2019-05-24','Délibérations','DM2019_051','1.6.12',"REVALORISATION DES TARIFS DE LOCATION DES INSTALLATIONS SPORTIVES - METROPOLE DE LYON/COLLEGE SAINT THOMAS NOTRE DAME","",'2022-08-04');
+
+2022-08-04 14:06:17 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4044539,'2019-05-24','Actes réglementaires','DM2019_050','1.6.12',"REVALORISATION DES TARIFS DE LOCATION DES INSTALLATIONS SPORTIVES - METROPOLE DE LYON/COLLEGE EMILE MALFROY","",'2022-08-04');
+
+2022-08-04 14:06:18 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4044310,'2019-03-29','Actes réglementaires','DM2019_049','1.6.12',"MISE EN LOCATION D'UN LOCAL MUNICIPAL A L'AUTO ECOLE LA DELIVRANCE","",'2022-08-04');
+
+2022-08-04 14:06:18 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4027659,'2019-05-21','Actes réglementaires','DM2019_048','1.6.12',"DEMANDE DE SUBVENTION A LA DRAC - ESPACE NUMERIQUE MEDIATHEQUE MAX POL FOUCHET","",'2022-08-04');
+
+2022-08-04 14:06:19 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4027655,'2019-05-21','Actes réglementaires','DM2019_047','1.6.12',"DEMANDE DE SUBVENTION A LA DRAC - VITRAUX EGLISE SAINT NICOLAS","",'2022-08-04');
+
+2022-08-04 14:06:20 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4027643,'2019-05-21','Actes réglementaires','DM2019_046','1.6.12',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION HOT CLUB","",'2022-08-04');
+
+2022-08-04 14:06:20 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4027629,'2019-05-21','Actes réglementaires','DM2019_045','1.6.12',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION PHILARMONIQUE INSTRUMENTALE DE GIVORS","",'2022-08-04');
+
+2022-08-04 14:06:21 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4027614,'2019-05-21','Actes réglementaires','DM2019_044','1.6.12',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A LA SAGIM","",'2022-08-04');
+
+2022-08-04 14:06:21 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4027605,'2019-05-21','Actes réglementaires','DM2019_043','1.6.12',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX AU MUSEE DE LA RESISTANCE","",'2022-08-04');
+
+2022-08-04 14:06:22 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4027580,'2019-05-21','Actes réglementaires','DM2019_042','1.6.12',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION LES CHŒURS DE GIVORS","",'2022-08-04');
+
+2022-08-04 14:06:23 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4027566,'2019-05-21','Actes réglementaires','DM2019_041','1.6.12',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION DROLE D'EQUIPAGE","",'2022-08-04');
+
+2022-08-04 14:06:23 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4027562,'2019-05-21','Actes réglementaires','DM2019_040','1.6.12',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION MUSICALE POPULAIRE","",'2022-08-04');
+
+2022-08-04 14:06:24 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,4027542,'2019-05-21','Actes réglementaires','DM2019_039','1.6.12',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION ART O VERNES","",'2022-08-04');
+
+2022-08-04 14:06:25 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3994788,'2019-05-15','Actes individuels','DG2019_04','5.5.2',"ARRETE PORTANT DELEGATION DANS LES FONCTIONS D’OFFICIER D’ETAT CIVIL - Françoise GUILLAUME","",'2022-08-04');
+
+2022-08-04 14:06:25 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3988829,'2019-05-10','Actes réglementaires','DM2019_038','5.5',"ACCEPTATION D’UNE INDEMNITE DE SINISTRE –  DEGATS DES EAUX SALLE ROSA PARKS","",'2022-08-04');
+
+2022-08-04 14:06:26 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3988815,'2019-05-10','Actes réglementaires','DM2019_037','5.5',"ACCEPTATION D’UNE INDEMNITE DE SINISTRE – ACCROCHAGE RENAULT NISSAN IMMATRICULE ES-558-VM","",'2022-08-04');
+
+2022-08-04 14:06:27 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3981172,'2019-05-10','Actes réglementaires','DM2019_036','7.5.1',"DEMANDE DE SUBVENTION A MONSIEUR LE PREFET DU RHONE DANS LE CADRE DE LA DOTATION DE SOUTIEN A L’INVESTISSEMENT PUBLIC LOCAL POUR L’ANNEE 2019","",'2022-08-04');
+
+2022-08-04 14:06:28 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3980644,'2019-04-29','Actes réglementaires','DM2019_035','7.5.1',"DEMANDE DE SUBVENTION A MONSIEUR LE PREFET DU RHONE DANS LE CADRE DU DISPOSITIF FONDS INTERMINISTERIEL DE PREVENTION DE LA DELINQUANCE POUR L’ANNEE 2019","",'2022-08-04');
+
+2022-08-04 14:06:28 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976902,'2019-04-25','Actes réglementaires','DM2019_034','3.3',"CONTRAT DE LOCATION/BAIL PRECAIRE D'UN LOGEMENT COMMUNAL - M. ABAD","",'2022-08-04');
+
+2022-08-04 14:06:29 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976887,'2019-03-29','Actes réglementaires','DM2019_033','3.3',"CONTRAT DE LOCATION/BAIL PRECAIRE D'UN LOGEMENT COMMUNAL - M. CHAIB","",'2022-08-04');
+
+2022-08-04 14:06:30 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976864,'2019-02-15','Actes réglementaires','DM2019_032','3.5',"MISE A DISPOSITION DE CAMERA DE SURVEILLANCE VIDEO AVEC LA METROPOLE DE LYON - 45 RUE R. SALENGRO","",'2022-08-04');
+
+2022-08-04 14:06:31 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976357,'2019-04-15','Actes réglementaires','DM2019_031','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION LA GAITE DE BANS","",'2022-08-04');
+
+2022-08-04 14:06:31 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976349,'2019-04-15','Actes réglementaires','DM2019_030','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION IKHLAS","",'2022-08-04');
+
+2022-08-04 14:06:32 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976343,'2019-04-15','Actes réglementaires','DM2019_029','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION GROUPE MYCOLOGIQUE","",'2022-08-04');
+
+2022-08-04 14:06:33 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976335,'2019-04-15','Actes réglementaires','DM2019_028','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION GIVORS-GAVINANE","",'2022-08-04');
+
+2022-08-04 14:06:33 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976331,'2019-04-15','Actes réglementaires','DM2019_027','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION GIVORS ECHECS","",'2022-08-04');
+
+2022-08-04 14:06:34 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976326,'2019-04-15','Actes réglementaires','DM2019_026','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION FNATH","",'2022-08-04');
+
+2022-08-04 14:06:35 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976313,'2019-04-15','Actes réglementaires','DM2019_025','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION ENTRAIDE ADDICTION","",'2022-08-04');
+
+2022-08-04 14:06:36 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976302,'2019-04-15','Actes réglementaires','DM2019_024','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION DON DU SANG","",'2022-08-04');
+
+2022-08-04 14:06:36 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976294,'2019-04-15','Actes réglementaires','DM2019_023','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION DDEN","",'2022-08-04');
+
+2022-08-04 14:06:37 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976285,'2019-04-15','Actes réglementaires','DM2019_022','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION CROIX ROUGE FRANCAISE","",'2022-08-04');
+
+2022-08-04 14:06:37 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976275,'2019-04-15','Actes réglementaires','DM2019_021','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION AVEC","",'2022-08-04');
+
+2022-08-04 14:06:38 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976270,'2019-04-15','Actes réglementaires','DM2019_020','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION APCA","",'2022-08-04');
+
+2022-08-04 14:06:39 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976261,'2019-04-15','Actes réglementaires','DM2019_019','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION AMINE","",'2022-08-04');
+
+2022-08-04 14:06:39 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976251,'2019-04-15','Actes réglementaires','DM2019_018','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION AMICALE DES PECHEURS","",'2022-08-04');
+
+2022-08-04 14:06:40 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976244,'2019-04-15','Actes réglementaires','DM2019_017','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION AMICALE DES ANCIENS MARINS","",'2022-08-04');
+
+2022-08-04 14:06:41 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976211,'2019-04-15','Actes réglementaires','DM2019_016','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION VIE LIBRE","",'2022-08-04');
+
+2022-08-04 14:06:42 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976207,'2019-04-15','Actes réglementaires','DM2019_015','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION UNRPA","",'2022-08-04');
+
+2022-08-04 14:06:42 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976181,'2019-04-15','Actes réglementaires','DM2019_014','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION UL FO","",'2022-08-04');
+
+2022-08-04 14:06:43 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976179,'2019-04-15','Actes réglementaires','DM2019_013','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION UL CGT","",'2022-08-04');
+
+2022-08-04 14:06:44 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976176,'2019-04-15','Actes réglementaires','DM2019_012','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION UFAC","",'2022-08-04');
+
+2022-08-04 14:06:44 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976152,'2019-04-15','Actes réglementaires','DM2019_011','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION SOCIETE GENEALOGIQUES DU LYONNAIS ET DU BEAUJOLAIS","",'2022-08-04');
+
+2022-08-04 14:06:45 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976150,'2019-04-15','Actes réglementaires','DM2019_010','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION SECOURS POPULAIRE Français","",'2022-08-04');
+
+2022-08-04 14:06:45 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976148,'2019-04-15','Actes réglementaires','DM2019_009','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION  PRO BTP","",'2022-08-04');
+
+2022-08-04 14:06:46 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976135,'2019-04-15','Actes réglementaires','DM2019_008','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION MOUVEMENT DE LA PAIX","",'2022-08-04');
+
+2022-08-04 14:06:47 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976130,'2019-04-15','Actes réglementaires','DM2019_007','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION MODELISTES GIVORDINS","",'2022-08-04');
+
+2022-08-04 14:06:48 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3976124,'2019-04-15','Actes réglementaires','DM2019_006','3.3',"MISE A DISPOSITION D'UN LOCAL MUNICIPAL A TITRE GRACIEUX A L'ASSOCIATION LA JOIE DE VIVRE","",'2022-08-04');
+
+2022-08-04 14:06:49 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3963470,'2019-04-16','Actes réglementaires','DG2019_005','9.1',"ACCEPTATION D’UNE INDEMNITE DE SINISTRE – ACCROCHAGE RENAULT CLIO IMMATRICULEE ER-162-FL","",'2022-08-04');
+
+2022-08-04 14:06:50 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3963455,'2019-04-17','Actes réglementaires','DG2019_004','5.8',"DECISION D’ESTER EN JUSTICE DEVANT LE TRIBUNAL ADMINISTRATIF DE LYON – RECOURS DE MONSIEUR K. HADJI","",'2022-08-04');
+
+2022-08-04 14:06:51 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3938826,'2019-02-19','Actes réglementaires','DM2019_003','1.7.7',"MODIFICATION DE LA REGIE D'AVANCES POUR LES DEPENSES LIEES AU FONCTIONNEMENT DE LA DIRECTION DES AFFAIRES CULTURELLES","",'2022-08-04');
+
+2022-08-04 14:06:51 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3938808,'2019-04-02','Actes réglementaires','DM2019_002','1.7.7',"MODIFICATION DE LA REGIE D'AVANCES POUR LES DEPENSES LIEES AU FONCTIONNEMENT DU CONSERVATOIRE MUNICIPAL DE MUSIQUE ET DE DANSE","",'2022-08-04');
+
+2022-08-04 14:06:52 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3914974,'2019-03-22','Actes réglementaires','DM2019_001','5.8',"DECISION D’ESTER EN JUSTICE DEVANT LA COUR ADMINISTRATIVE D’APPEL DE LYON – RECOURS DE MONSIEUR S. MOREL","",'2022-08-04');
+
+2022-08-04 14:06:53 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3914731,'2019-03-29','Actes individuels','DG2019_003','1.7.6',"ARRETE PORTANT DELEGATION DE SIGNATURE AU DIRECTEUR GENERAL DES SERVICES","",'2022-08-04');
+
+2022-08-04 14:06:53 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808188,'2019-03-11','Délibérations','DEL201903_028','5.5',"COMMUNICATIONS AU CONSEIL MUNICIPAL","",'2022-08-04');
+
+2022-08-04 14:06:54 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808167,'2019-03-11','Délibérations','DEL201903_027','8.2.8',"FONDS DE PARTICIPATION DES HABITANTS : MODALITES DE GESTION 2019","",'2022-08-04');
+
+2022-08-04 14:06:55 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808163,'2019-03-11','Délibérations','DEL201903_026','1.1',"AVENANT N°3 A LA CONVENTION DE MISE EN OEUVRE DE LA TÉLÉTRANSMISSION DES ACTES AVEC LA PRÉFECTURE DU RHÔNE","",'2022-08-04');
+
+2022-08-04 14:06:55 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808146,'2019-03-11','Délibérations','DEL201903_025','5.7.5',"METROPOLE DE LYON – SERVICE PUBLIC D’EAU POTABLE ET ASSAINISSEMENT - RAPPORT D’ACTIVITE 2017","",'2022-08-04');
+
+2022-08-04 14:06:56 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808141,'2019-03-11','Délibérations','DEL201903_023','5.3.2',"PROGRAMME METROPOLITAIN D’INSERTION POUR L’EMPLOI (PMI’e) 2016-2020 CONSEIL D’ADMINISTRATION DE LA MAISON METROPOLITAINE POUR L’EMPLOI DESIGNATION DE REPRESENTANTS DU CONSEIL","",'2022-08-04');
+
+2022-08-04 14:06:56 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808137,'2019-03-11','Délibérations','DEL201903_024','1.2.13',"DELEGATION DE L’EXPLOITATION DES MARCHES FORAINS D’APPROVISIONNEMENT – RAPPORT D’ACTIVITES 2017","",'2022-08-04');
+
+2022-08-04 14:06:57 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808124,'2019-03-11','Délibérations','DEL201903_022','2.2.3',"CONVENTION DE PARTICIPATION FINANCIERE ENTRE LA VILLE DE GIVORS ET LA METROPOLE DE LYON - EQUIPE DE MAITRISE D’OEUVRE URBAINE ET SOCIALE 2018","",'2022-08-04');
+
+2022-08-04 14:06:58 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808105,'2019-03-11','Délibérations','DEL201903_021','8.2.8',"DISPOSITIF VILLE VIE VACANCES – PROGRAMMATION 2019","",'2022-08-04');
+
+2022-08-04 14:06:58 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808092,'2019-03-11','Délibérations','DEL201903_020','8.2.8',"LABEL SOIF DE REPUBLIQUE – ADOPTION DU PLAN TERRITORIAL 2019","",'2022-08-04');
+
+2022-08-04 14:06:59 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808075,'2019-03-11','Délibérations','DEL201903_019','4.2.1',"REMUNERATION DES INTERVENTIONS A LA VACATION","",'2022-08-04');
+
+2022-08-04 14:07:01 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808067,'2019-03-11','Délibérations','DEL201903_018','4.2.1',"DISPOSITIF « MON PREMIER EMPLOI » 2019","",'2022-08-04');
+
+2022-08-04 14:07:01 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808048,'2019-03-11','Délibérations','DEL201903_017','4.2.1',"EMPLOIS SAISONNIERS","",'2022-08-04');
+
+2022-08-04 14:07:02 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808040,'2019-03-11','Délibérations','DEL201903_016','9.3.2',"MISE EN PLACE D’UNE CONVENTION DE MISE A DISPOSITION ET D’UNE CAUTION POUR LA MISE A DISPOSITION D’UN MINIBUS","",'2022-08-04');
+
+2022-08-04 14:07:02 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3808007,'2019-03-11','Délibérations','DEL201903_015','1.2',"DELEGATION DE SERVICE PUBLIC POUR L'EXPLOITATION DES MARCHES FORAINS D'APPROVISIONNEMENT ET AUTRES MANIFESTATIONS, FETES ET FOIRES – APPROBATION DU CHOIX DU DELEGATAIRE ET DU CONTRAT DE DELEGATION DE SERVICE PUBLIC","",'2022-08-04');
+
+2022-08-04 14:07:03 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807948,'2019-03-11','Délibérations','DEL201903_014','7.1.4',"CIMETIERES COMMUNAUX : REVISION DES TARIFS DES CONCESSIONS FUNÉRAIRES","",'2022-08-04');
+
+2022-08-04 14:07:03 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807915,'2019-03-11','Délibérations','DEL201903_013','7.5.3',"SUBVENTION AUX ASSOCIATIONS 2019 - AVENANT N°1 A LA CONVENTION D’OBJECTIFS ET DE MOYENS AVEC L’ASSOCIATION JEUNESSE DU STADE OLYMPIQUE DE GIVORS FOOTBALL (J.S.O.G. FOOT)","",'2022-08-04');
+
+2022-08-04 14:07:04 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807901,'2019-03-11','Délibérations','DEL201903_012','7.5.3',"SUBVENTION AUX ASSOCIATIONS 2019 - AVENANT N°1 A LA CONVENTION D’OBJECTIFS ET DE MOYENS AVEC LE STADE OLYMPIQUE DE GIVORS JUDO (S.O.G JUDO)","",'2022-08-04');
+
+2022-08-04 14:07:05 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807888,'2019-03-11','Délibérations','DEL201903_011','7.5.3',"SUBVENTION AUX ASSOCIATIONS 2019 – AVENANT N°1 A LA CONVENTION D’OBJECTIFS ET DE MOYENS AVEC LA MISSION INTERCOMMUNALE POUR LA FORMATION ET L'INSERTION DES JEUNES DANS LA VIE ACTIVE (MIFIVA)","",'2022-08-04');
+
+2022-08-04 14:07:05 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807878,'2019-03-11','Délibérations','DEL201903_010','7.5.3',"SUBVENTION AUX ASSOCIATIONS 2019 - AVENANT N°1 A LA CONVENTION D’OBJECTIFS ET DE MOYENS AVEC LES CENTRES SOCIAUX DE GIVORS","",'2022-08-04');
+
+2022-08-04 14:07:06 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807765,'2019-03-11','Délibérations','DEL201903_009','7.5.3',"SUBVENTION AUX ASSOCIATIONS 2019 - AVENANT N°1 A LA CONVENTION D’OBJECTIFS ET DE MOYENS AVEC L’ASSOCIATION POUR L’AIDE ET LE MAINTIEN A DOMICILE RHÔNE SUD (AMAD RHÔNE SUD)","",'2022-08-04');
+
+2022-08-04 14:07:06 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807732,'2019-03-11','Délibérations','DEL201903_008','7.5.3',"SUBVENTION AUX ASSOCIATIONS 2019 - AVENANT N°1 A LA CONVENTION D’OBJECTIFS ET DE MOYENS AVEC LA MAISON DES JEUNES ET DE LA CULTURE","",'2022-08-04');
+
+2022-08-04 14:07:07 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807723,'2019-03-11','Délibérations','DEL201903_007','7.5.3',"SUBVENTION AUX ASSOCIATIONS 2019 - AVENANT N°1 A LA CONVENTION D’OBJECTIFS ET DE MOYENS AVEC L’ASSOCIATION DES SAUVETEURS DE GIVORS","",'2022-08-04');
+
+2022-08-04 14:07:07 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807712,'2019-03-11','Délibérations','DEL201903_006','7.5.3',"SUBVENTION AUX ASSOCIATIONS 2019 - AVENANT N°1 A LA CONVENTION D’OBJECTIFS ET DE MOYENS AVEC LE SOG RUGBY","",'2022-08-04');
+
+2022-08-04 14:07:08 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807694,'2019-03-11','Délibérations','DEL201903_005','7.5.3',"SUBVENTION AUX ASSOCIATIONS 2019 - AVENANT N°1 A LA CONVENTION D’OBJECTIFS ET DE MOYENS AVEC LE COMITE D’ACTION SOCIALE ET CULTURELLE DU PERSONNEL COMMUNAL DE LA VILLE DE GIVORS (CASC","",'2022-08-04');
+
+2022-08-04 14:07:09 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807666,'2019-03-11','Délibérations','DEL201903_004','7.1.1',"AUTORISATION DE PROGRAMMES ET DE CREDITS DE PAIEMENT (AP/CP) - CREATION D’UNE AP/CP POUR LA REHABILITATION DE LA SALLE GEORGES BRASSENS","",'2022-08-04');
+
+2022-08-04 14:07:09 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3807541,'2019-03-11','Documents budgétaires et financiers','DEL201903_002B','7.1.1',"BUDGET PRIMITIF 2019","",'2022-08-04');
+
+2022-08-04 14:07:10 Champ 'WDGIVORS' inconnu dans field list [/import.php]
+INSERT INTO gi_index_delib VALUES(WDGIVORS,3806495,'2019-03-11','Délibérations','DEL201903_003','7.9.3',"AUTORISATION DE PROGRAMMES ET DE CREDITS DE PAIEMENT (AP/CP) - CREATION D’UNE AP/CP POUR LES TRAVAUX DE RENOVATION DES VITRAUX DE L’EGLISE SAINT NICOLAS","",'2022-08-04');

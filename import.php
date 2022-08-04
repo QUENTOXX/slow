@@ -27,12 +27,12 @@ if ($error>0) {
 	echo '<div class="info info-rouge"><br>⚠️ Merci de corriger les erreurs avant de lancer les récupérations<br><br></div>';
 	exit;
 }
-
-#if (!isset($_SERVER['HTTPS'])) {
-#	echo '<div class="info info-rouge"><br>⛔ Il semblerait que la page ne soit pas HTTPS<br><br></div>';
-#	exit;
-#}
-
+/*
+if (!isset($_SERVER['HTTPS'])) {
+	echo '<div class="info info-rouge"><br>⛔ Il semblerait que la page ne soit pas HTTPS<br><br></div>';
+	exit;
+}
+*/
 
 
 require_once "connect.inc.php";
@@ -46,7 +46,7 @@ if (!isset($_GET['insee']))
 else
 	$insee=$_GET['insee'];
 
-  // !! regarder a faire !!!
+
 // Prise en compte du serveur Windows (merci Antoine)
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 	define('PEM',     realpath('key').'\\'.$cert.'client.pem');
@@ -67,8 +67,8 @@ define('PASSWORD', $pass);
 
 // Permet de changer les classifications qui ont évoluées depuis 2011.
 $old_nature=array("Contrats et conventions","Deliberations","Arretes individuels","Arretes reglementaires","Documents budgetaires et financiers");
-$new_nature=array("Contrats, conventions et avenants","Deliberations","Actes individuels","Actes reglementaires","Documents budgetaires et financiers");
-// !!!!!!   enlever les accens pour sql    !!!!!!!!!!!
+$new_nature=array("Contrats, conventions et avenants","Délibérations","Actes individuels","Actes réglementaires","Documents budgétaires et financiers");
+
 /*
 // Liste des utilisateurs dans S2low
 $json=go_curl('',URL."admin/users/admin_users.php?api=1&count=1000"); // OK
@@ -94,58 +94,22 @@ else
 	$w="AND insee='$insee'";
 
 // Liste des utilisateurs (communes) à récupérer
-
-if ($insee == "all") { // a modif pour toute villes
-
-	foreach ($pref_tab_all as $ville => $pref) {
-
-		$sql="SELECT * FROM ".$pref."user WHERE actif=1 $w";
-		$res=mysqli_query($link,$sql);
-		//echo $sql;
-		if (mysqli_num_rows($res)==0) {
-		// S'il n'y a aucun utilisateur,
-		// on considère que le certification est pour un usage individuel.
-		// Il est conseiller de créer au moins 1 utilisateur
-		// et de spécifier un mot de passe dans S2low.
-			echo '<div class="info info-rouge">Vous n\'avez pas défini d\'utilisateur dans la table'.$pref.'user</div>';
-			//load(''); // Lance la récupération des actes pour l'utilisateur unique => déconseiller
-		} else {
-			while ($row=mysqli_fetch_object($res)) {
-				echo "<br> $insee";
-				echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
-				$insee=$row->insee;
-				$user_delib=$row;
-				load($insee, $pref, $proxyadd); // Lance la récupération des actes
-			}
-		}
-	}
-
-}else {
-
-	while ($cherinsee = current($insee_all)) {
-		if ($cherinsee == $insee) {
-
-			$sql="SELECT * FROM ".$pref_tab_all[key($insee_all)]."user WHERE actif=1 $w";
-			$res=mysqli_query($link,$sql);
-			//echo $sql;
-			if (mysqli_num_rows($res)==0) {
-			// S'il n'y a aucun utilisateur,
-			// on considère que le certification est pour un usage individuel.
-			// Il est conseiller de créer au moins 1 utilisateur
-			// et de spécifier un mot de passe dans S2low.
-				echo '<div class="info info-rouge">Vous n\'avez pas défini d\'utilisateur dans la table'.$pref_tab_all[key($insee_all)].'user</div>';
-				//load(''); // Lance la récupération des actes pour l'utilisateur unique => déconseiller
-			} else {
-				while ($row=mysqli_fetch_object($res)) {
-					echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
-					$insee=$row->insee;
-					$user_delib=$row;
-					load($insee,$pref_tab_all[key($insee_all)], $proxyadd); // Lance la récupération des actes
-				}
-			}
-			break;
-		}
-		next($insee_all);
+$sql="SELECT * FROM ".$pref_tab."user WHERE actif=1 $w";
+$res=mysqli_query($link,$sql);
+//echo $sql;
+if (mysqli_num_rows($res)==0) {
+// S'il n'y a aucun utilisateur,
+// on considère que le certification est pour un usage individuel.
+// Il est conseiller de créer au moins 1 utilisateur
+// et de spécifier un mot de passe dans S2low.
+	echo '<div class="info info-rouge">Vous n\'avez pas défini d\'utilisateur dans la table '.$pref_tab.'user</div>';
+	//load(''); // Lance la récupération des actes pour l'utilisateur unique => déconseiller
+} else {
+	while ($row=mysqli_fetch_object($res)) {
+		echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
+		$insee=$row->insee;
+		$user_delib=$row;
+		load($insee); // Lance la récupération des actes
 	}
 }
 
@@ -154,7 +118,9 @@ if ($insee == "all") { // a modif pour toute villes
 /**************************/
 /* Récupération des actes */
 /**************************/
-function load($insee, $pref_tab, $proxyadd) {
+function load($insee) {
+
+	global $pref_tab;
 
 	$nb_load=0;
 
@@ -179,9 +145,8 @@ function load($insee, $pref_tab, $proxyadd) {
 
 	echo '<hr>';
 	// Liste des actes de la commune
-	$json=go_curl($proxyadd, $insee, URL."modules/actes/api/list_actes.php?status_id=4&nature=2&offset=".$_GET['offset']."&limit=".$limit); // OK
+	$json=go_curl($insee, URL."modules/actes/api/list_actes.php?status_id=4&nature=2&offset=".$_GET['offset']."&limit=".$limit); // OK
 	if ($json!='') {
-		echo "json: $json";
 		$json=json_decode($json);
 		foreach($json->transactions as $k=>$t) {
 			echo "<hr>$t->nature_descr ";
@@ -191,7 +156,7 @@ function load($insee, $pref_tab, $proxyadd) {
 				if (!in_array($t->id,$vu)) { // Vérifie si l'acte est déjà récupéré à partir du fichier vu.txt
 					$nb_load++;
 					// Récupération des PJ
-					$list_doc=go_curl($proxyadd, $insee, URL."modules/actes/actes_transac_get_files_list.php?transaction=".$t->id);
+					$list_doc=go_curl($insee, URL."modules/actes/actes_transac_get_files_list.php?transaction=".$t->id);
 					if ($list_doc!='') {
 						$list_fich="";
 						$list=json_decode($list_doc);
@@ -202,7 +167,7 @@ function load($insee, $pref_tab, $proxyadd) {
 								$nomf=substr($d->name,0,-4)."__".uniqid().".pdf";
 								$list_fich.=$nomf."|";
 								// Récupération du fichier
-								go_curl($proxyadd, $insee, URL."modules/actes/actes_download_file.php?tampon=true&file=".$d->id, $nomf);
+								go_curl($insee, URL."modules/actes/actes_download_file.php?tampon=true&file=".$d->id, $nomf);
 							}
 						}
 						$nat=str_replace($GLOBALS['old_nature'], $GLOBALS['new_nature'], $t->nature_descr);
@@ -212,12 +177,9 @@ function load($insee, $pref_tab, $proxyadd) {
 						file_put_contents("actes/".$insee."/vu.txt",$t->id."\n",FILE_APPEND | LOCK_EX);
 						//date du jour
 						$today= date("Y-m-d");
-						// Ajout de l'acte dans la table mysql
-						exe ("INSERT INTO ".$pref_tab."index_delib VALUES('$insee',$t->id,'$t->date','".utf8_decode($nat)."','$t->number','$t->classification',\"".utf8_decode(str_replace("\n",' ',str_replace('"','\"',($t->subject))))."\",\"".substr($list_fich,0,-1)."\",'$today');");
 
-						// insertion date du jour
-						//exe("INSERT INTO ".$pref_tab."index_delib (import_date) VALUES ('$today');");
-						//exe("UPDATE ".$pref_tab."index_delib SET `import_date` = '$today' WHERE ".$pref_tab."index_delib.`insee` = $insee;");
+						// Ajout de l'acte dans la table mysql
+						exe ("INSERT INTO ".$pref_tab."index_delib VALUES($insee,$t->id,'$t->date','".utf8_decode($nat)."','$t->number','$t->classification',\"".utf8_decode(str_replace("\n",' ',str_replace('"','\"',($t->subject))))."\",\"".substr($list_fich,0,-1)."\",'$today');");
 
 						if ($nat=="Actes individuels")
 							$mel_delib_ind.="- $t->number ($nat) $t->subject\n";//<br>";
@@ -258,7 +220,7 @@ function load($insee, $pref_tab, $proxyadd) {
 /*******************************/
 /* Lance une requête sur S2low */
 /*******************************/
-function go_curl($proxyadd, $user, $api, $nfich='') {
+function go_curl($user, $api, $nfich='') {
 
 	echo "<br><i class='cl-bleu'>API : $api</i>";
 
@@ -276,7 +238,7 @@ function go_curl($proxyadd, $user, $api, $nfich='') {
 	// Dans mon cas l'user et le mot de passe sont identiques.
 	// Il s'agit du login et mot de passe saisie dans l'administration de S2low
 	if ($user!='')
-		curl_setopt($ch, CURLOPT_USERPWD, $user.":".'79BES=p'); // L'identifiant et le mot de passe sont identiques
+		curl_setopt($ch, CURLOPT_USERPWD, $user.":".$user); // L'identifiant et le mot de passe sont identiques
 
 
 //	curl_setopt($ch, CURLOPT_HEADER, true);
@@ -293,11 +255,12 @@ function go_curl($proxyadd, $user, $api, $nfich='') {
 	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
 	curl_setopt($ch, CURLOPT_VERBOSE, TRUE);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPGET, 1);
+
+	$proxyadd="http://192.168.76.3:3128";
 
 	if (isset($proxyadd)) {
 		curl_setopt($ch, CURLOPT_PROXY, $proxyadd);
-		echo "proxy set ".$proxyadd;
+		//echo "proxy set ".$proxyadd;
 		if (isset($proxyauth)) {
 			curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 		}
@@ -316,6 +279,14 @@ function go_curl($proxyadd, $user, $api, $nfich='') {
 			$curl_return='';
 		}
 	}
+
+	$info= curl_getinfo($ch);
+	echo '<br>La requête a mis ' . $info['total_time'] . ' secondes à être envoyée à ' . $info['url'];
+	$info= curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	echo "<br> code de retour : $info ";
+	$info= curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+	echo "<br> last url : $info ";
+
 	curl_close($ch);
 
 	return($curl_return);
