@@ -125,7 +125,10 @@ function load($insee) {
 	$nb_load=0;
 
 	// Création du répertoire de la commune
-	@mkdir("actes/".$insee."/");
+	$path= 'actes/'.$insee;
+	if (!is_dir($path)) {
+			mkdir($path, 0777);
+	}
 
 	// Récupération des actes déjà récupérés
 	$nvu="actes/".$insee."/vu.txt";
