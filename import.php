@@ -240,8 +240,9 @@ function go_curl($user, $api, $nfich='') {
 
 	// Dans mon cas l'user et le mot de passe sont identiques.
 	// Il s'agit du login et mot de passe saisie dans l'administration de S2low
+	echo "<br> user : $user";
 	if ($user!='')
-		curl_setopt($ch, CURLOPT_USERPWD, $user.":".$user); // L'identifiant et le mot de passe sont identiques
+		curl_setopt($ch, CURLOPT_USERPWD, $user.":".'pn3xz65'); // L'identifiant et le mot de passe sont identiques
 
 
 //	curl_setopt($ch, CURLOPT_HEADER, true);
