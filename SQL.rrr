@@ -1030,3 +1030,2160 @@ INSERT INTO gi_index_delib VALUES(WDGIVORS,3807541,'2019-03-11','Documents budg�
 
 2022-08-04 14:07:10 Champ 'WDGIVORS' inconnu dans field list [/import.php]
 INSERT INTO gi_index_delib VALUES(WDGIVORS,3806495,'2019-03-11','D�lib�rations','DEL201903_003','7.9.3',"AUTORISATION DE PROGRAMMES ET DE CREDITS DE PAIEMENT (AP/CP) - CREATION D�UNE AP/CP POUR LES TRAVAUX DE RENOVATION DES VITRAUX DE L�EGLISE SAINT NICOLAS","",'2022-08-04');
+
+2022-08-09 12:21:10 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi@test.com', '', 'a3bf200ff02e9c41fd27da11d0f09d0a', '216900910');
+
+2022-08-09 12:25:43 Duplicata du champ 'WDGIVORS-216900910' pour la clef 'insee_siren' [/login.php]
+INSERT INTO gi_user VALUES ('WDGIVORS', 1, 'moi@test.com', '', 'a3bf200ff02e9c41fd27da11d0f09d0a', '216900910');
+
+2022-08-09 13:42:51 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:42:51 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:42:51 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:42:51 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:42:52 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:42:52 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:42:52 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:42:52 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:42:52 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:35 Table 'publis2low.gi_user' inconnue [/install.php]
+DROP TABLE gi_user
+
+2022-08-09 13:43:35 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:35 Table 'publis2low.rs_user' inconnue [/install.php]
+DROP TABLE rs_user
+
+2022-08-09 13:43:35 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:35 Table 'publis2low.sc_user' inconnue [/install.php]
+DROP TABLE sc_user
+
+2022-08-09 13:43:35 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:35 Table 'publis2low.ve_user' inconnue [/install.php]
+DROP TABLE ve_user
+
+2022-08-09 13:43:35 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:35 Table 'publis2low.co_user' inconnue [/install.php]
+DROP TABLE co_user
+
+2022-08-09 13:43:35 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:35 Table 'publis2low.gr_user' inconnue [/install.php]
+DROP TABLE gr_user
+
+2022-08-09 13:43:35 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:35 Table 'publis2low.pi_user' inconnue [/install.php]
+DROP TABLE pi_user
+
+2022-08-09 13:43:35 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:35 Table 'publis2low.ri_user' inconnue [/install.php]
+DROP TABLE ri_user
+
+2022-08-09 13:43:35 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:35 Table 'publis2low.va_user' inconnue [/install.php]
+DROP TABLE va_user
+
+2022-08-09 13:43:35 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:45 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:45 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:45 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:45 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:45 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:45 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:45 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:45 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:43:45 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:47:53 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:47:53 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:47:53 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:47:53 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:47:53 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:47:53 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:47:53 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:47:53 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:47:53 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL UNIQUE KEY,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:48:21 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL UNIQUE,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:48:21 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL UNIQUE,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:48:21 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL UNIQUE,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:48:21 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL UNIQUE,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:48:21 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL UNIQUE,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:48:21 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL UNIQUE,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:48:21 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL UNIQUE,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:48:21 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL UNIQUE,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:48:21 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL UNIQUE,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:29 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:29 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:29 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:29 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:29 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:29 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:30 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:30 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:30 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:31 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:31 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:31 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:31 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:31 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:31 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:31 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:31 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:49:31 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:50:22 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:50:22 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:50:22 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:50:22 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:50:22 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:50:22 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:50:22 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:50:22 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:50:22 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:27 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:27 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:27 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:27 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:27 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:27 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:27 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:27 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:27 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 9 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif),
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:33 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:33 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:33 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:33 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:33 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:34 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:35 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:49 Table 'publis2low.gi_user' inconnue [/install.php]
+DROP TABLE gi_user
+
+2022-08-09 13:51:49 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:49 Table 'publis2low.rs_user' inconnue [/install.php]
+DROP TABLE rs_user
+
+2022-08-09 13:51:49 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:49 Table 'publis2low.sc_user' inconnue [/install.php]
+DROP TABLE sc_user
+
+2022-08-09 13:51:49 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:49 Table 'publis2low.ve_user' inconnue [/install.php]
+DROP TABLE ve_user
+
+2022-08-09 13:51:49 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:49 Table 'publis2low.co_user' inconnue [/install.php]
+DROP TABLE co_user
+
+2022-08-09 13:51:49 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:49 Table 'publis2low.gr_user' inconnue [/install.php]
+DROP TABLE gr_user
+
+2022-08-09 13:51:49 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:49 Table 'publis2low.pi_user' inconnue [/install.php]
+DROP TABLE pi_user
+
+2022-08-09 13:51:50 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:50 Table 'publis2low.ri_user' inconnue [/install.php]
+DROP TABLE ri_user
+
+2022-08-09 13:51:50 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:51:50 Table 'publis2low.va_user' inconnue [/install.php]
+DROP TABLE va_user
+
+2022-08-09 13:51:50 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:52:01 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:52:01 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:52:01 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:52:01 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:52:01 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:52:01 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:52:02 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:52:02 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:52:02 Erreur de syntaxe près de ') ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci' à la ligne 8 [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:18 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:19 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:20 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL,
+					UNIQUE (mels_notif)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:50 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:50 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:50 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:50 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:50 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:50 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:50 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:50 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:50 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:51 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:57 Table 'publis2low.gi_user' inconnue [/install.php]
+DROP TABLE gi_user
+
+2022-08-09 13:54:57 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:57 Table 'publis2low.rs_user' inconnue [/install.php]
+DROP TABLE rs_user
+
+2022-08-09 13:54:57 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:57 Table 'publis2low.sc_user' inconnue [/install.php]
+DROP TABLE sc_user
+
+2022-08-09 13:54:57 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:57 Table 'publis2low.ve_user' inconnue [/install.php]
+DROP TABLE ve_user
+
+2022-08-09 13:54:57 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:57 Table 'publis2low.co_user' inconnue [/install.php]
+DROP TABLE co_user
+
+2022-08-09 13:54:57 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:57 Table 'publis2low.gr_user' inconnue [/install.php]
+DROP TABLE gr_user
+
+2022-08-09 13:54:57 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:57 Table 'publis2low.pi_user' inconnue [/install.php]
+DROP TABLE pi_user
+
+2022-08-09 13:54:57 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:57 Table 'publis2low.ri_user' inconnue [/install.php]
+DROP TABLE ri_user
+
+2022-08-09 13:54:57 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:54:57 Table 'publis2low.va_user' inconnue [/install.php]
+DROP TABLE va_user
+
+2022-08-09 13:54:57 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:55:02 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:55:02 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:55:02 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:55:02 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:55:02 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:55:02 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:55:02 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:55:02 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:55:02 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL UNIQUE,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:56:46 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:56:46 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE rs_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:56:46 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE sc_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:56:46 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ve_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:56:46 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE co_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:56:46 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE gr_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:56:46 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE pi_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:56:46 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE ri_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:56:46 La colonne 'mels_notif' de type BLOB est utilisée dans une définition d'index sans longueur d'index [/install.php]
+CREATE TABLE va_user (
+					insee varchar(100) NOT NULL,
+					actif int(1) NOT NULL,
+					mels_notif text COLLATE utf8_unicode_ci NOT NULL PRIMARY KEY,
+					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+					mdp varchar(100),
+					siren int(10) NOT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+2022-08-09 13:56:54 Table 'publis2low.gi_user' inconnue [/install.php]
+DROP TABLE gi_user
+
+2022-08-09 13:56:54 Table 'publis2low.rs_user' inconnue [/install.php]
+DROP TABLE rs_user
+
+2022-08-09 13:56:54 Table 'publis2low.sc_user' inconnue [/install.php]
+DROP TABLE sc_user
+
+2022-08-09 13:56:54 Table 'publis2low.ve_user' inconnue [/install.php]
+DROP TABLE ve_user
+
+2022-08-09 13:56:54 Table 'publis2low.co_user' inconnue [/install.php]
+DROP TABLE co_user
+
+2022-08-09 13:56:54 Table 'publis2low.gr_user' inconnue [/install.php]
+DROP TABLE gr_user
+
+2022-08-09 13:56:54 Table 'publis2low.pi_user' inconnue [/install.php]
+DROP TABLE pi_user
+
+2022-08-09 13:56:54 Table 'publis2low.ri_user' inconnue [/install.php]
+DROP TABLE ri_user
+
+2022-08-09 13:56:54 Table 'publis2low.va_user' inconnue [/install.php]
+DROP TABLE va_user

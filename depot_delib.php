@@ -12,8 +12,6 @@
 	require_once "connect.inc.php";
 	require_once "fonctions.php";
 
-	include 'ctrl_cert.inc.php';
-
   echo "<h2>Dépot des actes</h2>";
 
 	//$user = array('nicolas@gmail.com' => 12345, 'idiotduvillage' => "4567",'ptdrtki' => "7894");

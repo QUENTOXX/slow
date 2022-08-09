@@ -133,8 +133,7 @@
 					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
 					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
 					mdp varchar(100),
-					siren int(10) NOT NULL,
-					UNIQUE KEY insee_siren (insee,siren)
+					siren int(10) NOT NULL
 				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
 				echo '<br>Création de la table '.$pref.'user';
 
@@ -150,7 +149,7 @@
 	echo '<br>';
 
 	include 'ctrl_cert.inc.php';
-
+/*
 	foreach ($pref_tab_all as $ville => $pref) {
 
 		$list_user=Rech($pref.'user', '1', 'GROUP_CONCAT(insee) as list')->list;
@@ -158,7 +157,7 @@
 		echo 'Liste des utilisateurs de '.$ville.' : '.$list_user;
 		echo "<br>";
 	}
-
+*/
 	// A faire
 	echo '<br><hr><br>A faire sur votre hébergement :';
 	echo '<li> Ajouter la tâche cron du script <i class="cl-bleu">'.dirname(__FILE__).'/import.php</i> dans votre hébergement</li>';

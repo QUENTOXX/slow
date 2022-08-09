@@ -14,9 +14,13 @@
     }else if (form == 2) {
       var psw1 = document.getElementByName("newpsw1").value;
       var psw2 = document.getElementByName("newpsw2").value;
+    }else if (form == 3) {
+      var psw1 = document.getElementByName("suppsw1").value;
+      var psw2 = document.getElementByName("suppsw2").value;
     }
     if (psw1 != psw2) {
       alert("Mot de passe différent")
+      return 0;
     }
   }
 
@@ -28,8 +32,6 @@ require_once "params.php";
 
 require_once "connect.inc.php";
 require_once "fonctions.php";
-
-include 'ctrl_cert.inc.php';
 
   echo "<h2>Connection pour le dépot des actes</h2>";
 
@@ -63,7 +65,7 @@ include 'ctrl_cert.inc.php';
 
 <?php
 
-  echo "<h2>Ajout / Modifier utilisateurs</h2>";
+  echo "<h2>Ajout / Modifier / Supprimer utilisateurs</h2>";
 
 ?>
 <form name="admin" action="" method="POST">
@@ -136,6 +138,29 @@ include 'ctrl_cert.inc.php';
       <input type="submit" name="modif" value="Modifier" onclick="Check_psw(2);"/>
     </form>
 
+    <br><br>
+    <form name="suppr" action="" method="post">
+      <br>
+      <p>Supprimer un utilisateur</p>
+      <label>Ville de l'utilisateur : </label>
+      <select id="ville" name="ville">
+        <option selected value=Givors>Givors</option>
+        <option value=Grigny>Grigny</option>
+        <option value=Saint-Chamond>Saint Chamond</option>
+        <option value=Venissieux>Venissieux</option>
+        <option value=Corbas>Corbas</option>
+        <option value=Pierre_Benite>Pierre Benite</option>
+        <option value=Rive_de_Gier>Rive de Gier</option>
+        <option value=Vaulx_en_Velin>Vaulx en Velin</option>
+        <option value=Sitiv>Sitiv</option>
+      </select>
+      <p>Rentrer son email : <input type="email" name="supemail"/> </p>
+      <p>Rentrer son mot de passe : <input type="password" name="suppsw1"/> </p>
+      <p>Confirmer son mot de passe : <input type="password" name="suppsw2"/> </p>
+      <br>
+      <input type="submit" name="suppr" value="Supprimer" onclick="Check_psw(3);"/>
+    </form>
+
       <?php
     }
   }
@@ -148,20 +173,42 @@ include 'ctrl_cert.inc.php';
 
     if (empty($email)) {
         echo "le mail doit etre renseigner !! <br>";
-    }
-    if (empty($psw1) || empty($psw2)) {
-        echo "les mots de passes doivent etre renseignés !! <br>";
-    }else{
-      if ($psw1 != $psw2) {
-        echo "Mots de passes différents !!";
-      }else {
-        $pre= $pref_tab_all[$_POST['ville']];
-        $siren= $siren_all[$_POST['ville']];
-        $insee= $insee_all[$_POST['ville']];
-        $hash= md5(crypt($psw1, $salt));
+        unset($_POST['subajout']);
+        unset($_POST['checkadmin']);
+    }else {
+      if (empty($psw1) || empty($psw2)) {
+          echo "les mots de passes doivent etre renseignés !! <br>";
+          unset($_POST['subajout']);
+          unset($_POST['checkadmin']);
+      }else{
+        if ($psw1 != $psw2) {
+          echo "Mots de passes différents !!";
+          unset($_POST['subajout']);
+          unset($_POST['checkadmin']);
+        }else {
 
-        if (exe("INSERT INTO ".$pre."user VALUES ('$insee', 1, '$email', '', '$hash', '$siren');")) {
-          echo "Ajouté !!";
+          $pre= $pref_tab_all[$_POST['ville']];
+          $sql= "SELECT * FROM ".$pre."user";
+          $req=mysqli_query($link, $sql);
+
+          foreach ($req as $user) {
+            if ($email == $user['mels_notif']) {
+              echo "Cet utilisateur existe déja !!";
+              unset($_POST['subajout']);
+              unset($_POST['checkadmin']);
+              exit();
+            }
+          }
+
+          $siren= $siren_all[$_POST['ville']];
+          $insee= $insee_all[$_POST['ville']];
+          $hash= md5(crypt($psw1, $salt));
+
+          if (exe("INSERT INTO ".$pre."user VALUES ('$insee', 1, '$email', '', '$hash', '$siren');")) {
+            echo "Ajouté !!";
+            unset($_POST['subajout']);
+            unset($_POST['checkadmin']);
+          }
         }
       }
     }
@@ -175,6 +222,8 @@ include 'ctrl_cert.inc.php';
 
     if (empty($newemail)) {
         echo "le mail doit etre renseigner !! <br>";
+        unset($_POST['modif']);
+        unset($_POST['checkadmin']);
     }else {
       $pref= $pref_tab_all[$_POST['ville']];
       $sql= "SELECT * FROM ".$pref."user";
@@ -185,19 +234,76 @@ include 'ctrl_cert.inc.php';
 
           if (empty($newpsw1) || empty($newpsw2)) {
               echo "le nouveau mot de passe doit etre renseigner !! <br>";
+              unset($_POST['modif']);
+              unset($_POST['checkadmin']);
           }else{
             if ($newpsw1 != $newpsw2) {
               echo "Mots de passes différents !!";
+              unset($_POST['modif']);
+              unset($_POST['checkadmin']);
             }else {
               $hash= md5(crypt($newpsw1, $salt));
 
               if (exe("UPDATE ".$pref."user SET mdp= '$hash' WHERE mels_notif= '$newemail'")) {
                 echo "Modifié !!";
+                unset($_POST['modif']);
+                unset($_POST['checkadmin']);
               }
             }
           }
         }else {
           echo "Cet utilisateur n'existe pas à ".$_POST['ville'];
+          unset($_POST['modif']);
+          unset($_POST['checkadmin']);
+        }
+      }
+    }
+  }
+
+  if (isset($_POST['suppr'])) {
+
+    $supemail = isset($_POST['supemail']) ? $_POST['supemail'] : "";
+    $suppsw1 = isset($_POST['suppsw1']) ? $_POST['suppsw1'] : "";
+    $suppsw2 = isset($_POST['suppsw2']) ? $_POST['suppsw2'] : "";
+
+    if (empty($supemail)) {
+        echo "le mail doit etre renseigner !! <br>";
+        unset($_POST['suppr']);
+        unset($_POST['checkadmin']);
+    }else {
+      $pref= $pref_tab_all[$_POST['ville']];
+      $sql= "SELECT * FROM ".$pref."user";
+      $req=mysqli_query($link, $sql);
+
+      foreach ($req as $user) {
+        if ($supemail == $user['mels_notif']) {
+
+          if (empty($suppsw1) || empty($suppsw2)) {
+              echo "le mot de passe doit etre renseigner !! <br>";
+              unset($_POST['suppr']);
+              unset($_POST['checkadmin']);
+          }else{
+            if ($suppsw1 != $suppsw2) {
+              echo "Mots de passes différents !!";
+              unset($_POST['suppr']);
+              unset($_POST['checkadmin']);
+            }else {
+              if (!hash_equals($user['mdp'], md5(crypt($suppsw1, $salt)))) {
+                echo "Mauvais mot de passe !!";
+              }else {
+
+                if (exe("DELETE FROM ".$pref."user WHERE mels_notif= '$supemail'")) {
+                  echo "Supprimer !!";
+                  unset($_POST['suppr']);
+                  unset($_POST['checkadmin']);
+                }
+              }
+            }
+          }
+        }else {
+          echo "Cet utilisateur n'existe pas à ".$_POST['ville'];
+          unset($_POST['suppr']);
+          unset($_POST['checkadmin']);
         }
       }
     }
