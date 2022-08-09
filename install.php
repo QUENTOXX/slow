@@ -22,11 +22,11 @@
 			// Création de la table contenant la liste des actes
 			exe("CREATE TABLE ".$pref."index_delib (
 				insee varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-				id int(11) NOT NULL,
+				id int(12) NOT NULL,
 				del_date date NOT NULL,
-				nature varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-				num varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-				code char(20) COLLATE utf8_unicode_ci NOT NULL,
+				nature varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+				num varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+				code char(32) COLLATE utf8_unicode_ci NOT NULL,
 				obj text COLLATE utf8_unicode_ci NOT NULL,
 				pj mediumtext COLLATE utf8_unicode_ci NOT NULL,
 				import_date date,
