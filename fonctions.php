@@ -6,6 +6,8 @@ function exe($rq) {
   echo "<br>";
   var_dump($rq);
   echo "<br>";
+  var_dump($GLOBALS['link']);
+  echo "<br>";
   if (!mysqli_query($GLOBALS['link'], $rq)) {
 		// Log de l'erreur
 		file_put_contents("SQL.rrr","\n".date("Y-m-d H:i:s")." ".mysqli_error($GLOBALS['link'])." [".$_SERVER['PHP_SELF']."]\n".$rq."\n",FILE_APPEND);
