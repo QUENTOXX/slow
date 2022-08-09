@@ -6,6 +6,7 @@ function exe($rq) {
   echo "<br>";
   var_dump($rq);
   echo "<br>";
+  echo "<br> le truc global";
   var_dump($GLOBALS['link']);
   echo "<br>";
   if (!mysqli_query($GLOBALS['link'], $rq)) {
