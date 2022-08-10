@@ -22,6 +22,20 @@ error_reporting(E_ALL);
 
 require_once "params.php";
 
+//recupération de l'argument
+if (isset($argv[1])) {
+	if (!array_key_exists($argv[1], $cert_all)) {
+		exit("L'argument n'est pas un établissement ou mal appelé !!");
+	}
+	$ville= $argv[1];
+}else {
+	exit("Il manque l'argument pour l'établissement à importer !!");
+}
+
+$cert= $cert_all[$ville];
+$pref_tab= $pref_tab_all[$ville];
+$mdp_acc= $mdp_all[$ville];
+
 include 'ctrl_cert.inc.php';
 if ($error>0) {
 	echo '<div class="info info-rouge"><br>⚠️ Merci de corriger les erreurs avant de lancer les récupérations<br><br></div>';
@@ -45,20 +59,6 @@ if (!isset($_GET['insee']))
 	$insee='all';
 else
 	$insee=$_GET['insee'];
-
-	//recupération de l'argument
-	if (isset($argv[1])) {
-		if (!array_key_exists($argv[1], $cert_all)) {
-			exit("L'argument n'est pas un établissement ou mal appelé !!");
-		}
-		$ville= $argv[1];
-	}else {
-		exit("Il manque l'argument pour l'établissement à importer !!");
-	}
-
-	$cert= $cert_all[$ville];
-	$pref_tab= $pref_tab_all[$ville];
-	$mdp_acc= $mdp_all[$ville];
 
 // Prise en compte du serveur Windows (merci Antoine)
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
