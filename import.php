@@ -46,6 +46,18 @@ if (!isset($_GET['insee']))
 else
 	$insee=$_GET['insee'];
 
+	//recupération de l'argument
+	if (isset($argv[1])) {
+		if (!array_key_exists($argv[1], $cert_all)) {
+			exit("L'argument n'est pas un établissement ou mal appelé !!");
+		}
+		$ville= $argv[1];
+	}else {
+		exit("Il manque l'argument pour l'établissement à importer !!");
+	}
+
+	$cert= $cert_all[$ville];
+	$pref_tab= $pref_tab_all[$ville];
 
 // Prise en compte du serveur Windows (merci Antoine)
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
@@ -182,7 +194,7 @@ function load($insee) {
 						$today= date("Y-m-d");
 
 						// Ajout de l'acte dans la table mysql
-						exe ("INSERT INTO ".$pref_tab."index_delib VALUES('$insee',$t->id,'$t->date','".utf8_decode($nat)."','$t->number','$t->classification',\"".utf8_decode(str_replace("\n",' ',str_replace('"','\"',($t->subject))))."\",\"".substr($list_fich,0,-1)."\",'$today');");
+						exe ("INSERT INTO ".$pref_tab."index_delib VALUES('$insee',$t->id,'$t->date','$nat','$t->number','$t->classification',\"".str_replace("\n",' ',str_replace('"','\"',($t->subject)))."\",\"".substr($list_fich,0,-1)."\",'$today');");
 
 						if ($nat=="Actes individuels")
 							$mel_delib_ind.="- $t->number ($nat) $t->subject\n";//<br>";
@@ -213,8 +225,8 @@ function load($insee) {
 	//if ($_GET['nb_load']>0)
 	if (count($json->transactions)>0) {
 		$lien_suite="import.php?insee=".$insee."&offset=".($_GET['offset']+$limit)."&nb_load=$nb_load";
-		echo "<br><br><a href='$lien_suite'>Pour récupérer les actes plus anciens cliquer ici</a><br>";
-		//echo "<meta http-equiv=\"refresh\" content=\"3;URL=$lien_suite\">";
+		//echo "<br><br><a href='$lien_suite'>Pour récupérer les actes plus anciens cliquer ici</a><br>";
+		echo "<meta http-equiv=\"refresh\" content=\"3;URL=$lien_suite\">";
 	}
 
 }
@@ -260,7 +272,8 @@ function go_curl($user, $api, $nfich='') {
 	curl_setopt($ch, CURLOPT_VERBOSE, TRUE);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 
-	$proxyadd="http://192.168.76.3:3128";
+	//$proxyadd="http://192.168.76.3:3128";
+	global $proxyadd;
 
 	if (isset($proxyadd)) {
 		curl_setopt($ch, CURLOPT_PROXY, $proxyadd);
@@ -283,13 +296,13 @@ function go_curl($user, $api, $nfich='') {
 			$curl_return='';
 		}
 	}
-
+/*
 	$info= curl_getinfo($ch);
 	echo '<br>La requête a mis ' . $info['total_time'] . ' secondes à être envoyée à ' . $info['url'];
 	$info= curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	echo "<br> code de retour : $info ";
 	$info= curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
-	echo "<br> last url : $info ";
+	echo "<br> last url : $info ";*/
 
 	curl_close($ch);
 
