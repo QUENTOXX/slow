@@ -58,6 +58,7 @@ else
 
 	$cert= $cert_all[$ville];
 	$pref_tab= $pref_tab_all[$ville];
+	$mdp_acc= $mdp_all[$ville];
 
 // Prise en compte du serveur Windows (merci Antoine)
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
@@ -237,6 +238,8 @@ function load($insee) {
 /*******************************/
 function go_curl($user, $api, $nfich='') {
 
+	global $mdp_acc;
+
 	echo "<br><i class='cl-bleu'>API : $api</i>";
 
 	$data = array('api' => '1'); // Laisser à 1
@@ -254,7 +257,7 @@ function go_curl($user, $api, $nfich='') {
 	// Il s'agit du login et mot de passe saisie dans l'administration de S2low
 	echo "<br> user : $user";
 	if ($user!='')
-		curl_setopt($ch, CURLOPT_USERPWD, $user.":".'pn3xz65'); // L'identifiant et le mot de passe sont identiques
+		curl_setopt($ch, CURLOPT_USERPWD, $user.":".$mdp_all); // L'identifiant et le mot de passe sont identiques
 
 
 //	curl_setopt($ch, CURLOPT_HEADER, true);
