@@ -227,7 +227,9 @@ function load($insee) {
 	if (count($json->transactions)>0) {
 		$lien_suite="import.php?insee=".$insee."&offset=".($_GET['offset']+$limit)."&nb_load=$nb_load";
 		//echo "<br><br><a href='$lien_suite'>Pour récupérer les actes plus anciens cliquer ici</a><br>";
-		echo "<meta http-equiv=\"refresh\" content=\"3;URL=$lien_suite\">";
+		//echo "<meta http-equiv=\"refresh\" content=\"3;URL=$lien_suite\">";
+		header('Location: '.$lien_suite'.');
+		exit();
 	}
 
 }
