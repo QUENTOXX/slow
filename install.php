@@ -31,7 +31,7 @@
 				pj mediumtext COLLATE utf8_unicode_ci NOT NULL,
 				import_date date,
 				UNIQUE KEY insee_num (insee,num)
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=;");
+			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
 
 			echo '<br>Création de la table '.$pref.'index_delib';
 		} else {
