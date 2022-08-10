@@ -2,6 +2,7 @@
 <html lang="fr" dir="ltr">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="refresh" content="DELAI;url=URL" />
 <meta name="robots" content="noindex">
 <meta name="referrer" content="origin-when-crossorigin">
 <title>Récupération des actes sur s2low</title>
@@ -228,7 +229,7 @@ function load($insee) {
 		$lien_suite="import.php?insee=".$insee."&offset=".($_GET['offset']+$limit)."&nb_load=$nb_load";
 		//echo "<br><br><a href='$lien_suite'>Pour récupérer les actes plus anciens cliquer ici</a><br>";
 		//echo "<meta http-equiv=\"refresh\" content=\"3;URL=$lien_suite\">";
-		header('Location: '.$lien_suite);
+		header("Refresh:0; url=$lien_suite");
 		exit();
 	}
 
