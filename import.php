@@ -353,8 +353,8 @@ function Envoi_mail_unique($pers,$obj,$mess,$info,$urgent=0,$ico='') {
   return(true);
 }
 
-return $err;
 require_once "disconnect.inc.php";
+return $err;
 
 ?>
 </body>
