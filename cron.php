@@ -25,7 +25,9 @@
       while ($err == 0) {
         $err= include 'import.php';
         $_GET['offset'] += 100;
+        echo "<br> $err";
       }
+      echo "<br> $err avant test final";
       if ($err == 1) {
         exe("UPDATE process SET actif= 0 WHERE ville= '$ville'");
         exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
