@@ -240,9 +240,11 @@ function load($insee) {
 		echo "<br>Importation non terminé, récupération de plus d'actes ! <br>";
 		//exec("sh /etc/scripts/tschang.sh $nom $pass");
 		return 0;
+		exit();
 	}else {
 		echo "<br>Importation terminé ! <br>";
 		return 1;
+		exit();
 	}
 
 }
