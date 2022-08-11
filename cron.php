@@ -53,10 +53,8 @@
         exe("UPDATE process SET actif= 1 WHERE ville= '$ville'");
         exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
 
-        while ($err == 0) {
-          $err= include 'import.php';
-          $inc += 100;
-        }
+        $err= include_once 'import.php';
+        
         if ($err == 1) {
           exe("UPDATE process SET actif= 0 WHERE ville= '$ville'");
           exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");

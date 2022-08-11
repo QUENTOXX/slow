@@ -215,7 +215,7 @@ function load($insee) {
 
 						// Ajout de l'acte dans la table mysql
 						exe ("INSERT INTO ".$pref_tab."index_delib VALUES('$insee',$t->id,'$t->date','$nat','$t->number','$t->classification',\"".str_replace("\n",' ',str_replace('"','\"',($t->subject)))."\",\"".substr($list_fich,0,-1)."\",'$today');");
-
+						echo "INSERT INTO ".$pref_tab."index_delib VALUES('$insee',$t->id,'$t->date','$nat','$t->number','$t->classification',\"".str_replace("\n",' ',str_replace('"','\"',($t->subject)))."\",\"".substr($list_fich,0,-1)."\",'$today');";
 						if ($nat=="Actes individuels")
 							$mel_delib_ind.="- $t->number ($nat) $t->subject\n";//<br>";
 						else
