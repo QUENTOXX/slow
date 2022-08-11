@@ -5,6 +5,7 @@
   require_once "fonctions.php";
 
   $err= 0;
+  $inc= 0;
 
     if (isset($argv[1])) {
       if (!array_key_exists($argv[1], $cert_all)) {
@@ -24,7 +25,7 @@
 
       while ($err == 0) {
         $err= include_once 'import.php';
-        $_GET['offset'] += 100;
+        $inc += 100;
         echo "<br> $err";
       }
       echo "<br> $err avant test final";
@@ -59,7 +60,7 @@
 
         while ($err == 0) {
           $err= include_once 'import.php';
-          $_GET['offset'] += 100;
+          $inc += 100;
         }
         if ($err == 1) {
           exe("UPDATE process SET actif= 0 WHERE ville= '$ville'");
