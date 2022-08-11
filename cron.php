@@ -23,7 +23,7 @@
       exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
 
       while ($err == 0) {
-        $err= include 'import.php';
+        $err= include_once 'import.php';
         $_GET['offset'] += 100;
         echo "<br> $err";
       }
@@ -59,7 +59,7 @@
         exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
 
         while ($err == 0) {
-          $err= include 'import.php';
+          $err= include_once 'import.php';
           $_GET['offset'] += 100;
         }
         if ($err == 1) {
