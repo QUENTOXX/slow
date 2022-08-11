@@ -126,7 +126,7 @@ if (mysqli_num_rows($res)==0) {
 		echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
 		$insee=$row->insee;
 		$user_delib=$row;
-		load($insee); // Lance la récupération des actes
+		$err= load($insee); // Lance la récupération des actes
 	}
 }
 
@@ -240,11 +240,9 @@ function load($insee) {
 		echo "<br>Importation non terminé, récupération de plus d'actes ! <br>";
 		//exec("sh /etc/scripts/tschang.sh $nom $pass");
 		return 0;
-		exit();
 	}else {
 		echo "<br>Importation terminé ! <br>";
 		return 1;
-		exit();
 	}
 
 }
@@ -355,7 +353,7 @@ function Envoi_mail_unique($pers,$obj,$mess,$info,$urgent=0,$ico='') {
   return(true);
 }
 
-
+return $err;
 require_once "disconnect.inc.php";
 
 ?>
