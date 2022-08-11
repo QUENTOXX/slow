@@ -159,6 +159,7 @@ function load($insee) {
 */
 	global $inc;
 	$_GET['offset']= $inc;
+	echo $_GET['offset'];
 	if (!isset($_GET['offset'])) $_GET['offset']=0;
 	$limit=100; // Nombres d'actes à lister
 
