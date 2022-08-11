@@ -2,6 +2,7 @@
 
   require_once "params.php";
   require_once "connect.inc.php";
+  require_once "fonctions.php";
 
   $err= 0;
 
