@@ -164,7 +164,7 @@
 		echo '<br>Création de la table process ';
 
 		$today= date("Y-m-d H:i:s");
-		$next= date('Y-m-d 23::00:00', strtotime($today. ' + 1 days'));
+		$next= date('Y-m-d 23:00:00', strtotime($today. ' + 1 days'));
 
 		foreach ($pref_tab_all as $ville => $values) {
 				//remplissage de base

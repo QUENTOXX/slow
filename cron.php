@@ -17,7 +17,7 @@
       $mdp_acc= $mdp_all[$ville];
 
       $today= date("Y-m-d H:i:s");
-      $next= date('Y-m-d 23::00:00', strtotime($today. ' + 1 days'));
+      $next= date('Y-m-d 23:00:00', strtotime($today. ' + 1 days'));
 
       exe("UPDATE process SET actif= 1 WHERE ville= '$ville'");
       exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
@@ -50,7 +50,7 @@
         $mdp_acc= $mdp_all[$ville];
 
         $today= date("Y-m-d H:i:s");
-        $next= date('Y-m-d 23::00:00', strtotime($today. ' + 1 days'));
+        $next= date('Y-m-d 23:00:00', strtotime($today. ' + 1 days'));
 
         exe("UPDATE process SET actif= 1 WHERE ville= '$ville'");
         exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
