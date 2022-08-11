@@ -22,7 +22,7 @@ ini_set('display_errors','on');
 error_reporting(E_ALL);
 
 require_once "params.php";
-
+/*
 //recupération de l'argument
 if (isset($argv[1])) {
 	if (!array_key_exists($argv[1], $cert_all)) {
@@ -36,6 +36,10 @@ if (isset($argv[1])) {
 $cert= $cert_all[$ville];
 $pref_tab= $pref_tab_all[$ville];
 $mdp_acc= $mdp_all[$ville];
+*/
+global $ville;
+global $cert;
+global $pref_tab;
 
 include 'ctrl_cert.inc.php';
 if ($error>0) {
@@ -97,7 +101,6 @@ foreach (json_decode($json) as $u) {
 //$json=go_curl('',URL."admin/authorities/admin_authorities.php?api=1&count=1000"); // OK
 //print_r($json);
 
-
 if (!isset($_GET['nb_load']))
 	$_GET['nb_load']=20;
 
@@ -148,8 +151,12 @@ function load($insee) {
 	$nvu="actes/".$insee."/vu.txt";
 	if (!file_exists($nvu)) file_put_contents($nvu,'');
 	$vu=explode("\n",file_get_contents($nvu));
-
-
+/*
+	//récupération de l'argument si les actes n'ont pas tous été récupérés.
+	if (isset($argv[2])) {
+			$_GET['offset']= $argv[2];
+	}
+*/
 	if (!isset($_GET['offset'])) $_GET['offset']=0;
 	$limit=100; // Nombres d'actes à lister
 
@@ -227,10 +234,15 @@ function load($insee) {
 	//if ($_GET['nb_load']>0)
 	if (count($json->transactions)>0) {
 		$lien_suite="import.php?insee=".$insee."&offset=".($_GET['offset']+$limit)."&nb_load=$nb_load";
-		//echo "<br><br><a href='$lien_suite'>Pour récupérer les actes plus anciens cliquer ici</a><br>";
+		echo "<br><br><a href='$lien_suite'>Pour récupérer les actes plus anciens cliquer ici</a><br>";
 		//echo "<meta http-equiv=\"refresh\" content=\"3;URL=$lien_suite\">";
-		header("Refresh:0; url=$lien_suite");
-		exit();
+		//header("Refresh:0; url=$lien_suite");
+		echo "<br>Importation non terminé, récupération de plus d'actes ! <br>";
+		//exec("sh /etc/scripts/tschang.sh $nom $pass");
+		return 0;
+	}else {
+		echo "<br>Importation terminé ! <br>";
+		return 1;
 	}
 
 }

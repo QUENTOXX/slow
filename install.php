@@ -20,20 +20,23 @@
 
 		if (!tab_exist($pref.'index_delib')) {
 			// Création de la table contenant la liste des actes
-			exe("CREATE TABLE ".$pref."index_delib (
-				insee varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-				id int(12) NOT NULL,
-				del_date date NOT NULL,
-				nature varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-				num varchar(32) COLLATE utf8_unicode_ci NOT NULL,
-				code char(32) COLLATE utf8_unicode_ci NOT NULL,
-				obj text COLLATE utf8_unicode_ci NOT NULL,
-				pj mediumtext COLLATE utf8_unicode_ci NOT NULL,
-				import_date date,
-				UNIQUE KEY insee_num (insee,num)
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
+			$ccas= substr($ville, 0, 4);
+			if (strcmp($ccas, "CCAS") != 0) {
+				exe("CREATE TABLE ".$pref."index_delib (
+					insee varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+					id int(12) NOT NULL,
+					del_date date NOT NULL,
+					nature varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+					num varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+					code char(32) COLLATE utf8_unicode_ci NOT NULL,
+					obj text COLLATE utf8_unicode_ci NOT NULL,
+					pj mediumtext COLLATE utf8_unicode_ci NOT NULL,
+					import_date date,
+					UNIQUE KEY insee_num (insee,num)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
 
-			echo '<br>Création de la table '.$pref.'index_delib';
+				echo '<br>Création de la table '.$pref.'index_delib';
+			}
 		} else {
 			//exe("ALTER TABLE ".$pref."index_delib ADD import_date date");
 
@@ -127,16 +130,18 @@
 			//exe("DROP TABLE ".$pref."user");
 			if (!tab_exist($pref.'user')) {
 				// Création de la table utilisateur
-				exe("CREATE TABLE ".$pref."user (
-					insee varchar(100) NOT NULL,
-					actif int(1) NOT NULL,
-					mels_notif text COLLATE utf8_unicode_ci NOT NULL,
-					mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
-					mdp varchar(100),
-					siren int(10) NOT NULL
-				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
-				echo '<br>Création de la table '.$pref.'user';
-
+				$ccas= substr($ville, 0, 4);
+				if (strcmp($ccas, "CCAS") != 0) {
+					exe("CREATE TABLE ".$pref."user (
+						insee varchar(100) NOT NULL,
+						actif int(1) NOT NULL,
+						mels_notif text COLLATE utf8_unicode_ci NOT NULL,
+						mels_notif_conf text COLLATE utf8_unicode_ci NOT NULL,
+						mdp varchar(100),
+						siren int(10) NOT NULL
+					) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
+					echo '<br>Création de la table '.$pref.'user';
+				}
 					// Exemple de données utilisateurs
 					/*exe("INSERT INTO ".$pref."user (insee, actif, mels_notif, mels_notif_conf) VALUES
 					(57999,	1,	'mel1@domaine.fr,mel2@domaine.fr,mel3@domaine.fr',	''),
@@ -144,6 +149,33 @@
 				}	else {
 					echo '<div class="info info-vert">✔️ La table <b>'.$pref.'user</b> existe déjà</div>';
 				}
+	}
+//création table process
+	if (!tab_exist('process')) {
+
+		exe("CREATE TABLE process (
+			ville varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+			actif int(1) NOT NULL,
+			date_run datetime NOT NULL,
+			date_next_run datetime NOT NULL,
+			status int(1) NOT NULL,
+			com text COLLATE utf8_unicode_ci
+		) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
+		echo '<br>Création de la table process ';
+
+		$today= date("Y-m-d H:i:s");
+		$next= date('Y-m-d 23::00:00', strtotime($today. ' + 1 days'));
+
+		foreach ($pref_tab_all as $ville => $values) {
+				//remplissage de base
+				$ccas= substr($ville, 0, 4);
+				if (strcmp($ccas, "CCAS") != 0) {
+					exe("INSERT INTO process VALUES ('$ville', 0, '$today', '$next', 0,'');");
+				}
+		}
+
+	}	else {
+		echo '<div class="info info-vert">✔️ La table <b> process </b> existe déjà</div>';
 	}
 
 	echo '<br>';
