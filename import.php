@@ -122,12 +122,19 @@ if (mysqli_num_rows($res)==0) {
 	echo '<div class="info info-rouge">Vous n\'avez pas défini d\'utilisateur dans la table '.$pref_tab.'user</div>';
 	//load(''); // Lance la récupération des actes pour l'utilisateur unique => déconseiller
 } else {
-	while ($row=mysqli_fetch_object($res)) {
-		echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
-		$insee=$row->insee;
-		$user_delib=$row;
-		$err= load($insee); // Lance la récupération des actes
+
+	$inc= 0;
+	while ($err == 0) {
+
+		while ($row=mysqli_fetch_object($res)) {
+			echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
+			$insee=$row->insee;
+			$user_delib=$row;
+			$err= load($insee); // Lance la récupération des actes
+		}
+		$inc += 100;
 	}
+
 }
 
 

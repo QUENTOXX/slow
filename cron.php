@@ -5,7 +5,6 @@
   require_once "fonctions.php";
 
   $err= 0;
-  $inc= 0;
 
     if (isset($argv[1])) {
       if (!array_key_exists($argv[1], $cert_all)) {
@@ -23,12 +22,8 @@
       exe("UPDATE process SET actif= 1 WHERE ville= '$ville'");
       exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
 
-      while ($err == 0) {
-        $err= include_once 'import.php';
-        $inc += 100;
-        echo "<br> $err";
-      }
-      echo "<br> $err avant test final";
+      $err= include_once 'import.php';
+
       if ($err == 1) {
         exe("UPDATE process SET actif= 0 WHERE ville= '$ville'");
         exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
@@ -59,7 +54,7 @@
         exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
 
         while ($err == 0) {
-          $err= include_once 'import.php';
+          $err= include 'import.php';
           $inc += 100;
         }
         if ($err == 1) {
