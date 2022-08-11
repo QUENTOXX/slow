@@ -130,8 +130,9 @@ if (mysqli_num_rows($res)==0) {
 			echo '<h2>Recherche des actes pour '.$row->insee.'...</h2>';
 			$insee=$row->insee;
 			$user_delib=$row;
-			$err= load($insee); // Lance la récupération des actes
+			 // Lance la récupération des actes
 		}
+		$err= load($insee);
 		$inc += 100;
 	}
 
