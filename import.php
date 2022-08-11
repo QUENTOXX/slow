@@ -157,6 +157,7 @@ function load($insee) {
 			$_GET['offset']= $argv[2];
 	}
 */
+	global $_GET['offset'];
 	if (!isset($_GET['offset'])) $_GET['offset']=0;
 	$limit=100; // Nombres d'actes à lister
 
@@ -353,7 +354,7 @@ function Envoi_mail_unique($pers,$obj,$mess,$info,$urgent=0,$ico='') {
   return(true);
 }
 
-require_once "disconnect.inc.php";
+//require_once "disconnect.inc.php";
 return $err;
 
 ?>

@@ -29,7 +29,6 @@
       }
       echo "<br> $err avant test final";
       if ($err == 1) {
-        require_once "connect.inc.php";
         exe("UPDATE process SET actif= 0 WHERE ville= '$ville'");
         exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
         exe("UPDATE process SET status= 0 WHERE ville= '$ville'");
