@@ -38,6 +38,7 @@
       $req=mysqli_query($link, $sql);
 
       foreach ($req as $user) {
+        echo $user['ville'];
         if ($user['actif'] == 1) {
           exit("Processus déja en cours !");
         }
