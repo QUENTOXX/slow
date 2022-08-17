@@ -39,11 +39,12 @@
 
       foreach ($req as $user) {
 
+        $ville= $user['ville'];
+
         if ($user['actif'] == 1) {
+          exe("UPDATE process SET com= 'problème pour exécuter le script car mal terminé précédement ' WHERE ville= '$ville'");
           exit("Processus déja en cours !");
         }
-
-        $ville= $user['ville'];
 
         $cert= $cert_all[$ville];
         $pref_tab= $pref_tab_all[$ville];
