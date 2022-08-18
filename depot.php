@@ -18,6 +18,8 @@
 
 	if (isset($_POST['depot'])) {
 
+		$tmp= 0;
+
 		//$insee= "$insee_par_defaut"; //$_POST['insee'];
 		$id=0;
 		$date_dec = date('Y-m-d', strtotime($_POST['date_deci']));
@@ -130,12 +132,11 @@
 		$req=mysqli_query($link, $sql);
 
 		foreach ($req as $user) {
-			var_dump($del_num);
-			var_dump($user['num']);
+
 			if ("$del_num" == $user['num']) {
 
 				exe("DELETE FROM ".$pref."index_delib WHERE num= '$del_num'");
-
+				$tmp= 0;
 				echo "<br/>Acte bien supprimé";
 				echo "<br/>Si vous souhaitez supprimé un autre acte cliquez ci-dessous";
 				?>
@@ -143,18 +144,21 @@
 				<input type="submit" name="retour" value="Supprimer un autre acte" />
 				</form>
 				<?php
-
+				break;
 			}else {
-				echo "Ce numéro n'éxiste !";
-				?>
-				<form method="post" action="depot_delib.php">
-				<input type="submit" name="retour" value="OK" />
-				</form>
-				<?php
-				//header("Location:".$_SERVER[HTTP_REFERER]);
-
-				die;
+				$tmp= 1;
 			}
+		}
+		if ($tmp == 1) {
+			echo "Ce numéro n'éxiste !";
+			?>
+			<form method="post" action="depot_delib.php">
+			<input type="submit" name="retour" value="OK" />
+			</form>
+			<?php
+			//header("Location:".$_SERVER[HTTP_REFERER]);
+
+			die;
 		}
 
 	}

@@ -40,7 +40,7 @@
 									$erreurs ="";
 									$erreurs .= "pseudo ou mot de passe incorect !! <br>";
 							}else {
-									echo "string";
+
 									$siren= $user['siren'];
 									$erreurs= "";
 									break 2;
