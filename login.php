@@ -33,7 +33,7 @@ require_once "params.php";
 require_once "connect.inc.php";
 require_once "fonctions.php";
 
-  echo "<h2>Connection pour le dépot des actes</h2>";
+  echo "<h2>Connection pour le dépot ou suppression des actes</h2>";
 
 ?>
 
@@ -117,7 +117,7 @@ require_once "fonctions.php";
       </form>
 
       <br><br>
-      <form name="ajout" action="" method="post">
+      <form name="modif" action="" method="post">
       <p>Modifier un utilisateur</p>
       <label>Ville de l'utilisateur : </label>
       <select id="ville" name="ville">

@@ -32,19 +32,18 @@
 					foreach ($pref_tab_all as $ville => $pref) {
 						$sql = "SELECT * FROM ".$pref."user";
 						$req=mysqli_query($link, $sql);
-						//var_dump($req);
 
-						//$res = $req->fetchALL();
-						//var_dump($res);
 						foreach ($req as $user) {
+
 							if ($login != $user['mels_notif'] || !hash_equals($user['mdp'], md5(crypt($mdp, $salt)))) {
 
 									$erreurs ="";
 									$erreurs .= "pseudo ou mot de passe incorect !! <br>";
 							}else {
+									echo "string";
 									$siren= $user['siren'];
 									$erreurs= "";
-									break;
+									break 2;
 							}
 						}
 			}
@@ -85,7 +84,18 @@
 		<label>Joindre un ou plusieurs PDF : </label>
 		<input type="file" id="pj" name="pj[]" accept="application/pdf" multiple >
 		<br><br>
-		<input type="submit" name="submit" value="Déposer"/>
+		<input type="submit" name="depot" value="Déposer"/>
+	</form>
+	<br><br>
+	<h2>Supprimer un acte</h2>
+	<br>
+	<form name="del_delib" action="depot.php" method="post" enctype="multipart/form-data">
+		<?php
+			echo '<input type="hidden" name="siren" value="' . htmlspecialchars($siren) . '" />'."\n";
+		?>
+		<p>Rentrer le numéro : <input type="text" name="del_num" placeholder="EX : PV202274Q"/></p>
+		<br>
+		<input type="submit" name="del_delib" value="Supprimer"/>
 	</form>
 
 	<?php
