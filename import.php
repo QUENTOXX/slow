@@ -9,8 +9,7 @@
 <link rel="stylesheet" type="text/css" href="style/style.css">
 <body>
 <?php
-global OCSOUR;
-echo OSCOUR;
+
 /*
 // A faire //
 
@@ -101,7 +100,7 @@ if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 	runkit7_constant_redefine('CA_PATH', './key/'.$cert.'ca.pem');
 }
 
-
+echo PEM;
 
 // Mot de passe choisi lors de la création openssl
 runkit7_constant_redefine('PASSWORD', $pass);
