@@ -65,6 +65,27 @@ if (!isset($_GET['insee']))
 else
 	$insee=$_GET['insee'];
 
+	if (unset('PEM')) {
+		// Prise en compte du serveur Windows (merci Antoine)
+		if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+			define('PEM',     realpath('key').'\\'.$cert.'client.pem');
+			define('SSLKEY',  realpath('key').'\\'.$cert.'key.pem');
+			define('CA_PATH', realpath('key').'\\'.$cert.'ca.pem');
+		} else {
+			// la partie x509 du certificat : openssl pkcs12 -in certificat.p12 -out client.pem -clcerts -nokeys
+			define('PEM',     './key/'.$cert.'client.pem');
+			//  la clé privée du certificat : openssl pkcs12 -in certificat.p12 -out key.pem -nocerts
+			define('SSLKEY',  './key/'.$cert.'key.pem');
+			//le certificat du CA :           openssl pkcs12 -in certificat.p12 -out ca.pem -cacerts -nokeys
+			define('CA_PATH', './key/'.$cert.'ca.pem');
+		}
+
+
+
+		// Mot de passe choisi lors de la création openssl
+		define('PASSWORD', $pass);
+	}
+
 // Prise en compte du serveur Windows (merci Antoine)
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 	runkit7_constant_redefine('PEM',     realpath('key').'\\'.$cert.'client.pem');
