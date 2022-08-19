@@ -80,6 +80,7 @@ if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 }
 
 
+
 // Mot de passe choisi lors de la création openssl
 define('PASSWORD', $pass);
 
@@ -137,6 +138,12 @@ if (mysqli_num_rows($res)==0) {
 	}
 
 }
+//effacement des definit pour le rappel suivant
+
+runkit7_constant_remove('PEM');
+runkit7_constant_remove('CA_PATH');
+runkit7_constant_remove('SSLKEY');
+runkit7_constant_remove('PASSWORD');
 
 // déplacement des fonction dans fonction.php
 
