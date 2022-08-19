@@ -140,10 +140,10 @@ if (mysqli_num_rows($res)==0) {
 }
 //effacement des definit pour le rappel suivant
 
-unset('PEM');
-unset('CA_PATH');
-unset('SSLKEY');
-unset('PASSWORD');
+unset(PEM);
+unset(CA_PATH);
+unset(SSLKEY);
+unset(PASSWORD);
 
 // déplacement des fonction dans fonction.php
 
