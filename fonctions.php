@@ -3,17 +3,8 @@
 
 /* Lance une requête mysql et log les erreurs dans un fichier SQL.rrr */
 function exe($rq) {
-  /*
-  echo "<br>";
-  var_dump($rq);
-  echo "<br>";
-  echo "<br> le truc global";
-  var_dump($GLOBALS['link']);
-  echo "<br>";
-    echo "<br> la commande<br>";
-  var_dump(mysqli_query($GLOBALS['link'], $rq));
-  echo "<br>";*/
-  if (!mysqli_query($GLOBALS['link'], $rq)) { //faire or die a la place de if
+
+  if (!mysqli_query($GLOBALS['link'], $rq)) {
 		// Log de l'erreur
 		file_put_contents("SQL.rrr","\n".date("Y-m-d H:i:s")." ".mysqli_error($GLOBALS['link'])." [".$_SERVER['PHP_SELF']."]\n".$rq."\n",FILE_APPEND);
 		echo "Erreur de requete";
