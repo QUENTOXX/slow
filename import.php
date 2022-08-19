@@ -67,22 +67,22 @@ else
 
 // Prise en compte du serveur Windows (merci Antoine)
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-	define('PEM',     realpath('key').'\\'.$cert.'client.pem');
-	define('SSLKEY',  realpath('key').'\\'.$cert.'key.pem');
-	define('CA_PATH', realpath('key').'\\'.$cert.'ca.pem');
+	runkit7_constant_redefine('PEM',     realpath('key').'\\'.$cert.'client.pem');
+	runkit7_constant_redefine('SSLKEY',  realpath('key').'\\'.$cert.'key.pem');
+	runkit7_constant_redefine('CA_PATH', realpath('key').'\\'.$cert.'ca.pem');
 } else {
 	// la partie x509 du certificat : openssl pkcs12 -in certificat.p12 -out client.pem -clcerts -nokeys
-	define('PEM',     './key/'.$cert.'client.pem');
+	runkit7_constant_redefine('PEM',     './key/'.$cert.'client.pem');
 	//  la clé privée du certificat : openssl pkcs12 -in certificat.p12 -out key.pem -nocerts
-	define('SSLKEY',  './key/'.$cert.'key.pem');
+	runkit7_constant_redefine('SSLKEY',  './key/'.$cert.'key.pem');
 	//le certificat du CA :           openssl pkcs12 -in certificat.p12 -out ca.pem -cacerts -nokeys
-	define('CA_PATH', './key/'.$cert.'ca.pem');
+	runkit7_constant_redefine('CA_PATH', './key/'.$cert.'ca.pem');
 }
 
 
 
 // Mot de passe choisi lors de la création openssl
-define('PASSWORD', $pass);
+runkit7_constant_redefine('PASSWORD', $pass);
 
 // Permet de changer les classifications qui ont évoluées depuis 2011.
 $old_nature=array("Contrats et conventions","Deliberations","Arretes individuels","Arretes reglementaires","Documents budgetaires et financiers");
@@ -139,12 +139,12 @@ if (mysqli_num_rows($res)==0) {
 
 }
 //effacement des definit pour le rappel suivant
-
+/*
 runkit7_constant_remove('PEM');
 runkit7_constant_remove('CA_PATH');
 runkit7_constant_remove('SSLKEY');
 runkit7_constant_remove('PASSWORD');
-
+*/
 // déplacement des fonction dans fonction.php
 
 
