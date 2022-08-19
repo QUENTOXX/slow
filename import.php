@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="style/style.css">
 <body>
 <?php
-
+echo OSCOUR;
 /*
 // A faire //
 

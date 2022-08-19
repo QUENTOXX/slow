@@ -22,6 +22,8 @@
       exe("UPDATE process SET actif= 1 WHERE ville= '$ville'");
       exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
 
+      define('OSCOUR', "on essaie");
+
       $err= include_once 'import.php';
 
       if ($err == 1) {
