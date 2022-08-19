@@ -20,6 +20,7 @@
       $next= date('Y-m-d 23:00:00', strtotime($today. ' + 1 days'));
 
       exe("UPDATE process SET actif= 1 WHERE ville= '$ville'");
+      exe("UPDATE process SET date_run= '$today' WHERE ville= '$ville'");
       exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
 
       $err= include_once 'import.php';
@@ -55,6 +56,7 @@
         $next= date('Y-m-d 23:00:00', strtotime($today. ' + 1 days'));
 
         exe("UPDATE process SET actif= 1 WHERE ville= '$ville'");
+        exe("UPDATE process SET date_run= '$today' WHERE ville= '$ville'");
         exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
 
         $err= include 'import.php';
