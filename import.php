@@ -140,10 +140,10 @@ if (mysqli_num_rows($res)==0) {
 }
 //effacement des definit pour le rappel suivant
 
-runkit7_constant_remove('PEM');
-runkit7_constant_remove('CA_PATH');
-runkit7_constant_remove('SSLKEY');
-runkit7_constant_remove('PASSWORD');
+unset('PEM');
+unset('CA_PATH');
+unset('SSLKEY');
+unset('PASSWORD');
 
 // déplacement des fonction dans fonction.php
 
