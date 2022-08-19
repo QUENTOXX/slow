@@ -146,6 +146,7 @@ if (mysqli_num_rows($res)==0) {
 } else {
 
 	$inc= 0;
+	$err= 0;
 	while ($err == 0) {
 
 		while ($row=mysqli_fetch_object($res)) {
