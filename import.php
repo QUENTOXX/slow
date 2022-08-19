@@ -65,7 +65,7 @@ if (!isset($_GET['insee']))
 else
 	$insee=$_GET['insee'];
 
-	if (unset('PEM')) {
+	if (!isset('PEM')) {
 		// Prise en compte du serveur Windows (merci Antoine)
 		if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 			define('PEM',     realpath('key').'\\'.$cert.'client.pem');
