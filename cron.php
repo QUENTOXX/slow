@@ -49,7 +49,8 @@
         if ($user['actif'] == 1) {
           exe("UPDATE process SET com= 'problème pour exécuter le script car mal terminé précédement ' WHERE ville= '$ville'");
           exe("UPDATE process SET status= 1 WHERE ville= '$ville'");
-          break("Processus déja en cours !");
+          echo "Processus déja en cours !";
+          break;
         }
 
         $cert= $cert_all[$ville];
