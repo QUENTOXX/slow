@@ -177,8 +177,9 @@ require_once "fonctions.php";
         <option value=Vaulx_en_Velin>Vaulx en Velin</option>
         <option value=Sitiv>Sitiv</option>
       </select>
-      <br>
+      <br><br>
       <input type="submit" name="forcer" value="Forcer le script"/>
+      <br><br>
     </form>
 
       <?php
