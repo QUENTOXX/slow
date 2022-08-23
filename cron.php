@@ -35,7 +35,11 @@
 
     }else {
 
-      $sql = "SELECT * FROM process";
+      $today= date("Y-m-d H:i:s");
+      $avt= date('Y-m-d H:i:s', strtotime($today. ' - 30 minutes'));
+      $aps= date('Y-m-d H:i:s', strtotime($today. ' + 30 minutes'));
+
+      $sql = "SELECT * FROM process WHERE date_next_run BETWEEN '$avt' AND '$aps'";
       $req=mysqli_query($link, $sql);
 
       foreach ($req as $user) {
@@ -52,7 +56,6 @@
         $pref_tab= $pref_tab_all[$ville];
         $mdp_acc= $mdp_all[$ville];
 
-        $today= date("Y-m-d H:i:s");
         $next= date('Y-m-d 23:00:00', strtotime($today. ' + 1 days'));
 
         exe("UPDATE process SET actif= 1 WHERE ville= '$ville'");
