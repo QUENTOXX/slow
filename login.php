@@ -161,6 +161,26 @@ require_once "fonctions.php";
       <input type="submit" name="suppr" value="Supprimer" onclick="Check_psw(3);"/>
     </form>
 
+    <br><br>
+    <form name="forcer" action="" method="post">
+      <br>
+      <p>Pour forcer l'import d'une ville</p>
+      <label>Ville en question : </label>
+      <select id="ville" name="ville">
+        <option selected value=Givors>Givors</option>
+        <option value=Grigny>Grigny</option>
+        <option value=Saint-Chamond>Saint Chamond</option>
+        <option value=Venissieux>Venissieux</option>
+        <option value=Corbas>Corbas</option>
+        <option value=Pierre_Benite>Pierre Benite</option>
+        <option value=Rive_de_Gier>Rive de Gier</option>
+        <option value=Vaulx_en_Velin>Vaulx en Velin</option>
+        <option value=Sitiv>Sitiv</option>
+      </select>
+      <br>
+      <input type="submit" name="forcer" value="Forcer le script"/>
+    </form>
+
       <?php
     }
   }
@@ -306,6 +326,17 @@ require_once "fonctions.php";
           unset($_POST['checkadmin']);
         }
       }
+    }
+  }
+
+  if (isset($_POST['forcer'])) {
+
+    $fv= $_POST['ville'];
+    $today= date("Y-m-d H:i:s");
+    $fs= date('Y-m-d H:i:s', strtotime($today. ' + 10 minutes'));
+
+    if (exe("UPDATE process SET date_next_run= '$fs' WHERE ville= '$fv'")) {
+      echo "L'import de $fv s'effectuera dans la prochaine rotation (maximum 30 minutes)";
     }
   }
 
