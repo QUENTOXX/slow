@@ -136,6 +136,13 @@
 			if ("$del_num" == $user['num']) {
 
 				exe("DELETE FROM ".$pref."index_delib WHERE num= '$del_num'");
+				$path= 'actes/'.$insee;
+				$lpj=explode("|",$user['pj']);
+				foreach($lpj as $pj){
+					if (file_exists("$path/$pj")) {
+						unlink("$path/$pj");
+					}
+				}
 				$tmp= 0;
 				echo "<br/>Acte bien supprimé";
 				echo "<br/>Si vous souhaitez supprimé un autre acte cliquez ci-dessous";
@@ -150,7 +157,7 @@
 			}
 		}
 		if ($tmp == 1) {
-			echo "Ce numéro n'éxiste !";
+			echo "Ce numéro n'éxiste pas !";
 			?>
 			<form method="post" action="depot_delib.php">
 			<input type="submit" name="retour" value="OK" />

@@ -209,15 +209,17 @@ require_once "fonctions.php";
         }else {
 
           $pre= $pref_tab_all[$_POST['ville']];
-          $sql= "SELECT * FROM ".$pre."user";
-          $req=mysqli_query($link, $sql);
+          foreach ($pref_tab_all as $key => $value) {
+            $sql= "SELECT * FROM ".$value."user";
+            $req=mysqli_query($link, $sql);
 
-          foreach ($req as $user) {
-            if ($email == $user['mels_notif']) {
-              echo "Cet utilisateur existe déja !!";
-              unset($_POST['subajout']);
-              unset($_POST['checkadmin']);
-              exit();
+            foreach ($req as $user) {
+              if ($email == $user['mels_notif']) {
+                echo "Cet utilisateur existe déja à $key !!";
+                unset($_POST['subajout']);
+                unset($_POST['checkadmin']);
+                exit();
+              }
             }
           }
 
