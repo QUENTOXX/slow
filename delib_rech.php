@@ -254,8 +254,11 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 				echo "<td>";
 				//piece jointe
 				$tmp=explode("|",$row->pj);
-				foreach($tmp as $pj)
-					echo "<a href='actes/$row->insee/$pj' target='_blank'><img src='ico/pdf.png' /></a>";
+				foreach($tmp as $pj){
+					if ($pj != "") {
+						echo "<a href='actes/$row->insee/$pj' target='_blank'><img src='ico/pdf.png' /></a>";
+					}
+				}
 				echo "</td>";
 				echo "<td>$row->import_date </td>";
 				echo "</tr>";
@@ -289,8 +292,11 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 			echo "<td>";
 			//piece jointe
 			$tmp=explode("|",$row->pj);
-			foreach($tmp as $pj)
-				echo "<a href='actes/$row->insee/$pj' target='_blank'><img src='ico/pdf.png' /></a>";
+			foreach($tmp as $pj){
+				if ($pj != "") {
+					echo "<a href='actes/$row->insee/$pj' target='_blank'><img src='ico/pdf.png' /></a>";
+				}
+			}
 			echo "</td>";
 			echo "<td>$row->import_date </td>";
 			echo "</tr>";
