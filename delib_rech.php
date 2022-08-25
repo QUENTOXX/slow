@@ -195,6 +195,11 @@
 
 	echo "\n".'Etablissements <select id="villes" class="form-control"><option>Choisir</option>';
 	echo "<option value=Toutes>Toutes</option>";
+	foreach ($pref_tab_all as $key => $value) {
+		$vu= str_replace("_", " ", $key);
+		echo "<option value=$key>$vu</option>";
+	}
+	/*
 	echo "<option value=Givors>Givors</option>";
 	echo "<option value=Grigny>Grigny</option>";
 	echo "<option value=Saint-Chamond>Saint Chamond</option>";
@@ -204,7 +209,7 @@
 	echo "<option value=Rive_de_Gier>Rive de Gier</option>";
 	echo "<option value=Vaulx_en_Velin>Vaulx en Velin</option>";
 	echo "<option value=Sitiv>Sitiv</option>";
-
+*/
 	echo "</select>";
 //formulaire date
 ?>

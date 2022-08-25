@@ -99,15 +99,13 @@ require_once "fonctions.php";
         <p>Ajouter un utilisateur</p>
         <label>Ville de l'utilisateur : </label>
         <select id="ville" name="ville">
-          <option selected value=Givors>Givors</option>
-          <option value=Grigny>Grigny</option>
-          <option value=Saint-Chamond>Saint Chamond</option>
-          <option value=Venissieux>Venissieux</option>
-          <option value=Corbas>Corbas</option>
-          <option value=Pierre_Benite>Pierre Benite</option>
-          <option value=Rive_de_Gier>Rive de Gier</option>
-          <option value=Vaulx_en_Velin>Vaulx en Velin</option>
-          <option value=Sitiv>Sitiv</option>
+          <option>Choisir</option>
+          <?php
+          foreach ($pref_tab_all as $key => $value) {
+            $vu= str_replace("_", " ", $key);
+            echo "<option value=$key>$vu</option>";
+          }
+           ?>
         </select>
         <p>Rentrer son email : <input type="email" name="email"/> </p>
         <p>Rentrer son mot de passe : <input type="password" name="psw1"/> </p>
@@ -121,15 +119,13 @@ require_once "fonctions.php";
       <p>Modifier un utilisateur</p>
       <label>Ville de l'utilisateur : </label>
       <select id="ville" name="ville">
-        <option selected value=Givors>Givors</option>
-        <option value=Grigny>Grigny</option>
-        <option value=Saint-Chamond>Saint Chamond</option>
-        <option value=Venissieux>Venissieux</option>
-        <option value=Corbas>Corbas</option>
-        <option value=Pierre_Benite>Pierre Benite</option>
-        <option value=Rive_de_Gier>Rive de Gier</option>
-        <option value=Vaulx_en_Velin>Vaulx en Velin</option>
-        <option value=Sitiv>Sitiv</option>
+        <option>Choisir</option>
+        <?php
+        foreach ($pref_tab_all as $key => $value) {
+          $vu= str_replace("_", " ", $key);
+          echo "<option value=$key>$vu</option>";
+        }
+         ?>
       </select>
       <p>Rentrer son email : <input type="email" name="newemail"/> </p>
       <p>Rentrer son nouveau mot de passe : <input type="password" name="newpsw1"/> </p>
@@ -144,15 +140,13 @@ require_once "fonctions.php";
       <p>Supprimer un utilisateur</p>
       <label>Ville de l'utilisateur : </label>
       <select id="ville" name="ville">
-        <option selected value=Givors>Givors</option>
-        <option value=Grigny>Grigny</option>
-        <option value=Saint-Chamond>Saint Chamond</option>
-        <option value=Venissieux>Venissieux</option>
-        <option value=Corbas>Corbas</option>
-        <option value=Pierre_Benite>Pierre Benite</option>
-        <option value=Rive_de_Gier>Rive de Gier</option>
-        <option value=Vaulx_en_Velin>Vaulx en Velin</option>
-        <option value=Sitiv>Sitiv</option>
+        <option>Choisir</option>
+        <?php
+        foreach ($pref_tab_all as $key => $value) {
+          $vu= str_replace("_", " ", $key);
+          echo "<option value=$key>$vu</option>";
+        }
+         ?>
       </select>
       <p>Rentrer son email : <input type="email" name="supemail"/> </p>
       <p>Rentrer son mot de passe : <input type="password" name="suppsw1"/> </p>
@@ -167,15 +161,13 @@ require_once "fonctions.php";
       <p>Pour forcer l'import d'une ville</p>
       <label>Ville en question : </label>
       <select id="ville" name="ville">
-        <option selected value=Givors>Givors</option>
-        <option value=Grigny>Grigny</option>
-        <option value=Saint-Chamond>Saint Chamond</option>
-        <option value=Venissieux>Venissieux</option>
-        <option value=Corbas>Corbas</option>
-        <option value=Pierre_Benite>Pierre Benite</option>
-        <option value=Rive_de_Gier>Rive de Gier</option>
-        <option value=Vaulx_en_Velin>Vaulx en Velin</option>
-        <option value=Sitiv>Sitiv</option>
+        <option>Choisir</option>
+        <?php
+        foreach ($pref_tab_all as $key => $value) {
+          $vu= str_replace("_", " ", $key);
+          echo "<option value=$key>$vu</option>";
+        }
+         ?>
       </select>
       <br><br>
       <input type="submit" name="forcer" value="Forcer le script"/>
@@ -242,6 +234,7 @@ require_once "fonctions.php";
     $newemail = isset($_POST['newemail']) ? $_POST['newemail'] : "";
     $newpsw1 = isset($_POST['newpsw1']) ? $_POST['newpsw1'] : "";
     $newpsw2 = isset($_POST['newpsw2']) ? $_POST['newpsw2'] : "";
+    $tmp= 0;
 
     if (empty($newemail)) {
         echo "le mail doit etre renseigner !! <br>";
@@ -269,17 +262,21 @@ require_once "fonctions.php";
 
               if (exe("UPDATE ".$pref."user SET mdp= '$hash' WHERE mels_notif= '$newemail'")) {
                 echo "Modifié !!";
+                $tmp= 0;
                 unset($_POST['modif']);
                 unset($_POST['checkadmin']);
               }
             }
           }
         }else {
-          echo "Cet utilisateur n'existe pas à ".$_POST['ville'];
-          unset($_POST['modif']);
-          unset($_POST['checkadmin']);
+          $tmp= 1;
         }
       }
+    }
+    if ($tmp == 1) {
+      echo "Cet utilisateur n'existe pas à ".$_POST['ville'];
+      unset($_POST['modif']);
+      unset($_POST['checkadmin']);
     }
   }
 
@@ -288,6 +285,7 @@ require_once "fonctions.php";
     $supemail = isset($_POST['supemail']) ? $_POST['supemail'] : "";
     $suppsw1 = isset($_POST['suppsw1']) ? $_POST['suppsw1'] : "";
     $suppsw2 = isset($_POST['suppsw2']) ? $_POST['suppsw2'] : "";
+    $tmp= 0;
 
     if (empty($supemail)) {
         echo "le mail doit etre renseigner !! <br>";
@@ -317,18 +315,23 @@ require_once "fonctions.php";
 
                 if (exe("DELETE FROM ".$pref."user WHERE mels_notif= '$supemail'")) {
                   echo "Supprimer !!";
+                  $tmp= 0;
                   unset($_POST['suppr']);
                   unset($_POST['checkadmin']);
+                  break;
                 }
               }
             }
           }
         }else {
-          echo "Cet utilisateur n'existe pas à ".$_POST['ville'];
-          unset($_POST['suppr']);
-          unset($_POST['checkadmin']);
+          $tmp= 1;
         }
       }
+    }
+    if ($tmp == 1) {
+      echo "Cet utilisateur n'existe pas à ".$_POST['ville'];
+      unset($_POST['suppr']);
+      unset($_POST['checkadmin']);
     }
   }
 
