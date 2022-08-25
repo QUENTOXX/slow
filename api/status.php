@@ -9,9 +9,9 @@
 	set_include_path("../connect.inc.php");
 	set_include_path("../fonctions.php");
 	set_include_path("../disconnect.inc.php");
-	require_once '../params.php';
-	require_once 'connect.inc.php';
-	require_once 'fonctions.php';
+	require_once '../config/params.php';
+	require_once '../connect.inc.php';
+	require_once '../fonctions.php';
 
 	if (!isset($_GET['type'])) {
 		$_GET['type']= "user";
@@ -71,6 +71,6 @@
 		json_encode($jsonerr);
 	}
 //UPDATE process SET actif= 1 WHERE ville= 'Givors'
-	require_once 'disconnect.inc.php';
+	require_once '../disconnect.inc.php';
 
 ?>

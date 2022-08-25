@@ -1,7 +1,7 @@
 <?php
 //error_reporting (0);
 
-require_once "params.php";
+require_once "config/params.php";
 
 /* Lance une requête mysql et log les erreurs dans un fichier SQL.rrr */
 function exe($rq) {

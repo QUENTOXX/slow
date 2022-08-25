@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="style/style.css">
 <?php
 
-	require_once "params.php";
+	require_once "config/params.php";
 
 	require_once "connect.inc.php";
 	require_once "fonctions.php";

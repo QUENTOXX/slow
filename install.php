@@ -8,7 +8,7 @@
 <img src="img/PubliS2low.svg" />
 <?php
 
-	require_once "params.php";
+	require_once "config/params.php";
 
 	require_once "connect.inc.php";
 	require_once "fonctions.php";
@@ -179,8 +179,9 @@
 	}
 
 	echo '<br>';
-
-	include 'ctrl_cert.inc.php';
+	foreach ($pref_tab_all as $cert) {
+		include 'ctrl_cert.inc.php';
+	}
 /*
 	foreach ($pref_tab_all as $ville => $pref) {
 
@@ -199,7 +200,7 @@
 
 	if ($error<1) {
 		echo '<br><hr>';
-		echo '<br><a href="import.php">Lancer le premier import</a>';
+		//echo '<br><a href="import.php">Lancer le premier import</a>'; plus en manuel
 		echo '<br><a href="delib_rech.php">Afficher la liste des délibérations</a>';
 	} else {
 		echo '<div class="info info-rouge">⚠️ Merci de corriger les erreurs avant de lancer les récupérations</div>';

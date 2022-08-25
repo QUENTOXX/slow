@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	require_once "params.php";
+	require_once "config/params.php";
 	require_once 'perso.php';
 
 	// Spécification de l'accès total (si certains actes ne sont pas à destination du public)
@@ -60,6 +60,7 @@
 
 		$tab_perso= Recup_Fich_Tab($pref_tab_all[$_GET['Villes']]);
 
+		if ($tab_perso != 0) {
 			$lien= $tab_perso[1]["Logo"];
 			$lien= ltrim($lien);
 			$lien= rtrim($lien);
@@ -68,15 +69,21 @@
 				$lien= "Personalisation/logo/".$lien;
 				image($lien);
 			}
+		}
 	}
 
 	//début page
 	if (isset($_GET['Villes']) && $_GET['Villes']!= "Toutes" && array_key_exists($_GET['Villes'], $pref_tab_all)) {
 
 		$tab_perso= Recup_Fich_Tab($pref_tab_all[$_GET['Villes']]);
-		$titre= $tab_perso[1]["Titre"];
-		$titre= ltrim($titre);
-		$titre= rtrim($titre);
+
+		if ($tab_perso != 0) {
+			$titre= $tab_perso[1]["Titre"];
+			$titre= ltrim($titre);
+			$titre= rtrim($titre);
+		}else {
+			$titre ="";
+		}
 
 		if ($titre == "") {
 			echo "<h2>Registre des actes</h2>";

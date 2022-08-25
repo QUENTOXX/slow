@@ -21,7 +21,7 @@ $json=go_curl($insee, URL."/modules/actes/actes_classification_fetch.php", "clas
 ini_set('display_errors','on');
 error_reporting(E_ALL);
 
-require_once "params.php";
+require_once "config/params.php";
 /*
 //recupération de l'argument
 if (isset($argv[1])) {
@@ -73,11 +73,11 @@ else
 			define('CA_PATH', realpath('key').'\\'.$cert.'ca.pem');
 		} else {
 			// la partie x509 du certificat : openssl pkcs12 -in certificat.p12 -out client.pem -clcerts -nokeys
-			define('PEM',     './key/'.$cert.'client.pem');
+			define('PEM',     $certpath.$cert.'client.pem');
 			//  la clé privée du certificat : openssl pkcs12 -in certificat.p12 -out key.pem -nocerts
-			define('SSLKEY',  './key/'.$cert.'key.pem');
+			define('SSLKEY',  $certpath.$cert.'key.pem');
 			//le certificat du CA :           openssl pkcs12 -in certificat.p12 -out ca.pem -cacerts -nokeys
-			define('CA_PATH', './key/'.$cert.'ca.pem');
+			define('CA_PATH', $certpath.$cert.'ca.pem');
 		}
 
 
@@ -93,11 +93,11 @@ if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 	runkit7_constant_redefine('CA_PATH', realpath('key').'\\'.$cert.'ca.pem');
 } else {
 	// la partie x509 du certificat : openssl pkcs12 -in certificat.p12 -out client.pem -clcerts -nokeys
-	runkit7_constant_redefine('PEM',     './key/'.$cert.'client.pem');
+	runkit7_constant_redefine('PEM',     $certpath.$cert.'client.pem');
 	//  la clé privée du certificat : openssl pkcs12 -in certificat.p12 -out key.pem -nocerts
-	runkit7_constant_redefine('SSLKEY',  './key/'.$cert.'key.pem');
+	runkit7_constant_redefine('SSLKEY',  $certpath.$cert.'key.pem');
 	//le certificat du CA :           openssl pkcs12 -in certificat.p12 -out ca.pem -cacerts -nokeys
-	runkit7_constant_redefine('CA_PATH', './key/'.$cert.'ca.pem');
+	runkit7_constant_redefine('CA_PATH', $certpath.$cert.'ca.pem');
 }
 
 // Mot de passe choisi lors de la création openssl

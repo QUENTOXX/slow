@@ -4,7 +4,7 @@ function Recup_Fich_Tab($pref) {
 
    $fichier="Personalisation/".$pref."classification.ini";  //notre fichier de configuration
    $array=array();
-   if(file_exists($fichier) && $fichier_lecture=file($fichier))
+   if(file_exists($fichier) && $fichier_lecture=file($fichier)){
       foreach($fichier_lecture as $ligne)
       {
         if(preg_match("#^\[(.*)\]\s+$#",$ligne,$matches))
@@ -20,7 +20,7 @@ function Recup_Fich_Tab($pref) {
            $array[$groupe][$item]=$valeur;
         }
       }
-   else{
+    }else{
       echo "Le fichier de personalisation est introuvable ou incompatible<br />";
       return 0;
    }
