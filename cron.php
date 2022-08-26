@@ -39,7 +39,7 @@
       $avt= date('Y-m-d H:i:s', strtotime($today. ' - 30 minutes'));
       $aps= date('Y-m-d H:i:s', strtotime($today. ' + 30 minutes'));
 
-      $sql = "SELECT * FROM process WHERE date_next_run BETWEEN '$avt' AND '$aps'";
+      $sql = "SELECT * FROM process"; // WHERE date_next_run BETWEEN '$avt' AND '$aps'
       $req=mysqli_query($link, $sql);
 
       foreach ($req as $user) {
