@@ -4,6 +4,9 @@
   require_once "connect.inc.php";
   require_once "fonctions.php";
 
+  // Change le dossier courant utile lors du lancement des tâches cron
+  chdir(dirname(__FILE__));
+
   $err= 0;
 
     if (isset($argv[1])) {
