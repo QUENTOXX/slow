@@ -63,7 +63,7 @@ function load($insee) {
 	// Création du répertoire de la commune
 	$path= 'actes/'.$insee;
 	if (!is_dir($path)) {
-			mkdir($path, 0777);
+			mkdir($path, 0770);
 	}
 
 	// Récupération des actes déjà récupérés

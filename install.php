@@ -13,8 +13,10 @@
 	require_once "connect.inc.php";
 	require_once "fonctions.php";
 
-	@mkdir ('actes');
-	@mkdir ('key');
+	$path= 'actes';
+	if (!is_dir($path)) {
+			mkdir($path, 0770);
+	}
 
 	foreach ($pref_tab_all as $ville => $pref) {
 
