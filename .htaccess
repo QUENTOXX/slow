@@ -1,3 +1,18 @@
-Order Allow,Deny
+order allow,deny
+<Files ~ ".(js|css|png|jpg|json|svg)$">
+allow from all
+</Files>
+
+Order deny,allow
 Deny from all
 
+<FilesMatch "^(delib_rech|login|depot|depot_delib).php$">
+    Allow from all
+</FilesMatch>
+
+<LimitExcept GET POST>
+        Order Allow,Deny
+        Deny from all
+</LimitExcept>
+
+options -indexes

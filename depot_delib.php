@@ -6,8 +6,9 @@
 <title>Dépot des Actes</title>
 <link rel="stylesheet" type="text/css" href="style/style.css">
 <?php
+session_start();
 
-if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_SESSION['login'])) {
    exit;
  }
 
@@ -47,25 +48,30 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 									$siren= $user['siren'];
 									$erreurs= "";
+									$_SESSION['login']= $login;
+									$_SESSION['siren']= $siren;
 									break 2;
 							}
 						}
 			}
 
 			}
-	}else {
+	}elseif (!isset($_SESSION['login'])) {
+
 		header("Location: login.php");
 	}
 
 ?>
 <?php
 
-	if (empty($erreurs)) {
+	if (empty($erreurs) && isset($_SESSION['login'])) {
 
 	?>
 	<div id="okay">
 			<?php
+					$login= $_SESSION['login'];
 					echo("Bienvenue $login");
+					$siren= $_SESSION['siren'];
 			?>
 	</div>
 

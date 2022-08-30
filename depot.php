@@ -6,8 +6,9 @@
 <title>Dépot des Actes</title>
 <link rel="stylesheet" type="text/css" href="style/style.css">
 <?php
+session_start();
 
-if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+if ($_SERVER['REQUEST_METHOD'] != 'POST' && isset($_SESSION['login'])) {
    exit;
  }
 
@@ -20,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 	$siren= $_POST['siren'];
 
-	if (isset($_POST['depot'])) {
+	if (isset($_POST['depot']) && isset($_SESSION['login'])) {
 
 		$tmp= 0;
 
@@ -98,6 +99,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 			<form method="post" action="depot_delib.php">
 			<input type="submit" name="retour" value="Déposer un autre acte" />
 			</form>
+			<form method="post" action="login.php">
+			<input type="submit" name="deco" value="Déconnection" />
+			</form>
 			<?php
 
 		}else {
@@ -108,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 			</form>
 			<?php
 		}
-	}elseif (isset($_POST['del_delib'])) {
+	}elseif (isset($_POST['del_delib']) && isset($_SESSION['login'])) {
 
 		foreach ($siren_all as $villes => $values) {
 			if ($values == $siren) {
@@ -126,6 +130,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 			?>
 			<form method="post" action="depot_delib.php">
 			<input type="submit" name="retour" value="OK" />
+			</form>
+			<form method="post" action="login.php">
+			<input type="submit" name="deco" value="Déconnection" />
 			</form>
 			<?php
 			//header("Location:".$_SERVER[HTTP_REFERER]);
@@ -153,6 +160,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 				?>
 				<form method="post" action="depot_delib.php">
 				<input type="submit" name="retour" value="Supprimer un autre acte" />
+				</form>
+				<form method="post" action="login.php">
+				<input type="submit" name="deco" value="Déconnection" />
 				</form>
 				<?php
 				break;

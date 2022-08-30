@@ -27,6 +27,10 @@
 </script>
 
 <?php
+session_start();
+if (isset($_POST['deco'])) {
+  session_destroy();
+}
 
 require_once "config/params.php";
 
