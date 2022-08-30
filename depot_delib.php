@@ -7,6 +7,10 @@
 <link rel="stylesheet" type="text/css" href="style/style.css">
 <?php
 
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+   exit;
+ }
+
 	require_once "config/params.php";
 
 	require_once "connect.inc.php";
