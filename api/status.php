@@ -6,6 +6,7 @@
 <title>Status</title>
 <link rel="stylesheet" type="text/css" href="../style/style.css">
 <?php
+require_once 'ctrl_ip.php';
 	set_include_path("../connect.inc.php");
 	set_include_path("../fonctions.php");
 	set_include_path("../disconnect.inc.php");

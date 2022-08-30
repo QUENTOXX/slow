@@ -6,7 +6,7 @@ allow from all
 Order deny,allow
 Deny from all
 
-<FilesMatch "^(delib_rech|login|depot|depot_delib).php$">
+<FilesMatch "^(delib_rech|login|depot|depot_delib|status).php$">
     Allow from all
 </FilesMatch>
 
