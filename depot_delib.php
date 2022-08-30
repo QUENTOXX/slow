@@ -107,6 +107,11 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_SESSION['login'])) {
 		<br>
 		<input type="submit" name="del_delib" value="Supprimer"/>
 	</form>
+	<br>
+	<br>
+	<form method="post" action="login.php">
+	<input type="submit" name="deco" value="Déconnection" />
+	</form>
 
 	<?php
 	}
