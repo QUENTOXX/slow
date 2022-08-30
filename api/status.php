@@ -9,7 +9,8 @@
 	require_once 'ctrl_ip.php';
 
 	if ($error == 1) {
-		exit;
+		http_response_code(403);
+		die('Forbidden');
 	}
 
 	set_include_path("../connect.inc.php");
