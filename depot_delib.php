@@ -9,7 +9,8 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_SESSION['login'])) {
-   exit;
+	http_response_code(403);
+	die('Forbidden');
  }
 
 	require_once "config/params.php";
