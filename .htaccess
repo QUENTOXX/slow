@@ -1,18 +1,23 @@
-order allow,deny
-<Files ~ ".(js|css|png|jpg|json|svg)$">
+DirectoryIndex index.php
+order Deny,Allow
+
+# deny everything except landing page
+<FilesMatch ".">
+Deny From All
+</FilesMatch>
+
+# allow index.php and testfile.php
+#<FilesMatch "^(index|testfile)\.php$">
+<FilesMatch "^(delib_rech|login|depot|depot_delib|status|index)\.php$">
+Allow From All
+</FilesMatch>
+
+
+<Files ~ ".(js|css|png|jpg|json|svg|ico)$">
 allow from all
 </Files>
-
-Order deny,allow
-Deny from all
-
-<FilesMatch "^(delib_rech|login|depot|depot_delib|status).php$">
-    Allow from all
-</FilesMatch>
 
 <LimitExcept GET POST>
         Order Allow,Deny
         Deny from all
 </LimitExcept>
-
-options -indexes
