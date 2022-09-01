@@ -8,7 +8,7 @@
 <?php
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] != 'POST' && isset($_SESSION['login'])) {
+if ($_SERVER['REQUEST_METHOD'] != 'POST' && !isset($_SESSION['login'])) {
 	http_response_code(403);
 	die('Forbidden');
  }

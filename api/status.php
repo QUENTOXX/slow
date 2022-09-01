@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="robots" content="noindex">
-<meta name="referrer" content="origin-when-crossorigin">
-<title>Status</title>
-<link rel="stylesheet" type="text/css" href="../style/style.css">
 <?php
 	require_once 'ctrl_ip.php';
 
@@ -39,20 +32,28 @@
 		$erreurs += 1;
 	}
 
-	$sql = "SELECT * FROM process";
-	$req=mysqli_query($link, $sql);
+	if ($erreurs == 0) {
+		$jsonerr["status"]= 0;
+	}else {
 
-	foreach ($req as $user) {
-
-		if (in_array($user['ville'], $errvil)) {
-			$jsonerr[$user['ville']]= 1;
-		}else {
-			$jsonerr[$user['ville']]= 0;
+		foreach ($errvil as $ville => $value) {
+			if ($value == 1) {
+				$jsonerr["status"]= 1;
+				$jsonerr[$ville]= 1;
+			}
 		}
 	}
 
 	if ($_GET['type'] == "user") {
-
+		?>
+		<!DOCTYPE html>
+		<html lang="fr" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="robots" content="noindex">
+		<meta name="referrer" content="origin-when-crossorigin">
+		<title>Status</title>
+		<link rel="stylesheet" type="text/css" href="../style/style.css">
+		<?php
 		echo "<h2>Status ! </h2>";
 
 		if ($erreurs == 0) {
