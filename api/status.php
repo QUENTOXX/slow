@@ -74,8 +74,8 @@
 		}
 	}elseif ($_GET['type'] == "json") {
 		// code... faire array liste et encode
-
-		json_encode($jsonerr);
+		header("Content-Type: application/json");
+		echo json_encode($jsonerr);
 	}
 //UPDATE process SET actif= 1 WHERE ville= 'Givors'
 	require_once '../disconnect.inc.php';
