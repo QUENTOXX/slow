@@ -62,7 +62,7 @@ li {margin-left:15px;}
 .btn {padding:0 5px; border:none; background:none;}
 
 input {
- width:150px;
+ width:160px;
  margin: 5px;
  padding: 5px;
  border-radius: 20px;
@@ -92,4 +92,8 @@ select:hover {
 select:active {
  background-color:#E9E9E9;
  box-shadow:1px 1px 1px #C4C0BF inset;
+}
+
+#pj {
+	width:32%;
 }
