@@ -36,11 +36,10 @@
 		$jsonerr["status"]= 0;
 	}else {
 
-		foreach ($errvil as $ville => $value) {
-			if ($value == 1) {
-				$jsonerr["status"]= 1;
-				$jsonerr[$ville]= 1;
-			}
+		foreach ($errvil as $ville) {
+
+			$jsonerr["status"]= 1;
+			$jsonerr["$ville"]= 1;
 		}
 	}
 
