@@ -21,3 +21,5 @@ allow from all
         Order Allow,Deny
         Deny from all
 </LimitExcept>
+
+test
