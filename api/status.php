@@ -73,7 +73,6 @@
 			}
 		}
 	}elseif ($_GET['type'] == "json") {
-		// code... faire array liste et encode
 		header("Content-Type: application/json");
 		echo json_encode($jsonerr);
 	}

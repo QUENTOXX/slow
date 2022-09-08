@@ -103,61 +103,8 @@
 	}
 	echo "</select>";
 
-	// Filtres pour le public : affichera les actes de natures Délibérations, mais exclus Actes individuels, Actes réglementaires, Autres, ...
-	//$w="AND nature LIKE '%rations'";
-
 	$w="";
 
-/*	if ($_SESSION['acces']==1) { // => Acces total pour les besoins internes à notre EPCI
-
-		if ($insee == "Toutes" || $_GET['Villes'] == "Toutes" || (!isset($_GET['Villes']))) {
-
-			echo "\n".' &nbsp; Nature <select id="nature" class="form-control"<option>Choisir</option>';
-			echo "<option>Choisir</option>";
-
-			foreach($pref_tab_all as $ville => $pref){
-				$sql="SELECT DISTINCT nature FROM ".$pref."index_delib ORDER BY nature";
-				$res=mysqli_query($link, $sql);
-				//echo $sql;
-				while ($row=mysqli_fetch_object($res)) {
-					echo "<option>".utf8_encode($row->nature)."</option>";
-				}
-			}
-			echo "<option value=All>Toutes</option>";
-			echo "<option value=Toutes>Public</option>";
-			echo "</select>";
-
-		}elseif (array_key_exists($_GET['Villes'], $pref_tab_all)) {
-
-			$tab_nature = array();
-
-			echo "\n".' &nbsp; Nature <select id="nature" class="form-control"<option>Choisir</option>';
-			echo "<option>Choisir</option>";
-			$sql="SELECT DISTINCT nature FROM ".$pref_tab_all[$_GET['Villes']]."index_delib ORDER BY nature";
-			$res=mysqli_query($link, $sql);
-			//echo $sql;
-			while ($row=mysqli_fetch_object($res)) {	//recupération des natures
-				if (!in_array("utf8_encode($row->nature)", $tab_nature)) {
-					array_push($tab_nature, utf8_encode($row->nature));
-				}
-				//echo "<option>".utf8_encode($row->nature)."</option>";
-			}
-			foreach ($tab_nature as $value) {
-				echo "<option>".$value."</option>";
-			}
-			echo "<option value=All>Toutes</option>";
-			echo "<option value=Toutes>Public</option>";
-			echo "</select>";
-
-		}
-
-			if (isset($_GET['nature'])) {
-				if ($_GET['nature']!='Toutes')
-					$w="AND nature='".$_GET['nature']."'";
-
-			} else
-					$w="";
-		}else {*/
 
 			echo "\n".'Natures <select id="nature" class="form-control"><option>Choisir</option>';
 			echo "<option value=delib>Délibérations</option>";
@@ -206,17 +153,7 @@
 		$vu= str_replace("_", " ", $key);
 		echo "<option value=$key>$vu</option>";
 	}
-	/*
-	echo "<option value=Givors>Givors</option>";
-	echo "<option value=Grigny>Grigny</option>";
-	echo "<option value=Saint-Chamond>Saint Chamond</option>";
-	echo "<option value=Venissieux>Venissieux</option>";
-	echo "<option value=Corbas>Corbas</option>";
-	echo "<option value=Pierre_Benite>Pierre Benite</option>";
-	echo "<option value=Rive_de_Gier>Rive de Gier</option>";
-	echo "<option value=Vaulx_en_Velin>Vaulx en Velin</option>";
-	echo "<option value=Sitiv>Sitiv</option>";
-*/
+
 	echo "</select>";
 //formulaire date
 ?>
@@ -282,13 +219,11 @@ if (isset($_POST['date_acte_deb']) && isset($_POST['date_acte_fin'])) {
 	}elseif (array_key_exists($_GET['Villes'], $pref_tab_all)) {
 
 		echo "<br>";
-		//$sql="SELECT * FROM gi_index_delib WHERE insee='WDGIVORS' AND nature= 'Délibérations'";
+
 		$sql="SELECT * FROM ".$pref_tab_all[$_GET['Villes']]."index_delib WHERE insee='$insee' $w $d"."ORDER BY import_date DESC";
 		$res=mysqli_query($link, $sql);
 		//echo $sql;
-		//var_dump("$sql");
-		//var_dump("SELECT * FROM gi_index_delib WHERE insee='WDGIVORS' AND nature= 'Délibérations' ORDER BY del_date DESC");
-		//var_dump($res);
+
 		echo '<table id="delib" class="display compact" cellspacing="0" width="100%">';
 		echo "<thead><tr><th>Date de décision</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Etablissement</th><th>Pièces jointes</th><th>Date d'affichage</th></tr></thead>"; //debut
 		echo "<tfoot><tr><th>Date de décision</th><th>Numéro</th><th>Classification</th><th>Objet</th><th>Etablissement</th><th>Pièces jointes</th><th>Date d'affichage</th></tr></tfoot>"; //fin
@@ -324,7 +259,7 @@ $(document).ready(function() {
 	var table = $('#delib').dataTable( {
 		"language": { "url": "french.json" },
 		"order": [[ 0, "desc" ],[ 1, "desc" ]],
-		"lengthMenu": [[50, 100, -1, 10, 25], [50, 100, "Tous", 10, 25]]
+		"lengthMenu": [[50, 100, -1], [50, 100, "Tous"]]
 		}
 	);
 
@@ -369,17 +304,7 @@ $("#nature").change(function() {
 })
 
 $("#villes").change(function() {
-	/*
-	let searchParams = new URLSearchParams(window.location.search);
 
-	if ((!searchParams.has('insee')) || (!searchParams.has('nature'))) {
-		document.location="delib_rech.php?Villes="+$(this).val();
-	}else {
-		let insee= searchParams.get('insee');
-		let nature= searchParams.get('nature');
-
-		document.location="delib_rech.php?insee="+insee+"&nature="+nature+"&Villes="+$(this).val();
-	}*/
 	if ($(this).val() == "Choisir") {
 		document.location="delib_rech.php?Villes=Toutes";
 	}else {
