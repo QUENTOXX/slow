@@ -34,7 +34,7 @@ function image($lien){
   if ((exif_imagetype($lien) == IMAGETYPE_JPEG) && (imagecreatefromjpeg($lien) !== false ))
   {
     list($larg, $haut)= getimagesize("$lien");
-    if ($larg > 800 || $haut > 150) {
+    if ($larg > 1500 || $haut > 500) {
       echo "Vérifiez bien la taille votre image";
     }else {
         echo '<p align="center"><img src="'.$lien.'"></p>';
@@ -43,7 +43,7 @@ function image($lien){
 }elseif ((exif_imagetype($lien) == IMAGETYPE_PNG) && (imagecreatefrompng($lien) !== false ))
 {
   list($larg, $haut)= getimagesize("$lien");
-  if ($larg > 800 || $haut > 150) {
+  if ($larg > 1500 || $haut > 500) {
     echo "Vérifiez bien la taille votre image";
   }else {
       echo '<p align="center"><img src="'.$lien.'"></p>';
