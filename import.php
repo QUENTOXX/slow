@@ -169,6 +169,9 @@ runkit7_constant_remove('PASSWORD');
 
 
 //require_once "disconnect.inc.php";
+
+exe("DELETE FROM ".$pref_tab."index_delib WHERE nature= 'Actes individuels'");
+
 return $err;
 
 ?>
