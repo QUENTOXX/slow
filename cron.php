@@ -30,6 +30,8 @@
 
       if ($err == 2) {
         exe("UPDATE process SET com= 'Aucun utilisateur actif' WHERE ville= '$ville'");
+        exe("UPDATE process SET actif= 0 WHERE ville= '$ville'");
+        exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
       }
       if ($err == 1) {
         exe("UPDATE process SET actif= 0 WHERE ville= '$ville'");
@@ -74,6 +76,8 @@
 
         if ($err == 2) {
           exe("UPDATE process SET com= 'Aucun utilisateur actif' WHERE ville= '$ville'");
+          exe("UPDATE process SET date_next_run= '$next' WHERE ville= '$ville'");
+          exe("UPDATE process SET status= 0 WHERE ville= '$ville'");
         }
         if ($err == 1) {
           exe("UPDATE process SET actif= 0 WHERE ville= '$ville'");
