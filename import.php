@@ -140,6 +140,7 @@ if (mysqli_num_rows($res)==0) {
 // Il est conseiller de créer au moins 1 utilisateur
 // et de spécifier un mot de passe dans S2low.
 	echo '<div class="info info-rouge">Vous n\'avez pas défini d\'utilisateur dans la table '.$pref_tab.'user</div>';
+	$err= 2;
 	//load(''); // Lance la récupération des actes pour l'utilisateur unique => déconseiller
 } else {
 
