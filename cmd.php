@@ -11,9 +11,10 @@ if (isset($argv[1]) && isset($argv[2]) && isset($argv[3])) {
     exit("L'argument n'est pas un établissement ou mal appelé !!");
   }
   if (!in_array($argv[3], $words)) {
-    exit("Commandes possible : cmd.php 'ville' process actif
+    exit("Commandes possible :
+    cmd.php 'ville' process unactif
     cmd.php 'ville' 'user' actif
-    cmd.php 'ville' 'user' unactif !!");
+    cmd.php 'ville' 'user' unactif");
   }else {
     if ($argv[3] == "actif") {
       $actif= 1;
@@ -53,6 +54,11 @@ if (isset($argv[1]) && isset($argv[2]) && isset($argv[3])) {
       }
     }
   }
+}else {
+  echo("Commandes possible :
+  cmd.php 'ville' process unactif
+  cmd.php 'ville' 'user' actif
+  cmd.php 'ville' 'user' unactif");
 }
 
     require_once "disconnect.inc.php";
