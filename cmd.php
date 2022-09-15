@@ -33,17 +33,7 @@ if (isset($argv[1]) && isset($argv[2]) && isset($argv[3])) {
   }else {
 
     $mod_user= $argv[2];
-
-    foreach ($siren_all as $villes => $values) {
-      if ($values == $siren) {
-        $insee= $insee_all[$villes];
-      }
-    }
-    foreach($insee_all as $ville => $y){
-      if ($y == $insee) {
-        $pref= $pref_tab_all[$ville];
-      }
-    }
+    $pref= $pref_tab_all[$ville];
 
     $sql= "SELECT * FROM ".$pref."user";
     $req=mysqli_query($link, $sql);
