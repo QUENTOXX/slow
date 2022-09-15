@@ -52,9 +52,13 @@ if (isset($argv[1]) && isset($argv[2]) && isset($argv[3])) {
       if ($mod_user == $user['mels_notif']) {
         if (exe("UPDATE ".$pref."user SET actif= '$actif' WHERE mels_notif= '$mod_user'")) {
           echo "L'activité de l'utilisateur $mod_user a été mis à : $actif !!";
-          break 2;
+          $tmp= 0;
+          break;
         }
       }else {
+        $tmp= 1;
+      }
+      if ($tmp == 1) {
         echo "L'utilisateur $mod_user n'éxiste pas à $vile ou est mal écrit.";
       }
     }
